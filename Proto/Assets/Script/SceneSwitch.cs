@@ -12,7 +12,7 @@ public class SceneSwitch : MonoBehaviour
     {
        
     }
-    public void ScenePeli(){
+    public void ScenePeli() {
         SceneManager.LoadScene("Peli");
     }
 
