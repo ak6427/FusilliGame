@@ -11,4 +11,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Peli.unity
     guid: 85796c9f9565f064fa27f1d8c5ba5251
+  - enabled: 1
+    path: Assets/Scenes/Victory.unity
+    guid: 7baa9358464bd974dbc389ebb3c38ab9
   m_configObjects: {}

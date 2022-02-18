@@ -15,6 +15,10 @@ public class SceneSwitch : MonoBehaviour
     public void ScenePeli() {
         SceneManager.LoadScene("Peli");
     }
+    public void SceneValikko() {
+        SceneManager.LoadScene("Valikko");
+    }
+
 
     // Update is called once per frame
     void Update()

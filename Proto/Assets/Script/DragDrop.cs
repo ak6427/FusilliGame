@@ -5,11 +5,15 @@ using UnityEngine.EventSystems;
 
 public class DragDrop : MonoBehaviour, IPointerDownHandler, IBeginDragHandler, IEndDragHandler, IDragHandler  {
     [SerializeField] private Canvas canvas;
+    [SerializeField] public int Value;
+    [SerializeField] public int Correct;
     private RectTransform rectTransform;
-    private CanvasGroup canvasGroup;
+    public CanvasGroup canvasGroup;
+    private GameScore gameScore;
     private void Awake() {
         rectTransform = GetComponent<RectTransform>();
         canvasGroup=GetComponent<CanvasGroup>();
+        gameScore=GameObject.FindObjectOfType<GameScore>();
     }
 
     public void OnBeginDrag(PointerEventData eventData) {
@@ -23,6 +27,11 @@ public class DragDrop : MonoBehaviour, IPointerDownHandler, IBeginDragHandler, I
         Debug.Log("OnEndDrag");
         canvasGroup.blocksRaycasts = true;
         canvasGroup.alpha = 1f; 
+        if (Correct == 1){
+            canvasGroup.blocksRaycasts = false;
+            gameScore.Score++;
+            
+        }
     }
 
     public void OnDrag(PointerEventData eventData) {
