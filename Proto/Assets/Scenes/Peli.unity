@@ -187,8 +187,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   canvas: {fileID: 1524004942}
-  Value: 2
-  Correct: 0
+  rankFood: 2
+  correct: 0
   canvasGroup: {fileID: 0}
 --- !u!114 &52037426
 MonoBehaviour:
@@ -280,8 +280,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   canvas: {fileID: 1524004942}
-  Value: 1
-  Correct: 0
+  rankFood: 1
+  correct: 0
   canvasGroup: {fileID: 0}
 --- !u!114 &466835788
 MonoBehaviour:
@@ -384,7 +384,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c7e4d64d4dab39f4bb4f3399cce90d02, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Value: 1
+  rankBox: 1
 --- !u!114 &650951785
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -486,7 +486,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c7e4d64d4dab39f4bb4f3399cce90d02, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Value: 1
+  rankBox: 1
 --- !u!114 &737007137
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -601,8 +601,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   canvas: {fileID: 1524004942}
-  Value: 2
-  Correct: 0
+  rankFood: 2
+  correct: 0
   canvasGroup: {fileID: 0}
 --- !u!114 &976640848
 MonoBehaviour:
@@ -693,7 +693,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c7e4d64d4dab39f4bb4f3399cce90d02, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Value: 1
+  rankBox: 1
 --- !u!114 &1095286242
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -808,8 +808,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   canvas: {fileID: 1524004942}
-  Value: 3
-  Correct: 0
+  rankFood: 3
+  correct: 0
   canvasGroup: {fileID: 0}
 --- !u!114 &1198290933
 MonoBehaviour:
@@ -1078,7 +1078,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c7e4d64d4dab39f4bb4f3399cce90d02, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Value: 2
+  rankBox: 2
 --- !u!114 &1556855818
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1193,8 +1193,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   canvas: {fileID: 1524004942}
-  Value: 1
-  Correct: 0
+  rankFood: 1
+  correct: 0
   canvasGroup: {fileID: 0}
 --- !u!114 &1653280485
 MonoBehaviour:
@@ -1450,7 +1450,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c7e4d64d4dab39f4bb4f3399cce90d02, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Value: 3
+  rankBox: 3
 --- !u!225 &1954671386
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -1514,7 +1514,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c7e4d64d4dab39f4bb4f3399cce90d02, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Value: 2
+  rankBox: 2
 --- !u!114 &2054575482
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1629,8 +1629,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   canvas: {fileID: 1524004942}
-  Value: 1
-  Correct: 0
+  rankFood: 1
+  correct: 0
   canvasGroup: {fileID: 0}
 --- !u!114 &2133231469
 MonoBehaviour:
