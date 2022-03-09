@@ -9,9 +9,16 @@ public class Drop : MonoBehaviour, IDropHandler
     [SerializeField] private int rankBox; //lokero ranking
     private CanvasGroup canvasGroup;
     private Image image;
+    private GameScore gameScore;
+    private PenaltySpawn penaltySpawn;
+    [SerializeField]
+    private GameObject prefabPenalty;
+    private int rankPenalty = 0;
+
     private void Awake() {
         image=GetComponent<Image>();
         canvasGroup=GetComponent<CanvasGroup>();
+        gameScore = FindObjectOfType<GameScore>();
     }
     public void OnDrop(PointerEventData eventData) {
         Debug.Log("OnDrop");
@@ -24,8 +31,23 @@ public class Drop : MonoBehaviour, IDropHandler
             }
             else {
                 image.color = Color.red;
+
+                //PENALTY
+                rankPenalty = Mathf.Abs(rankBox - eventData.pointerDrag.GetComponent<DragDrop>().rankFood) * 3;
+
+                gameScore.timeR -= rankPenalty;
+
+                SpawnPenalty();
             }
 
         }
     }
+    private void SpawnPenalty() 
+    {
+        /*var newPenalty = */Instantiate(prefabPenalty, transform.position, transform.rotation);   
+        penaltySpawn = FindObjectOfType<PenaltySpawn>();
+        //penaltySpawn.retrievePenalty = rankPenalty;
+        penaltySpawn.transform.SetParent(gameObject.transform, false);
+    }
+
 }

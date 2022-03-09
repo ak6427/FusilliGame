@@ -13,14 +13,13 @@ public class DragDrop : MonoBehaviour, IPointerDownHandler, IBeginDragHandler, I
     private void Awake() {
         rectTransform = GetComponent<RectTransform>();
         canvasGroup=GetComponent<CanvasGroup>();
-        gameScore=GameObject.FindObjectOfType<GameScore>();
+        gameScore=FindObjectOfType<GameScore>();
     }
 
     public void OnBeginDrag(PointerEventData eventData) {
         Debug.Log("OnBeginDrag");
         canvasGroup.alpha = .4f; 
         canvasGroup.blocksRaycasts = false;
-
     }
 
     public void OnEndDrag(PointerEventData eventData) {

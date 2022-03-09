@@ -528,6 +528,49 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 02015d511f508bb488f214822b9b9f68, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &1251909569
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1251909570}
+  - component: {fileID: 1251909571}
+  m_Layer: 0
+  m_Name: Exit
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1251909570
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1251909569}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.000065725784, y: -198, z: 0}
+  m_LocalScale: {x: 0.4307405, y: 0.4307405, z: 0.4307405}
+  m_Children: []
+  m_Father: {fileID: 1756231982}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1251909571
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1251909569}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 045bc360cba4da949bea0a79ced6cf91, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1355274960
 GameObject:
   m_ObjectHideFlags: 0
@@ -610,7 +653,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1355274963}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1251909571}
+        m_TargetAssemblyTypeName: Exit, Assembly-CSharp
+        m_MethodName: exitgame
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Exit.exitgame
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1355274963
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -830,10 +885,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 800, y: 600}
+  m_ReferenceResolution: {x: 1920, y: 1080}
   m_ScreenMatchMode: 0
   m_MatchWidthOrHeight: 0
   m_PhysicalUnit: 3
@@ -877,6 +932,7 @@ RectTransform:
   - {fileID: 915718786}
   - {fileID: 1355274961}
   - {fileID: 999518959}
+  - {fileID: 1251909570}
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
