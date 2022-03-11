@@ -37,16 +37,20 @@ public class Drop : MonoBehaviour, IDropHandler
 
                 gameScore.timeR -= rankPenalty;
 
-                SpawnPenalty();
+                SpawnPenalty(rankPenalty);
             }
 
         }
     }
-    private void SpawnPenalty() 
+    private void SpawnPenalty(int rankPenalty) 
     {
-        /*var newPenalty = */Instantiate(prefabPenalty, transform.position, transform.rotation);   
+        Vector3 penaltyPosition = transform.position;
+        penaltyPosition.x += 172;
+        penaltyPosition.y += 36;
+
+        Instantiate(prefabPenalty, penaltyPosition, transform.rotation);   
         penaltySpawn = FindObjectOfType<PenaltySpawn>();
-        //penaltySpawn.retrievePenalty = rankPenalty;
+        penaltySpawn.retrievePenalty = rankPenalty;
         penaltySpawn.transform.SetParent(gameObject.transform, false);
     }
 
