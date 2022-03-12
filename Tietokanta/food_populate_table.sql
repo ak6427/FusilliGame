@@ -306,3 +306,20 @@ INSERT INTO foods VALUES (
     77, 'Kyssäkaali', 1, 1
 );
 
+-- TERVEYS(rank/lokero pyramidissa)
+-- 1 = 44 kpl
+-- 2 = 5 kpl
+-- 3 = 15 kpl
+-- 4 = 5 kpl
+-- 5 = 2 kpl
+-- 6 = 5 kpl
+-- 7 = 1 kpl
+
+--ILMASTO(rank/lokero pyramidissa)
+-- 1 = 48 kpl
+-- 2 = 5 kpl
+-- 3 = 3 kpl
+-- 4 = 13 kpl
+-- 5 = 1 kpl
+-- 6 = 1 kpl
+-- 7 = 4 kpl
