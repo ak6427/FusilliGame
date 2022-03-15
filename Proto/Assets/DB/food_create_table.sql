@@ -1,6 +1,6 @@
 PRAGMA foreign_keys = ON;
 
-DROP TABLE IF EXISTS foods;
+--DROP TABLE IF EXISTS foods;
 
 CREATE TABLE foods (
     id INT NOT NULL,
