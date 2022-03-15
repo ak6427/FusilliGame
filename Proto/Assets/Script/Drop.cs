@@ -15,21 +15,27 @@ public class Drop : MonoBehaviour, IDropHandler
     private GameObject prefabPenalty;
     private int rankPenalty = 0;
 
-    private void Awake() {
+    private void Awake() 
+    {
         image=GetComponent<Image>();
         canvasGroup=GetComponent<CanvasGroup>();
         gameScore = FindObjectOfType<GameScore>();
     }
-    public void OnDrop(PointerEventData eventData) {
+
+    public void OnDrop(PointerEventData eventData) 
+    {
         Debug.Log("OnDrop");
-        if (eventData.pointerDrag != null) {
+        if (eventData.pointerDrag != null) 
+        {
             eventData.pointerDrag.GetComponent<RectTransform>().anchoredPosition = GetComponent<RectTransform>().anchoredPosition;
-            if (rankBox == eventData.pointerDrag.GetComponent<DragDrop>().rankFood) {
+            if (rankBox == eventData.pointerDrag.GetComponent<DragDrop>().rankFood) 
+            {
                 image.color = Color.green;
                 canvasGroup.blocksRaycasts = false;
                 eventData.pointerDrag.GetComponent<DragDrop>().correct = 1;
             }
-            else {
+            else 
+            {
                 image.color = Color.red;
 
                 //PENALTY
@@ -39,9 +45,9 @@ public class Drop : MonoBehaviour, IDropHandler
 
                 SpawnPenalty(rankPenalty);
             }
-
         }
     }
+
     private void SpawnPenalty(int rankPenalty) 
     {
         Vector3 penaltyPosition = transform.position;
@@ -53,5 +59,4 @@ public class Drop : MonoBehaviour, IDropHandler
         penaltySpawn.retrievePenalty = rankPenalty;
         penaltySpawn.transform.SetParent(gameObject.transform, false);
     }
-
 }

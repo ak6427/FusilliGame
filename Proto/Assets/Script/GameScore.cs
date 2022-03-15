@@ -19,16 +19,20 @@ public class GameScore : MonoBehaviour
     {
         R.text = "Remaining "+ Math.Floor(timeR); 
 
-        if(Score == 6){
+        if(Score == 6) 
+        {
             SceneManager.LoadScene("Victory");
         }    
         
         // TIMERIN PÄIVITYS
-        if(timeR > 0){
+        if(timeR > 0)
+        {
             timeR -= Time.deltaTime;
         }
-        else if(timeR <= 0){
-         SceneManager.LoadScene("Failure");
+
+        else if(timeR <= 0) 
+        {
+            SceneManager.LoadScene("Failure");
         }
     }
 }
