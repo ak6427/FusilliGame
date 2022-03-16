@@ -1596,6 +1596,10 @@ PrefabInstance:
       propertyPath: R
       value: 
       objectReference: {fileID: 71102707}
+    - target: {fileID: 1534319276390231056, guid: c8f5eff3e0dd1824fb7582f2bd20a919, type: 3}
+      propertyPath: timeR
+      value: 30
+      objectReference: {fileID: 0}
     - target: {fileID: 1534319276390231057, guid: c8f5eff3e0dd1824fb7582f2bd20a919, type: 3}
       propertyPath: m_RootOrder
       value: 14
@@ -1778,6 +1782,10 @@ PrefabInstance:
     - target: {fileID: 4168694512712950020, guid: b74752ea1c457644a959e8ae494cf87c, type: 3}
       propertyPath: m_Name
       value: Timer
+      objectReference: {fileID: 0}
+    - target: {fileID: 4168694512712950022, guid: b74752ea1c457644a959e8ae494cf87c, type: 3}
+      propertyPath: m_HorizontalAlignment
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4168694512712950023, guid: b74752ea1c457644a959e8ae494cf87c, type: 3}
       propertyPath: m_Pivot.x
