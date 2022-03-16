@@ -18,6 +18,18 @@ public class SceneSwitch : MonoBehaviour
     public void SceneValikko() {
         SceneManager.LoadScene("Valikko");
     }
+    public void SceneEasy() {
+        SceneManager.LoadScene("Easy");
+    }
+    public void SceneMedium() {
+        SceneManager.LoadScene("Medium");
+    }
+    public void SceneHard() {
+        SceneManager.LoadScene("Hard");
+    }
+    public void SceneExtreme() {
+        SceneManager.LoadScene("Extreme");
+    }
 
 
     // Update is called once per frame
