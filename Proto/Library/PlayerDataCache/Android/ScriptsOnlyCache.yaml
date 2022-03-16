@@ -41,6 +41,63 @@ ScriptsOnlyBuild:
     - UnityEngine.UI.Image
     - UnityEngine.UI.Text
   sceneClasses:
+    Assets/Scenes/Easy.unity:
+    - Class: 1
+      Script: {instanceID: 0}
+    - Class: 4
+      Script: {instanceID: 0}
+    - Class: 20
+      Script: {instanceID: 0}
+    - Class: 21
+      Script: {instanceID: 0}
+    - Class: 28
+      Script: {instanceID: 0}
+    - Class: 48
+      Script: {instanceID: 0}
+    - Class: 81
+      Script: {instanceID: 0}
+    - Class: 104
+      Script: {instanceID: 0}
+    - Class: 114
+      Script: {instanceID: 1488}
+    - Class: 114
+      Script: {instanceID: 1894}
+    - Class: 114
+      Script: {instanceID: 2736}
+    - Class: 114
+      Script: {instanceID: 2754}
+    - Class: 114
+      Script: {instanceID: 2910}
+    - Class: 114
+      Script: {instanceID: 2960}
+    - Class: 114
+      Script: {instanceID: 3146}
+    - Class: 114
+      Script: {instanceID: 3394}
+    - Class: 114
+      Script: {instanceID: 4000}
+    - Class: 114
+      Script: {instanceID: 4724}
+    - Class: 114
+      Script: {instanceID: 5026}
+    - Class: 115
+      Script: {instanceID: 0}
+    - Class: 128
+      Script: {instanceID: 0}
+    - Class: 157
+      Script: {instanceID: 0}
+    - Class: 196
+      Script: {instanceID: 0}
+    - Class: 213
+      Script: {instanceID: 0}
+    - Class: 222
+      Script: {instanceID: 0}
+    - Class: 223
+      Script: {instanceID: 0}
+    - Class: 224
+      Script: {instanceID: 0}
+    - Class: 225
+      Script: {instanceID: 0}
     Assets/Scenes/Failure.unity:
     - Class: 1
       Script: {instanceID: 0}
@@ -61,19 +118,19 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 1488}
     - Class: 114
-      Script: {instanceID: 2288}
+      Script: {instanceID: 2308}
     - Class: 114
-      Script: {instanceID: 2716}
+      Script: {instanceID: 2736}
     - Class: 114
-      Script: {instanceID: 2890}
+      Script: {instanceID: 2910}
     - Class: 114
-      Script: {instanceID: 3128}
+      Script: {instanceID: 3146}
     - Class: 114
-      Script: {instanceID: 3376}
+      Script: {instanceID: 3394}
     - Class: 114
-      Script: {instanceID: 3496}
+      Script: {instanceID: 3514}
     - Class: 114
-      Script: {instanceID: 4690}
+      Script: {instanceID: 4708}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -89,6 +146,177 @@ ScriptsOnlyBuild:
     - Class: 223
       Script: {instanceID: 0}
     - Class: 224
+      Script: {instanceID: 0}
+    Assets/Scenes/Hard.unity:
+    - Class: 1
+      Script: {instanceID: 0}
+    - Class: 4
+      Script: {instanceID: 0}
+    - Class: 20
+      Script: {instanceID: 0}
+    - Class: 21
+      Script: {instanceID: 0}
+    - Class: 28
+      Script: {instanceID: 0}
+    - Class: 48
+      Script: {instanceID: 0}
+    - Class: 81
+      Script: {instanceID: 0}
+    - Class: 104
+      Script: {instanceID: 0}
+    - Class: 114
+      Script: {instanceID: 1488}
+    - Class: 114
+      Script: {instanceID: 1894}
+    - Class: 114
+      Script: {instanceID: 2736}
+    - Class: 114
+      Script: {instanceID: 2754}
+    - Class: 114
+      Script: {instanceID: 2910}
+    - Class: 114
+      Script: {instanceID: 2960}
+    - Class: 114
+      Script: {instanceID: 3146}
+    - Class: 114
+      Script: {instanceID: 3394}
+    - Class: 114
+      Script: {instanceID: 4000}
+    - Class: 114
+      Script: {instanceID: 4724}
+    - Class: 114
+      Script: {instanceID: 5026}
+    - Class: 115
+      Script: {instanceID: 0}
+    - Class: 128
+      Script: {instanceID: 0}
+    - Class: 157
+      Script: {instanceID: 0}
+    - Class: 196
+      Script: {instanceID: 0}
+    - Class: 213
+      Script: {instanceID: 0}
+    - Class: 222
+      Script: {instanceID: 0}
+    - Class: 223
+      Script: {instanceID: 0}
+    - Class: 224
+      Script: {instanceID: 0}
+    - Class: 225
+      Script: {instanceID: 0}
+    Assets/Scenes/Medium (1).unity:
+    - Class: 1
+      Script: {instanceID: 0}
+    - Class: 4
+      Script: {instanceID: 0}
+    - Class: 20
+      Script: {instanceID: 0}
+    - Class: 21
+      Script: {instanceID: 0}
+    - Class: 28
+      Script: {instanceID: 0}
+    - Class: 48
+      Script: {instanceID: 0}
+    - Class: 81
+      Script: {instanceID: 0}
+    - Class: 104
+      Script: {instanceID: 0}
+    - Class: 114
+      Script: {instanceID: 1488}
+    - Class: 114
+      Script: {instanceID: 1894}
+    - Class: 114
+      Script: {instanceID: 2736}
+    - Class: 114
+      Script: {instanceID: 2754}
+    - Class: 114
+      Script: {instanceID: 2910}
+    - Class: 114
+      Script: {instanceID: 2960}
+    - Class: 114
+      Script: {instanceID: 3146}
+    - Class: 114
+      Script: {instanceID: 3394}
+    - Class: 114
+      Script: {instanceID: 4000}
+    - Class: 114
+      Script: {instanceID: 4724}
+    - Class: 114
+      Script: {instanceID: 5026}
+    - Class: 115
+      Script: {instanceID: 0}
+    - Class: 128
+      Script: {instanceID: 0}
+    - Class: 157
+      Script: {instanceID: 0}
+    - Class: 196
+      Script: {instanceID: 0}
+    - Class: 213
+      Script: {instanceID: 0}
+    - Class: 222
+      Script: {instanceID: 0}
+    - Class: 223
+      Script: {instanceID: 0}
+    - Class: 224
+      Script: {instanceID: 0}
+    - Class: 225
+      Script: {instanceID: 0}
+    Assets/Scenes/Medium.unity:
+    - Class: 1
+      Script: {instanceID: 0}
+    - Class: 4
+      Script: {instanceID: 0}
+    - Class: 20
+      Script: {instanceID: 0}
+    - Class: 21
+      Script: {instanceID: 0}
+    - Class: 28
+      Script: {instanceID: 0}
+    - Class: 48
+      Script: {instanceID: 0}
+    - Class: 81
+      Script: {instanceID: 0}
+    - Class: 104
+      Script: {instanceID: 0}
+    - Class: 114
+      Script: {instanceID: 1488}
+    - Class: 114
+      Script: {instanceID: 1894}
+    - Class: 114
+      Script: {instanceID: 2736}
+    - Class: 114
+      Script: {instanceID: 2754}
+    - Class: 114
+      Script: {instanceID: 2910}
+    - Class: 114
+      Script: {instanceID: 2960}
+    - Class: 114
+      Script: {instanceID: 3146}
+    - Class: 114
+      Script: {instanceID: 3394}
+    - Class: 114
+      Script: {instanceID: 4000}
+    - Class: 114
+      Script: {instanceID: 4724}
+    - Class: 114
+      Script: {instanceID: 5026}
+    - Class: 115
+      Script: {instanceID: 0}
+    - Class: 128
+      Script: {instanceID: 0}
+    - Class: 157
+      Script: {instanceID: 0}
+    - Class: 196
+      Script: {instanceID: 0}
+    - Class: 213
+      Script: {instanceID: 0}
+    - Class: 222
+      Script: {instanceID: 0}
+    - Class: 223
+      Script: {instanceID: 0}
+    - Class: 224
+      Script: {instanceID: 0}
+    - Class: 225
       Script: {instanceID: 0}
     Assets/Scenes/Peli.unity:
     - Class: 1
@@ -110,25 +338,21 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 1488}
     - Class: 114
-      Script: {instanceID: 1872}
+      Script: {instanceID: 1592}
     - Class: 114
-      Script: {instanceID: 2716}
+      Script: {instanceID: 2308}
     - Class: 114
-      Script: {instanceID: 2734}
+      Script: {instanceID: 2736}
     - Class: 114
-      Script: {instanceID: 2890}
+      Script: {instanceID: 2910}
     - Class: 114
-      Script: {instanceID: 2940}
+      Script: {instanceID: 3146}
     - Class: 114
-      Script: {instanceID: 3128}
+      Script: {instanceID: 3394}
     - Class: 114
-      Script: {instanceID: 3376}
+      Script: {instanceID: 3514}
     - Class: 114
-      Script: {instanceID: 3982}
-    - Class: 114
-      Script: {instanceID: 4706}
-    - Class: 114
-      Script: {instanceID: 5008}
+      Script: {instanceID: 4708}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -144,8 +368,6 @@ ScriptsOnlyBuild:
     - Class: 223
       Script: {instanceID: 0}
     - Class: 224
-      Script: {instanceID: 0}
-    - Class: 225
       Script: {instanceID: 0}
     Assets/Scenes/Valikko.unity:
     - Class: 1
@@ -169,29 +391,29 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 1488}
     - Class: 114
-      Script: {instanceID: 1570}
+      Script: {instanceID: 1592}
     - Class: 114
-      Script: {instanceID: 1872}
+      Script: {instanceID: 1894}
     - Class: 114
-      Script: {instanceID: 2280}
+      Script: {instanceID: 2300}
     - Class: 114
-      Script: {instanceID: 2288}
+      Script: {instanceID: 2308}
     - Class: 114
-      Script: {instanceID: 2716}
+      Script: {instanceID: 2736}
     - Class: 114
-      Script: {instanceID: 2890}
+      Script: {instanceID: 2910}
     - Class: 114
-      Script: {instanceID: 3128}
+      Script: {instanceID: 3146}
     - Class: 114
-      Script: {instanceID: 3376}
+      Script: {instanceID: 3394}
     - Class: 114
-      Script: {instanceID: 3496}
+      Script: {instanceID: 3514}
     - Class: 114
-      Script: {instanceID: 4690}
+      Script: {instanceID: 4708}
     - Class: 114
-      Script: {instanceID: 4904}
+      Script: {instanceID: 4922}
     - Class: 114
-      Script: {instanceID: 5304}
+      Script: {instanceID: 5322}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -228,19 +450,19 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 1488}
     - Class: 114
-      Script: {instanceID: 2288}
+      Script: {instanceID: 2308}
     - Class: 114
-      Script: {instanceID: 2716}
+      Script: {instanceID: 2736}
     - Class: 114
-      Script: {instanceID: 2890}
+      Script: {instanceID: 2910}
     - Class: 114
-      Script: {instanceID: 3128}
+      Script: {instanceID: 3146}
     - Class: 114
-      Script: {instanceID: 3376}
+      Script: {instanceID: 3394}
     - Class: 114
-      Script: {instanceID: 3496}
+      Script: {instanceID: 3514}
     - Class: 114
-      Script: {instanceID: 4690}
+      Script: {instanceID: 4708}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -819,7 +1041,11 @@ ScriptsOnlyBuild:
   platform: 13
   scenePathNames:
   - Assets/Scenes/Valikko.unity
-  - Assets/Scenes/Peli.unity
+  - Assets/Scenes/Easy.unity
   - Assets/Scenes/Victory.unity
   - Assets/Scenes/Failure.unity
+  - Assets/Scenes/Peli.unity
+  - Assets/Scenes/Hard.unity
+  - Assets/Scenes/Medium.unity
+  - Assets/Scenes/Medium (1).unity
   playerPath: C:/Users/vlehd/Dropbox/TAMK/Unity/Projektit/Fusilli/FusilliGame/Proto/fone.apk

@@ -21,12 +21,12 @@ EditorBuildSettings:
     path: Assets/Scenes/Peli.unity
     guid: bda2510966a7dc14080cc6137dc7c686
   - enabled: 1
-    path: Assets/Scenes/Extreme.unity
+    path: Assets/Scenes/Hard.unity
     guid: 5e733b303798e684ab675ff75481178c
   - enabled: 1
-    path: Assets/Scenes/Hard.unity
+    path: Assets/Scenes/Medium.unity
     guid: 790f288c51194664b82b7f95cda94478
   - enabled: 1
-    path: Assets/Scenes/Medium.unity
+    path: Assets/Scenes/Medium (1).unity
     guid: adad0152659a98448a44ab587ce55322
   m_configObjects: {}
