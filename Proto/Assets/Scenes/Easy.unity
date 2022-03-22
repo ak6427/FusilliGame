@@ -1075,27 +1075,6 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 4849721580422224395, guid: c2b05664fc6ae3b4d9b58eff95c43c34, type: 3}
   m_PrefabInstance: {fileID: 970473632}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1084134944 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3456326465069624798, guid: bb5d88ef989fddf48a7bc3e14f83d19a, type: 3}
-  m_PrefabInstance: {fileID: 8213446987687853434}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1084134945
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1084134944}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bc0250a24fcba0e4c90e4048cc937533, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  foodID: 0
-  foodName: 
-  db: {fileID: 0}
-  foodsNeededEz: {fileID: 0}
 --- !u!1001 &1176129952
 PrefabInstance:
   m_ObjectHideFlags: 0

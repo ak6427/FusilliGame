@@ -1,9 +1,13 @@
 using System.Collections;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.UI;
+
+
 
 namespace db
 {
+    [RequireComponent(typeof(Image))]
     public class FetchFood : MonoBehaviour
     {
         private string foodTable = "foods";
@@ -16,7 +20,10 @@ namespace db
         public FoodsNeededEz foodsNeededEz;
         //public FoodsNeededMed foodsNeededMed;
         //public FoodsNeededHard foodsNeededHard;
+        public DragDrop dragDrop;
         private string compareString;
+        private string imagePath;
+        public Image image;
 
         void Awake()
         {
@@ -25,6 +32,8 @@ namespace db
             rndSeed = System.DateTime.Now.Millisecond;
             Random.InitState(rndSeed);
             foodsNeededEz = FindObjectOfType<FoodsNeededEz>();
+            dragDrop = GetComponent<DragDrop>();
+            image = GetComponent<Image>();
         }
 
         // Start is called before the first frame update
@@ -35,6 +44,7 @@ namespace db
 
             // Set compareString
             compareString = FillNeededEz();
+            dragDrop.rankFood = int.Parse(compareString);
 
             // Set array list
             foodsArrayList = db.SingleSelectWhereID(foodTable, "id", "health", "=", compareString);
@@ -58,8 +68,8 @@ namespace db
                 if (foodsNeededEz.needToBeFetched[i, 1] == 0)
                 {
                     foodsNeededEz.needToBeFetched[i, 1] = 1;
-                    return (string)foodsNeededEz.needToBeFetched[i, 0].ToString();
                 }
+                return (string)foodsNeededEz.needToBeFetched[i, 0].ToString();
             }
         }
 
@@ -88,6 +98,8 @@ namespace db
 
             // Set food name
             foodName = (string)foodsArrayList[0].ToString();
+            Sprite sp = Resources.Load<Sprite>("Images/"+foodName);
+            image.sprite = sp;
         }
 
         // Update is called once per frame
