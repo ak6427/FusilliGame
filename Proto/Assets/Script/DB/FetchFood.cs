@@ -1,9 +1,7 @@
 using System.Collections;
 using UnityEngine;
-using UnityEngine.EventSystems;
 using UnityEngine.UI;
-
-
+using UnityEngine.SceneManagement;
 
 namespace db
 {
@@ -18,12 +16,15 @@ namespace db
         public string foodName;
         public DBAccess db;
         public FoodsNeededEz foodsNeededEz;
-        //public FoodsNeededMed foodsNeededMed;
+        public FoodsNeededMed foodsNeededMed;
         //public FoodsNeededHard foodsNeededHard;
         public DragDrop dragDrop;
+        public DuplicateCheck duplicateCheck;
+        private int duplicateCheckTarget;
         private string compareString;
         private string imagePath;
         public Image image;
+        private string activeScene;
 
         void Awake()
         {
@@ -31,9 +32,19 @@ namespace db
             db = db.GetComponent<DBAccess>();
             rndSeed = System.DateTime.Now.Millisecond;
             Random.InitState(rndSeed);
-            foodsNeededEz = FindObjectOfType<FoodsNeededEz>();
             dragDrop = GetComponent<DragDrop>();
             image = GetComponent<Image>();
+            duplicateCheck = FindObjectOfType<DuplicateCheck>();
+            duplicateCheck = duplicateCheck.GetComponent<DuplicateCheck>();
+            activeScene = SceneManager.GetActiveScene().name;
+            if (activeScene == "Easy") 
+            {
+                foodsNeededEz = FindObjectOfType<FoodsNeededEz>();
+            }
+            else if (activeScene == "Medium")
+            {
+                foodsNeededMed = FindObjectOfType<FoodsNeededMed>();
+            }
         }
 
         // Start is called before the first frame update
@@ -43,7 +54,15 @@ namespace db
             db.OpenDB(Application.dataPath + "/DB/" + "food.db");
 
             // Set compareString
-            compareString = FillNeededEz();
+            if (activeScene == "Easy") 
+            {
+                compareString = FillNeededEz();
+            }
+            else if (activeScene == "Medium") 
+            {
+                compareString = FillNeededMed();
+            }
+
             dragDrop.rankFood = int.Parse(compareString);
 
             // Set array list
@@ -73,6 +92,20 @@ namespace db
             }
         }
 
+        private string FillNeededMed()
+        {
+            int i;
+            while(true)
+            {
+                i = Random.Range(0, foodsNeededMed.needToBeFetched.GetLength(0));
+                if (foodsNeededMed.needToBeFetched[i, 1] == 0)
+                {
+                    foodsNeededMed.needToBeFetched[i, 1] = 1;
+                }
+                return (string)foodsNeededMed.needToBeFetched[i, 0].ToString();
+            }
+        }
+
         private void FillArray()
         {
             foodsArrayID = new int[foodsArrayList.Count];
@@ -84,8 +117,23 @@ namespace db
 
         private void RandomizeFood()
         {
-            foodID = Random.Range(0, foodsArrayID.Length);
-            foodID = foodsArrayID[foodID];
+            while(true)
+            {
+                foodID = Random.Range(0, foodsArrayID.GetLength(0));
+                foodID = foodsArrayID[foodID];
+                for(int i = 0; i < duplicateCheck.intFoodArray.Length; i++)
+                {
+                    if (duplicateCheck.intFoodArray[i] == 0)
+                    {
+                        duplicateCheck.intFoodArray[i] = foodID;
+                        return;
+                    }
+                    else if(duplicateCheck.intFoodArray[i] == foodID)
+                    {
+                        break;
+                    }
+                }
+            }
         }
 
         private void WhereQueryString()
