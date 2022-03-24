@@ -159,7 +159,7 @@ INSERT INTO foods VALUES (
 );
 
 INSERT INTO foods VALUES (
-    41, 'Juusto', 4, 6
+    41, 'Emmentaljuusto', 4, 6
 );
 
 INSERT INTO foods VALUES (
@@ -306,20 +306,68 @@ INSERT INTO foods VALUES (
     77, 'Kyssäkaali', 1, 1
 );
 
+INSERT INTO foods VALUES (
+    78, 'Manteli', 2, 2
+);
+
+INSERT INTO foods VALUES (
+    79, 'Piimä', 2, 3
+);
+
+INSERT INTO foods VALUES (
+    80, 'Maito', 4, 2
+);
+
+INSERT INTO foods VALUES (
+    81, 'Broilerin maksa', 4, 3
+);
+
+INSERT INTO foods VALUES (
+    82, 'Maissilastut', 5, 1
+);
+
+INSERT INTO foods VALUES (
+    83, 'Riisikakku', 5, 1
+);
+
+INSERT INTO foods VALUES (
+    84, 'Hienosokeri', 5, 1
+);
+
+INSERT INTO foods VALUES (
+    85, 'Kinkku', 7, 5
+);
+
+INSERT INTO foods VALUES (
+    86, 'Pekoni', 7, 5
+);
+
+INSERT INTO foods VALUES (
+    87, 'Meetvursti', 7, 5
+);
+
+INSERT INTO foods VALUES (
+    89, 'Maksamakkara', 7, 5
+);
+
+INSERT INTO foods VALUES (
+    90, 'Fetajuusto', 4, 6
+);
+
 -- TERVEYS(rank/lokero pyramidissa)
 -- 1 = 44 kpl
--- 2 = 5 kpl
+-- 2 = 7 kpl
 -- 3 = 15 kpl
--- 4 = 5 kpl
--- 5 = 2 kpl
+-- 4 = 8 kpl
+-- 5 = 5 kpl
 -- 6 = 5 kpl
--- 7 = 1 kpl
+-- 7 = 5 kpl
 
 --ILMASTO(rank/lokero pyramidissa)
--- 1 = 48 kpl
--- 2 = 5 kpl
--- 3 = 3 kpl
+-- 1 = 52 kpl
+-- 2 = 7 kpl
+-- 3 = 6 kpl
 -- 4 = 13 kpl
--- 5 = 1 kpl
--- 6 = 1 kpl
+-- 5 = 5 kpl
+-- 6 = 2 kpl
 -- 7 = 4 kpl
