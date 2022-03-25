@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 5431511295282720761}
   - component: {fileID: 2316449323171007437}
   - component: {fileID: 4050001167183303503}
+  - component: {fileID: 974174265}
   m_Layer: 5
   m_Name: Food
   m_TagString: Untagged
@@ -38,7 +39,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 64, y: 64}
+  m_SizeDelta: {x: 128, y: 128}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &4443601166454137473
 CanvasRenderer:
@@ -68,7 +69,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: eee78c6ed696ce4469a03ffe2ba6135a, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -91,7 +92,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   canvas: {fileID: 0}
-  rankFood: 0
+  rankFood: 1
   correct: 0
   canvasGroup: {fileID: 0}
 --- !u!225 &2316449323171007437
@@ -105,7 +106,7 @@ CanvasGroup:
   m_Alpha: 1
   m_Interactable: 1
   m_BlocksRaycasts: 1
-  m_IgnoreParentGroups: 0
+  m_IgnoreParentGroups: 1
 --- !u!114 &4050001167183303503
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -122,3 +123,20 @@ MonoBehaviour:
   foodName: 
   db: {fileID: 0}
   foodsNeededEz: {fileID: 0}
+  foodsNeededMed: {fileID: 0}
+  dragDrop: {fileID: 0}
+  duplicateCheck: {fileID: 0}
+  image: {fileID: 0}
+--- !u!114 &974174265
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3456326465069624798}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a8849037fd481394e829e11dd7b54dcc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tip: 

@@ -81,14 +81,16 @@ namespace db
         private string FillNeededEz()
         {
             int i;
+            int arrayLenght = foodsNeededEz.needToBeFetched.GetLength(0);
             while(true)
             {
-                i = Random.Range(0, foodsNeededEz.needToBeFetched.GetLength(0));
+                i = Random.Range(0, arrayLenght);
                 if (foodsNeededEz.needToBeFetched[i, 1] == 0)
                 {
                     foodsNeededEz.needToBeFetched[i, 1] = 1;
+                    return (string)foodsNeededEz.needToBeFetched[i, 0].ToString();
                 }
-                return (string)foodsNeededEz.needToBeFetched[i, 0].ToString();
+                //return (string)foodsNeededEz.needToBeFetched[i, 0].ToString();
             }
         }
 
@@ -101,8 +103,9 @@ namespace db
                 if (foodsNeededMed.needToBeFetched[i, 1] == 0)
                 {
                     foodsNeededMed.needToBeFetched[i, 1] = 1;
+                    return (string)foodsNeededMed.needToBeFetched[i, 0].ToString();
                 }
-                return (string)foodsNeededMed.needToBeFetched[i, 0].ToString();
+                //return (string)foodsNeededMed.needToBeFetched[i, 0].ToString();
             }
         }
 

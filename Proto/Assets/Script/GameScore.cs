@@ -8,13 +8,27 @@ using System;
 
 public class GameScore : MonoBehaviour
 {
-    [SerializeField]
-    public float timeR = 300;
+    public float timeR;
 
     public TMP_Text R; // PIIRRÄ JÄLJELLÄ OLEVA AIKA RUUDULLE
 
+    private string activeScene;
+
     [SerializeField] public int Score;
     
+    void Awake()
+    {
+        activeScene = SceneManager.GetActiveScene().name;
+        if (activeScene == "Easy") 
+        {
+            timeR = 30;
+        }
+        else if (activeScene == "Medium")
+        {
+            timeR = 60;
+        }
+    }
+
     void Update()
     {
         R.text = "Remaining "+ Math.Floor(timeR); 

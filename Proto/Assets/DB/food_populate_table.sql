@@ -35,7 +35,7 @@ INSERT INTO foods VALUES (
 );
 
 INSERT INTO foods VALUES (
-    10, 'Bambunverso', 1, 1
+    10, 'Parsakaali', 1, 1
 );
 
 INSERT INTO foods VALUES (
@@ -51,7 +51,7 @@ INSERT INTO foods VALUES (
 );
 
 INSERT INTO foods VALUES (
-    14, 'Broileri', 4, 3
+    14, 'Ankka', 4, 3
 );
 
 INSERT INTO foods VALUES (
@@ -75,7 +75,7 @@ INSERT INTO foods VALUES (
 );
 
 INSERT INTO foods VALUES (
-    20, 'Greippi', 1, 1
+    20, 'Riisi', 1, 1
 );
 
 INSERT INTO foods VALUES (
@@ -87,7 +87,7 @@ INSERT INTO foods VALUES (
 );
 
 INSERT INTO foods VALUES (
-    23, 'Haaparousku', 1, 1
+    23, 'Porkkana', 1, 1
 );
 
 INSERT INTO foods VALUES (
@@ -108,10 +108,6 @@ INSERT INTO foods VALUES (
 
 INSERT INTO foods VALUES (
     28, 'Herne', 3, 1
-);
-
-INSERT INTO foods VALUES (
-    29, 'Herneenverso', 1, 1
 );
 
 INSERT INTO foods VALUES (
@@ -179,7 +175,7 @@ INSERT INTO foods VALUES (
 );
 
 INSERT INTO foods VALUES (
-    46, 'Kana', 4, 3
+    46, 'Kanankoipi', 4, 3
 );
 
 INSERT INTO foods VALUES (
@@ -187,15 +183,15 @@ INSERT INTO foods VALUES (
 );
 
 INSERT INTO foods VALUES (
-    48, 'Kangasrousku', 1, 1
+    48, 'Peruna', 1, 1
 );
 
 INSERT INTO foods VALUES (
-    49, 'Kangastatti', 1, 1
+    49, 'Munakoiso', 1, 1
 );
 
 INSERT INTO foods VALUES (
-    50, 'Kani', 6, 7
+    50, 'Naudanlihapihvi', 6, 7
 );
 
 INSERT INTO foods VALUES (
@@ -303,7 +299,7 @@ INSERT INTO foods VALUES (
 );
 
 INSERT INTO foods VALUES (
-    77, 'Kyssäkaali', 1, 1
+    77, 'Maissi', 1, 1
 );
 
 INSERT INTO foods VALUES (
@@ -355,7 +351,7 @@ INSERT INTO foods VALUES (
 );
 
 -- TERVEYS(rank/lokero pyramidissa)
--- 1 = 44 kpl
+-- 1 = 43 kpl
 -- 2 = 7 kpl
 -- 3 = 15 kpl
 -- 4 = 8 kpl
@@ -364,7 +360,7 @@ INSERT INTO foods VALUES (
 -- 7 = 5 kpl
 
 --ILMASTO(rank/lokero pyramidissa)
--- 1 = 52 kpl
+-- 1 = 51 kpl
 -- 2 = 7 kpl
 -- 3 = 6 kpl
 -- 4 = 13 kpl
