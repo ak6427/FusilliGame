@@ -1,0 +1,1 @@
+SELECT * FROM foods WHERE nimi = "Kiiwi";

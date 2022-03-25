@@ -30,9 +30,9 @@ public class TipText : MonoBehaviour
     }
     private void ShowTip(string tip, Vector2 MousePos){
         tipText.text = tip;
-        tipWindow.sizeDelta = new Vector2(tipText.preferredWidth > 200 ? 200 : tipText.preferredWidth, tipText.preferredHeight);
+        tipWindow.sizeDelta = new Vector2(tipText.preferredWidth > 10000 ? 10000 : tipText.preferredWidth, tipText.preferredHeight);
         tipWindow.gameObject.SetActive(true);
-        tipWindow.transform.position = new Vector2(MousePos.x + tipWindow.sizeDelta.x * 2 / canvas.scaleFactor, MousePos.y / canvas.scaleFactor);
+        tipWindow.transform.position = new Vector3(MousePos.x * 0.015625f , MousePos.y * 0.015625f + (64 * 0.015625f), 100);
 
     }
     
