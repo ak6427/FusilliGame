@@ -75,7 +75,7 @@ INSERT INTO foods VALUES (
 );
 
 INSERT INTO foods VALUES (
-    20, 'Riisi', 1, 1
+    20, 'Valkoinen riisi', 5, 1
 );
 
 INSERT INTO foods VALUES (
@@ -183,7 +183,7 @@ INSERT INTO foods VALUES (
 );
 
 INSERT INTO foods VALUES (
-    48, 'Peruna', 1, 1
+    48, 'Peruna', 5, 1
 );
 
 INSERT INTO foods VALUES (
@@ -351,11 +351,11 @@ INSERT INTO foods VALUES (
 );
 
 -- TERVEYS(rank/lokero pyramidissa)
--- 1 = 43 kpl
+-- 1 = 41 kpl
 -- 2 = 7 kpl
 -- 3 = 15 kpl
 -- 4 = 8 kpl
--- 5 = 5 kpl
+-- 5 = 7 kpl
 -- 6 = 5 kpl
 -- 7 = 5 kpl
 

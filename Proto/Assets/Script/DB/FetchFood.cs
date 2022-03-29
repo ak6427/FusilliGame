@@ -57,16 +57,35 @@ namespace db
             if (activeScene == "Easy") 
             {
                 compareString = FillNeededEz();
+
+                dragDrop.rankFood = int.Parse(compareString);
+
+                // Set array list
+                switch(compareString)
+                {
+                    case "1":
+                        compareString = "3";
+                        foodsArrayList = db.SingleSelectWhereID(foodTable, "id", "health", "<", compareString);
+                        break;
+                    case "2":
+                        compareString = "2 AND health < 6";
+                        foodsArrayList = db.SingleSelectWhereID(foodTable, "id", "health", ">", compareString);
+                        break;
+                    case "3":
+                        compareString = "5";
+                        foodsArrayList = db.SingleSelectWhereID(foodTable, "id", "health", ">", compareString);
+                        break;
+                }
             }
             else if (activeScene == "Medium") 
             {
                 compareString = FillNeededMed();
+
+                // Set array list
+                foodsArrayList = db.SingleSelectWhereID(foodTable, "id", "health", "=", compareString);
+
+                dragDrop.rankFood = int.Parse(compareString);
             }
-
-            dragDrop.rankFood = int.Parse(compareString);
-
-            // Set array list
-            foodsArrayList = db.SingleSelectWhereID(foodTable, "id", "health", "=", compareString);
 
             // Fill array
             FillArray();

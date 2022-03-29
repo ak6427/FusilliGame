@@ -11,10 +11,18 @@ public class DownTip : MonoBehaviour, IPointerDownHandler,IPointerUpHandler
     public FetchFood fetchFood;
     public string tip;
     private float WaitTime = 0.5f;
+    private bool show = false;
 
     void Awake(){
         fetchFood = GetComponent<FetchFood>();
+    }
 
+    void Update()
+    {
+        if (show == true)
+        {
+            ShowTip();
+        }
     }
 
     public void OnPointerDown(PointerEventData eventData){
@@ -25,6 +33,7 @@ public class DownTip : MonoBehaviour, IPointerDownHandler,IPointerUpHandler
     public void OnPointerUp(PointerEventData eventData){
         StopAllCoroutines();
         TipText.OnPointerDownLost();
+        show = false;
     }
 
     private void ShowTip(){
@@ -34,7 +43,8 @@ public class DownTip : MonoBehaviour, IPointerDownHandler,IPointerUpHandler
 
     private IEnumerator StartTimer(){
         yield return new WaitForSeconds(WaitTime);
-        ShowTip();
+        show = true;
+        //ShowTip();
 
     }
 }
