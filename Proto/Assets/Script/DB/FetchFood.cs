@@ -1,4 +1,5 @@
 using System.Collections;
+using System.IO;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
@@ -15,6 +16,7 @@ namespace db
         public int foodID;
         public string foodName;
         public DBAccess db;
+        public PathWrite pathWrite;
         public FoodsNeededEz foodsNeededEz;
         public FoodsNeededMed foodsNeededMed;
         //public FoodsNeededHard foodsNeededHard;
@@ -29,6 +31,7 @@ namespace db
         void Awake()
         {
             db = FindObjectOfType<DBAccess>();
+            pathWrite = db.GetComponent<PathWrite>();
             db = db.GetComponent<DBAccess>();
             rndSeed = System.DateTime.Now.Millisecond;
             Random.InitState(rndSeed);
@@ -50,8 +53,14 @@ namespace db
         // Start is called before the first frame update
         void Start()
         {
-            // ID QUERY
-            db.OpenDB(Application.dataPath + "/DB/" + "food.db");
+            // Open DB connection
+            if (Application.platform == RuntimePlatform.Android)
+            {
+                db.OpenDB(pathWrite.dbPath);
+            }
+            else {
+                db.OpenDB(Application.dataPath + "/StreamingAssets/food.db");
+            }
 
             // Set compareString
             if (activeScene == "Easy") 
@@ -95,6 +104,8 @@ namespace db
 
             // Set food name
             WhereQueryString();
+
+            db.CloseDB();
         }
 
         private string FillNeededEz()
@@ -166,9 +177,10 @@ namespace db
             // STRING QUERY
             foodsArrayList = db.SingleSelectWhereString(foodTable, "nimi", "id", "=", compareString);
 
-            // Set food name
+            // Set food name and image
             foodName = (string)foodsArrayList[0].ToString();
-            Sprite sp = Resources.Load<Sprite>("Images/"+foodName);
+
+            Sprite sp = Resources.Load<Sprite>(foodName) as Sprite;
             image.sprite = sp;
         }
 

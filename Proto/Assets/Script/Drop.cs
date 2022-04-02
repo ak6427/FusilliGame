@@ -39,7 +39,7 @@ public class Drop : MonoBehaviour, IDropHandler
                 image.color = Color.red;
 
                 //PENALTY
-                rankPenalty = Mathf.Abs(rankBox - eventData.pointerDrag.GetComponent<DragDrop>().rankFood) * 3;
+                rankPenalty = Mathf.Abs(rankBox - eventData.pointerDrag.GetComponent<DragDrop>().rankFood) * 2;
 
                 gameScore.timeR -= rankPenalty;
 

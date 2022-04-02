@@ -92,7 +92,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   canvas: {fileID: 0}
-  rankFood: 1
+  rankFood: 0
   correct: 0
   canvasGroup: {fileID: 0}
 --- !u!225 &2316449323171007437
@@ -139,4 +139,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a8849037fd481394e829e11dd7b54dcc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  fetchFood: {fileID: 0}
   tip: 
