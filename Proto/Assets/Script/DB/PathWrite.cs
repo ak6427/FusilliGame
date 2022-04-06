@@ -1,35 +1,34 @@
 using UnityEngine;
 using UnityEngine.Networking;
 using System.IO;
+using System;
+using Better.StreamingAssets;
 
 namespace db
 {
     public class PathWrite : MonoBehaviour
     {
-        public string dbPath; 
-        public string imagePath; 
+        public string runtimeDBPath; 
+        public string loadDBpath; 
         float timer;
+        public BSA bsa;
 
         public void Awake()
         {
-            dbPath = Path.Combine(Application.persistentDataPath + "/food.db");
+            bsa = GetComponent<BSA>();
+            bsa.InitBSA();
 
-            if(!File.Exists(dbPath))
+            runtimeDBPath = Path.Combine(Application.persistentDataPath, "food.db");
+            Debug.Log(runtimeDBPath);
+            loadDBpath = Path.Combine("jar:file://" + Application.dataPath + "!/assets/", "food.db");
+            Debug.Log(loadDBpath);
+
+            if(!File.Exists(runtimeDBPath))
             {
-                UnityWebRequest loadDb = UnityWebRequest.Get("jar:file://" + Application.dataPath + "!/assets/food.db");
-
-                timer = 0;
-
-                while (!loadDb.isDone) 
-                { 
-                    timer += Time.deltaTime;
-                    if (timer >= 5)
-                    {
-                        break;
-                    }
-                }
-                byte[] newBytes = loadDb.downloadHandler.data;
-                File.WriteAllBytes(dbPath, newBytes);
+                byte[] newBytes = BetterStreamingAssets.ReadAllBytes("food.db");
+                File.WriteAllBytes(runtimeDBPath, newBytes);
+                Debug.Log("dbPath exists: " + File.Exists(runtimeDBPath));
+                Debug.Log(Convert.ToBase64String(newBytes));
             }
         }
     }

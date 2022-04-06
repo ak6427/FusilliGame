@@ -19,9 +19,9 @@ namespace db
         public PathWrite pathWrite;
         public FoodsNeededEz foodsNeededEz;
         public FoodsNeededMed foodsNeededMed;
-        //public FoodsNeededHard foodsNeededHard;
         public DragDrop dragDrop;
         public DuplicateCheck duplicateCheck;
+        public SpriteRenderer spriteRenderer;
         private int duplicateCheckTarget;
         private string compareString;
         private string imagePath;
@@ -36,6 +36,7 @@ namespace db
             rndSeed = System.DateTime.Now.Millisecond;
             Random.InitState(rndSeed);
             dragDrop = GetComponent<DragDrop>();
+            spriteRenderer = GetComponent<SpriteRenderer>();
             image = GetComponent<Image>();
             duplicateCheck = FindObjectOfType<DuplicateCheck>();
             duplicateCheck = duplicateCheck.GetComponent<DuplicateCheck>();
@@ -56,7 +57,7 @@ namespace db
             // Open DB connection
             if (Application.platform == RuntimePlatform.Android)
             {
-                db.OpenDB(pathWrite.dbPath);
+                db.OpenDB(pathWrite.runtimeDBPath);
             }
             else {
                 db.OpenDB(Application.dataPath + "/StreamingAssets/food.db");
