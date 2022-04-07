@@ -24,7 +24,7 @@ public class GameScore : MonoBehaviour
         }
         else if (activeScene == "Medium")
         {
-            timeR = 90;
+            timeR = 140;
             maxScore = 28;
         }
     }

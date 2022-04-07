@@ -19,16 +19,12 @@ namespace db
             bsa.InitBSA();
 
             runtimeDBPath = Path.Combine(Application.persistentDataPath, "food.db");
-            Debug.Log(runtimeDBPath);
             loadDBpath = Path.Combine("jar:file://" + Application.dataPath + "!/assets/", "food.db");
-            Debug.Log(loadDBpath);
 
             if(!File.Exists(runtimeDBPath))
             {
                 byte[] newBytes = BetterStreamingAssets.ReadAllBytes("food.db");
                 File.WriteAllBytes(runtimeDBPath, newBytes);
-                Debug.Log("dbPath exists: " + File.Exists(runtimeDBPath));
-                Debug.Log(Convert.ToBase64String(newBytes));
             }
         }
     }
