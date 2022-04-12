@@ -155,7 +155,7 @@ INSERT INTO foods VALUES (
 );
 
 INSERT INTO foods VALUES (
-    41, 'Emmentaljuusto', 4, 6
+    41, 'Emmental', 4, 6
 );
 
 INSERT INTO foods VALUES (
@@ -347,16 +347,44 @@ INSERT INTO foods VALUES (
 );
 
 INSERT INTO foods VALUES (
-    90, 'Fetajuusto', 4, 6
+    90, 'Feta', 4, 6
+);
+
+INSERT INTO foods VALUES (
+    91, 'Sianliha', 6, 7
+);
+
+INSERT INTO foods VALUES (
+    92, 'Lampaanliha', 6, 7
+);
+
+INSERT INTO foods VALUES (
+    93, 'Hevosenliha', 6, 7
+);
+
+INSERT INTO foods VALUES (
+    94, 'Leipäjuusto', 4, 6
+);
+
+INSERT INTO foods VALUES (
+    95, 'Aurajuusto', 4, 6
+);
+
+INSERT INTO foods VALUES (
+    96, 'Mozzarella', 4, 6
+);
+
+INSERT INTO foods VALUES (
+    97, 'Cheddar', 4, 6
 );
 
 -- TERVEYS(rank/lokero pyramidissa)
 -- 1 = 41 kpl
 -- 2 = 7 kpl
 -- 3 = 15 kpl
--- 4 = 8 kpl
+-- 4 = 12 kpl
 -- 5 = 7 kpl
--- 6 = 5 kpl
+-- 6 = 8 kpl
 -- 7 = 5 kpl
 
 --ILMASTO(rank/lokero pyramidissa)
@@ -365,5 +393,5 @@ INSERT INTO foods VALUES (
 -- 3 = 6 kpl
 -- 4 = 13 kpl
 -- 5 = 5 kpl
--- 6 = 2 kpl
--- 7 = 4 kpl
+-- 6 = 6 kpl
+-- 7 = 7 kpl

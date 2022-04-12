@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
+
 public class DragDrop : MonoBehaviour, IPointerDownHandler, IBeginDragHandler, IEndDragHandler, IDragHandler  {
     [SerializeField] private Canvas canvas;
     [SerializeField] public int rankFood; //ruoka ranking
@@ -13,11 +14,14 @@ public class DragDrop : MonoBehaviour, IPointerDownHandler, IBeginDragHandler, I
     private RectTransform rectTransform;
     public CanvasGroup canvasGroup;
     private GameScore gameScore;
+    public TargetPyramid foodsTargetPyramid;
     private void Awake()
     {
         rectTransform = GetComponent<RectTransform>();
         canvasGroup=GetComponent<CanvasGroup>();
         gameScore=FindObjectOfType<GameScore>();
+        foodsTargetPyramid = FindObjectOfType<TargetPyramid>();
+        foodsTargetPyramid = foodsTargetPyramid.GetComponent<TargetPyramid>();
     }
 
     public void OnBeginDrag(PointerEventData eventData) 
@@ -25,6 +29,7 @@ public class DragDrop : MonoBehaviour, IPointerDownHandler, IBeginDragHandler, I
         Debug.Log("OnBeginDrag");
         canvasGroup.alpha = .4f; 
         canvasGroup.blocksRaycasts = false;
+        foodsTargetPyramid.foodTargetPyramid = targetPyramid;
     }
 
     public void OnEndDrag(PointerEventData eventData) 

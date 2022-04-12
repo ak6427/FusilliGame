@@ -27,6 +27,11 @@ public class GameScore : MonoBehaviour
             timeR = 140;
             maxScore = 28;
         }
+        else if (activeScene == "Hard")
+        {
+            timeR = 280;
+            maxScore = 56;
+        }
     }
 
     void Update()

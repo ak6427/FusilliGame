@@ -19,36 +19,47 @@ public class Drop : MonoBehaviour, IDropHandler
     private GameObject prefabPenalty;
 
     private int rankPenalty = 0;
+    public TargetPyramid foodsTargetPyramid;
 
     private void Awake() 
     {
         image=GetComponent<Image>();
         canvasGroup=GetComponent<CanvasGroup>();
         gameScore = FindObjectOfType<GameScore>();
+        foodsTargetPyramid = FindObjectOfType<TargetPyramid>();
+        foodsTargetPyramid = foodsTargetPyramid.GetComponent<TargetPyramid>();
     }
 
     public void OnDrop(PointerEventData eventData) 
     {
         Debug.Log("OnDrop");
+
+        bool samePyramid = boxPartOfPyramid == eventData.pointerDrag.GetComponent<DragDrop>().targetPyramid;
+
+        image.color = new Color(image.color.r, image.color.g, image.color.b, 1);
+
         if (eventData.pointerDrag != null) 
         {
             eventData.pointerDrag.GetComponent<RectTransform>().anchoredPosition = GetComponent<RectTransform>().anchoredPosition;
-            if (rankBox == eventData.pointerDrag.GetComponent<DragDrop>().rankFood && boxPartOfPyramid == eventData.pointerDrag.GetComponent<DragDrop>().targetPyramid) 
+            if (samePyramid == true)
             {
-                image.color = Color.green;
-                canvasGroup.blocksRaycasts = false;
-                eventData.pointerDrag.GetComponent<DragDrop>().correct = 1;
-            }
-            else 
-            {
-                image.color = Color.red;
+                if (rankBox == eventData.pointerDrag.GetComponent<DragDrop>().rankFood) 
+                {
+                    image.color = Color.green;
+                    canvasGroup.blocksRaycasts = false;
+                    eventData.pointerDrag.GetComponent<DragDrop>().correct = 1;
+                }
+                else 
+                {
+                    image.color = Color.red;
 
-                //PENALTY
-                rankPenalty = Mathf.Abs(rankBox - eventData.pointerDrag.GetComponent<DragDrop>().rankFood) * 2;
+                    //PENALTY
+                    rankPenalty = Mathf.Abs(rankBox - eventData.pointerDrag.GetComponent<DragDrop>().rankFood) * 2;
 
-                gameScore.timeR -= rankPenalty;
+                    gameScore.timeR -= rankPenalty;
 
-                SpawnPenalty(rankPenalty);
+                    SpawnPenalty(rankPenalty);
+                }
             }
         }
     }
@@ -63,5 +74,14 @@ public class Drop : MonoBehaviour, IDropHandler
         penaltySpawn = FindObjectOfType<PenaltySpawn>();
         penaltySpawn.retrievePenalty = rankPenalty;
         penaltySpawn.transform.SetParent(gameObject.transform, false);
+    }
+
+    void Update()
+    {
+        Debug.Log("Check pyramid");
+        if (foodsTargetPyramid.foodTargetPyramid != "" && boxPartOfPyramid != foodsTargetPyramid.foodTargetPyramid)
+        {
+            image.color = new Color(image.color.r, image.color.g, image.color.b, 0);
+        }
     }
 }
