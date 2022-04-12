@@ -11,8 +11,13 @@ public class Drop : MonoBehaviour, IDropHandler
     private Image image;
     private GameScore gameScore;
     private PenaltySpawn penaltySpawn;
+
+    [SerializeField]
+    public string boxPartOfPyramid;
+
     [SerializeField]
     private GameObject prefabPenalty;
+
     private int rankPenalty = 0;
 
     private void Awake() 
@@ -28,7 +33,7 @@ public class Drop : MonoBehaviour, IDropHandler
         if (eventData.pointerDrag != null) 
         {
             eventData.pointerDrag.GetComponent<RectTransform>().anchoredPosition = GetComponent<RectTransform>().anchoredPosition;
-            if (rankBox == eventData.pointerDrag.GetComponent<DragDrop>().rankFood) 
+            if (rankBox == eventData.pointerDrag.GetComponent<DragDrop>().rankFood && boxPartOfPyramid == eventData.pointerDrag.GetComponent<DragDrop>().targetPyramid) 
             {
                 image.color = Color.green;
                 canvasGroup.blocksRaycasts = false;

@@ -8,6 +8,8 @@ public class DragDrop : MonoBehaviour, IPointerDownHandler, IBeginDragHandler, I
     [SerializeField] private Canvas canvas;
     [SerializeField] public int rankFood; //ruoka ranking
     [SerializeField] public int correct; //0 = false, 1 = true
+    [SerializeField] public string targetPyramid;
+
     private RectTransform rectTransform;
     public CanvasGroup canvasGroup;
     private GameScore gameScore;
