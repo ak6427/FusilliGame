@@ -36,7 +36,7 @@ public class Drop : MonoBehaviour, IDropHandler
 
         bool samePyramid = boxPartOfPyramid == eventData.pointerDrag.GetComponent<DragDrop>().targetPyramid;
 
-        image.color = new Color(image.color.r, image.color.g, image.color.b, 1);
+        // image.color = new Color(image.color.r, image.color.g, image.color.b, 1);
 
         if (eventData.pointerDrag != null) 
         {
@@ -66,7 +66,7 @@ public class Drop : MonoBehaviour, IDropHandler
 
     private void SpawnPenalty(int rankPenalty) 
     {
-        Vector3 penaltyPosition = transform.position;
+        Vector3 penaltyPosition = new Vector3(transform.position.x, transform.position.y, 5);
         penaltyPosition.x += 172;
         penaltyPosition.y += 36;
 
@@ -82,6 +82,10 @@ public class Drop : MonoBehaviour, IDropHandler
         if (foodsTargetPyramid.foodTargetPyramid != "" && boxPartOfPyramid != foodsTargetPyramid.foodTargetPyramid)
         {
             image.color = new Color(image.color.r, image.color.g, image.color.b, 0);
+        }
+        if (foodsTargetPyramid.resetAlpha == true) 
+        {
+            image.color = new Color(image.color.r, image.color.g, image.color.b, 1);
         }
     }
 }

@@ -24,6 +24,7 @@ public class PenaltySpawn : MonoBehaviour
         timePenalty.text = "-"+ retrievePenalty;
         timePenalty.rectTransform.anchoredPosition = new Vector2(timePenalty.rectTransform.anchoredPosition.x, timePenalty.rectTransform.anchoredPosition.y + 0.1f);
         timePenalty.alpha -= Time.deltaTime;
+        timePenalty.outlineColor = new Color32(0, 0, 0, 255);
 
         Destroy(gameObject, 1);
     }

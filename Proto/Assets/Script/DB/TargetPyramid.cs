@@ -5,4 +5,5 @@ using UnityEngine;
 public class TargetPyramid : MonoBehaviour
 {
     public string foodTargetPyramid;
+    public bool resetAlpha = true;
 }

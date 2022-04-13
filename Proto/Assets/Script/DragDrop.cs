@@ -30,6 +30,7 @@ public class DragDrop : MonoBehaviour, IPointerDownHandler, IBeginDragHandler, I
         canvasGroup.alpha = .4f; 
         canvasGroup.blocksRaycasts = false;
         foodsTargetPyramid.foodTargetPyramid = targetPyramid;
+        foodsTargetPyramid.resetAlpha = false;
     }
 
     public void OnEndDrag(PointerEventData eventData) 
@@ -43,6 +44,7 @@ public class DragDrop : MonoBehaviour, IPointerDownHandler, IBeginDragHandler, I
             gameScore.Score++;
             
         }
+        foodsTargetPyramid.resetAlpha = true;
     }
 
     public void OnDrag(PointerEventData eventData)
@@ -55,5 +57,4 @@ public class DragDrop : MonoBehaviour, IPointerDownHandler, IBeginDragHandler, I
     {
         Debug.Log("OnPointerDown");
     }
-
 }
