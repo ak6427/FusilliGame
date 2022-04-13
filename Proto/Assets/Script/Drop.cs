@@ -61,12 +61,16 @@ public class Drop : MonoBehaviour, IDropHandler
                     SpawnPenalty(rankPenalty);
                 }
             }
+            else
+            {
+                eventData.pointerDrag.GetComponent<RectTransform>().anchoredPosition = eventData.pointerDrag.GetComponent<DragDrop>().lastCoords;
+            }
         }
     }
 
     private void SpawnPenalty(int rankPenalty) 
     {
-        Vector3 penaltyPosition = new Vector3(transform.position.x, transform.position.y, 5);
+        Vector3 penaltyPosition = new Vector3(transform.position.x, transform.position.y, transform.position.z);
         penaltyPosition.x += 172;
         penaltyPosition.y += 36;
 

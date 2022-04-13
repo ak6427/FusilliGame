@@ -10,7 +10,7 @@ public class DownTip : MonoBehaviour, IPointerDownHandler,IPointerUpHandler
 {
     public FetchFood fetchFood;
     public string tip;
-    private float WaitTime = 0.5f;
+    private float WaitTime = 0.25f;
     private bool show = false;
 
     void Awake(){

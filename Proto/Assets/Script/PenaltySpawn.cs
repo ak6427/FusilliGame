@@ -7,13 +7,12 @@ using System;
 
 public class PenaltySpawn : MonoBehaviour
 {
-
     public float retrievePenalty = 0;
     public TMP_Text timePenalty;
-    private RectTransform rectTransform;
+    public RectTransform rectTransform;
 
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
         rectTransform = GetComponent<RectTransform>();
     }
@@ -22,9 +21,8 @@ public class PenaltySpawn : MonoBehaviour
     void Update()
     {
         timePenalty.text = "-"+ retrievePenalty;
-        timePenalty.rectTransform.anchoredPosition = new Vector2(timePenalty.rectTransform.anchoredPosition.x, timePenalty.rectTransform.anchoredPosition.y + 0.1f);
+        timePenalty.rectTransform.anchoredPosition3D = new Vector3(timePenalty.rectTransform.anchoredPosition.x, timePenalty.rectTransform.anchoredPosition.y + 0.1f, -5.0f);
         timePenalty.alpha -= Time.deltaTime;
-        timePenalty.outlineColor = new Color32(0, 0, 0, 255);
 
         Destroy(gameObject, 1);
     }

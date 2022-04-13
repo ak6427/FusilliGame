@@ -5,7 +5,7 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 
 
-public class DragDrop : MonoBehaviour, IPointerDownHandler, IBeginDragHandler, IEndDragHandler, IDragHandler  {
+public class DragDrop : MonoBehaviour, IPointerDownHandler, IPointerUpHandler, IBeginDragHandler, IEndDragHandler, IDragHandler  {
     [SerializeField] private Canvas canvas;
     [SerializeField] public int rankFood; //ruoka ranking
     [SerializeField] public int correct; //0 = false, 1 = true
@@ -15,6 +15,10 @@ public class DragDrop : MonoBehaviour, IPointerDownHandler, IBeginDragHandler, I
     public CanvasGroup canvasGroup;
     private GameScore gameScore;
     public TargetPyramid foodsTargetPyramid;
+    public Vector2 lastCoords;
+    public GameObject button;
+    private RectTransform buttonRectTransform;
+
     private void Awake()
     {
         rectTransform = GetComponent<RectTransform>();
@@ -22,6 +26,8 @@ public class DragDrop : MonoBehaviour, IPointerDownHandler, IBeginDragHandler, I
         gameScore=FindObjectOfType<GameScore>();
         foodsTargetPyramid = FindObjectOfType<TargetPyramid>();
         foodsTargetPyramid = foodsTargetPyramid.GetComponent<TargetPyramid>();
+        button = GameObject.Find("Main Menu - button");
+        buttonRectTransform = button.GetComponent<RectTransform>();
     }
 
     public void OnBeginDrag(PointerEventData eventData) 
@@ -29,8 +35,7 @@ public class DragDrop : MonoBehaviour, IPointerDownHandler, IBeginDragHandler, I
         Debug.Log("OnBeginDrag");
         canvasGroup.alpha = .4f; 
         canvasGroup.blocksRaycasts = false;
-        foodsTargetPyramid.foodTargetPyramid = targetPyramid;
-        foodsTargetPyramid.resetAlpha = false;
+        lastCoords = rectTransform.anchoredPosition;
     }
 
     public void OnEndDrag(PointerEventData eventData) 
@@ -44,7 +49,6 @@ public class DragDrop : MonoBehaviour, IPointerDownHandler, IBeginDragHandler, I
             gameScore.Score++;
             
         }
-        foodsTargetPyramid.resetAlpha = true;
     }
 
     public void OnDrag(PointerEventData eventData)
@@ -56,5 +60,26 @@ public class DragDrop : MonoBehaviour, IPointerDownHandler, IBeginDragHandler, I
     public void OnPointerDown(PointerEventData eventData)
     {
         Debug.Log("OnPointerDown");
+        foodsTargetPyramid.foodTargetPyramid = targetPyramid;
+        foodsTargetPyramid.resetAlpha = false;
+    }
+
+    public void OnPointerUp(PointerEventData eventData)
+    {
+        Debug.Log("OnPointerUp");
+
+        foodsTargetPyramid.resetAlpha = true;
+
+        float foodX = rectTransform.anchoredPosition.x - rectTransform.rect.xMax + Screen.width / 2;
+        float foodY = rectTransform.anchoredPosition.y - rectTransform.rect.yMax + Screen.height / 2;
+        if(foodX < buttonRectTransform.offsetMax.x && foodY < buttonRectTransform.offsetMax.y)
+        {
+            rectTransform.anchoredPosition = lastCoords;
+        }
+    }
+
+    void Update()
+    {
+        
     }
 }
