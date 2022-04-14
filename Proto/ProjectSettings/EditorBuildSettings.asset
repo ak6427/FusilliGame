@@ -26,6 +26,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Medium.unity
     guid: 790f288c51194664b82b7f95cda94478
+  - enabled: 1
+    path: Assets/Scenes/Scores.unity
+    guid: f6a73ec8bde591148b5edbe50d159e17
   - enabled: 0
     path: 
     guid: 00000000000000000000000000000000

@@ -35,6 +35,10 @@ public class SceneSwitch : MonoBehaviour
         sceneSaver.retry = "Extreme";
         SceneManager.LoadScene("Extreme");
     }
+    public void SceneScores() {
+        sceneSaver.retry = "Scores";
+        SceneManager.LoadScene("Scores");
+    }
 
     public void SceneRetry()
     {

@@ -36,10 +36,71 @@ public class GameScore : MonoBehaviour
 
     void Update()
     {
+        //PlayerPrefs.DeleteAll();
         R.text = "Remaining "+ Math.Floor(timeR); 
-
         if(Score == maxScore) 
         {
+            if (activeScene == "Easy"){
+                int F=1;
+                int i = 0;
+                while(F==1){
+                    i++;
+                    String ESS = "E" + i;
+                    if(timeR > PlayerPrefs.GetFloat(ESS)){
+                        for(int i2 = 10; i2 > i; i2--){
+                            String OHighScore = "E"+i2;//E10
+                            int ii = i2-1;
+                            String NHighScore = "E"+ii;//E9
+                            float NScore = PlayerPrefs.GetFloat(NHighScore);
+                            PlayerPrefs.SetFloat(OHighScore, NScore);
+                        }
+                        PlayerPrefs.SetFloat(ESS, (float)Math.Round((double)timeR,3));
+                        F=2;
+                    }
+                    if(i==10)F=2;
+                }
+
+            }
+            else if (activeScene == "Medium"){
+                int F=1;
+                int i = 0;
+                while(F==1){
+                    i++;
+                    String ESS = "M" + i;
+                    if(timeR > PlayerPrefs.GetFloat(ESS)){
+                        for(int i2 = 10; i2 > i; i2--){
+                            String OHighScore = "M"+i2;//E10
+                            int ii = i2-1;
+                            String NHighScore = "M"+ii;//E9
+                            float NScore = PlayerPrefs.GetFloat(NHighScore);
+                            PlayerPrefs.SetFloat(OHighScore, NScore);
+                        }
+                        PlayerPrefs.SetFloat(ESS, (float)Math.Round((double)timeR,3));
+                        F=2;
+                    }
+                    if(i==10)F=2;
+                }
+            }
+            else if (activeScene == "Hard"){
+                int F=1;
+                int i = 0;
+                while(F==1){
+                    i++;
+                    String ESS = "H" + i;
+                    if(timeR > PlayerPrefs.GetFloat(ESS)){
+                        for(int i2 = 10; i2 > i; i2--){
+                            String OHighScore = "H"+i2;//E10
+                            int ii = i2-1;
+                            String NHighScore = "H"+ii;//E9
+                            float NScore = PlayerPrefs.GetFloat(NHighScore);
+                            PlayerPrefs.SetFloat(OHighScore, NScore);
+                        }
+                        PlayerPrefs.SetFloat(ESS, (float)Math.Round((double)timeR,3));
+                        F=2;
+                    }
+                    if(i==10)F=2;
+                }
+            }
             SceneManager.LoadScene("Victory");
         }    
         
