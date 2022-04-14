@@ -3,177 +3,93 @@
     "m_SelectedPackage": {
         "deviceId": "QV725ZV43A",
         "name": "com.DefaultCompany.Proto",
-        "processId": 20627,
+        "processId": 12645,
         "exited": false
     },
     "m_SelectedPriority": 0,
     "m_KnownPackagesForSerialization": [
         {
             "deviceId": "QV725ZV43A",
-            "name": "com.sonymobile.launcher",
-            "processId": 2774,
-            "exited": false
-        },
-        {
-            "deviceId": "QV725ZV43A",
-            "name": "com.DefaultCompany.Proto",
-            "processId": 13405,
-            "exited": true
-        },
-        {
-            "deviceId": "QV725ZV43A",
-            "name": "com.DefaultCompany.Proto",
-            "processId": 14084,
-            "exited": true
-        },
-        {
-            "deviceId": "QV725ZV43A",
-            "name": "com.DefaultCompany.Proto",
-            "processId": 14800,
-            "exited": true
-        },
-        {
-            "deviceId": "QV725ZV43A",
-            "name": "com.DefaultCompany.Proto",
-            "processId": 15370,
-            "exited": true
-        },
-        {
-            "deviceId": "QV725ZV43A",
-            "name": "com.DefaultCompany.Proto",
-            "processId": 16013,
-            "exited": true
-        },
-        {
-            "deviceId": "QV725ZV43A",
-            "name": "com.DefaultCompany.Proto",
-            "processId": 16824,
-            "exited": false
-        },
-        {
-            "deviceId": "QV725ZV43A",
-            "name": "com.DefaultCompany.Proto",
-            "processId": 17513,
-            "exited": false
-        },
-        {
-            "deviceId": "QV725ZV43A",
-            "name": "com.DefaultCompany.Proto",
-            "processId": 18031,
-            "exited": false
-        },
-        {
-            "deviceId": "QV725ZV43A",
-            "name": "com.DefaultCompany.Proto",
-            "processId": 18413,
-            "exited": false
-        },
-        {
-            "deviceId": "QV725ZV43A",
-            "name": "com.DefaultCompany.Proto",
-            "processId": 18902,
-            "exited": false
-        },
-        {
-            "deviceId": "QV725ZV43A",
-            "name": "com.DefaultCompany.Proto",
-            "processId": 19556,
-            "exited": false
-        },
-        {
-            "deviceId": "QV725ZV43A",
-            "name": "com.DefaultCompany.Proto",
-            "processId": 20039,
-            "exited": false
-        },
-        {
-            "deviceId": "QV725ZV43A",
-            "name": "com.DefaultCompany.Proto",
-            "processId": 20886,
-            "exited": false
-        },
-        {
-            "deviceId": "QV725ZV43A",
-            "name": "com.DefaultCompany.Proto",
-            "processId": 21222,
-            "exited": false
-        },
-        {
-            "deviceId": "QV725ZV43A",
-            "name": "com.DefaultCompany.Proto",
-            "processId": 22259,
-            "exited": false
-        },
-        {
-            "deviceId": "QV725ZV43A",
-            "name": "com.DefaultCompany.Proto",
-            "processId": 23362,
-            "exited": false
-        },
-        {
-            "deviceId": "QV725ZV43A",
-            "name": "com.DefaultCompany.Proto",
-            "processId": 4698,
-            "exited": false
-        },
-        {
-            "deviceId": "QV725ZV43A",
-            "name": "com.DefaultCompany.Proto",
-            "processId": 11685,
-            "exited": false
-        },
-        {
-            "deviceId": "QV725ZV43A",
-            "name": "com.DefaultCompany.Proto",
-            "processId": 11247,
-            "exited": false
-        },
-        {
-            "deviceId": "QV725ZV43A",
-            "name": "com.DefaultCompany.Proto",
-            "processId": 11942,
-            "exited": false
-        },
-        {
-            "deviceId": "QV725ZV43A",
-            "name": "com.DefaultCompany.Proto",
-            "processId": 15492,
-            "exited": false
-        },
-        {
-            "deviceId": "QV725ZV43A",
-            "name": "com.DefaultCompany.Proto",
-            "processId": 16642,
-            "exited": false
-        },
-        {
-            "deviceId": "QV725ZV43A",
-            "name": "com.DefaultCompany.Proto",
-            "processId": 17667,
-            "exited": false
-        },
-        {
-            "deviceId": "QV725ZV43A",
-            "name": "com.DefaultCompany.Proto",
-            "processId": 18251,
-            "exited": false
-        },
-        {
-            "deviceId": "QV725ZV43A",
             "name": "com.DefaultCompany.Proto",
             "processId": 19012,
-            "exited": false
+            "exited": true
         },
         {
             "deviceId": "QV725ZV43A",
             "name": "com.DefaultCompany.Proto",
             "processId": 19742,
-            "exited": false
+            "exited": true
         },
         {
             "deviceId": "QV725ZV43A",
             "name": "com.DefaultCompany.Proto",
             "processId": 20627,
+            "exited": true
+        },
+        {
+            "deviceId": "QV725ZV43A",
+            "name": "com.DefaultCompany.Proto",
+            "processId": 1650,
+            "exited": true
+        },
+        {
+            "deviceId": "QV725ZV43A",
+            "name": "com.android.settings",
+            "processId": 2757,
+            "exited": false
+        },
+        {
+            "deviceId": "QV725ZV43A",
+            "name": "com.sonymobile.launcher",
+            "processId": 5044,
+            "exited": false
+        },
+        {
+            "deviceId": "QV725ZV43A",
+            "name": "com.DefaultCompany.Proto",
+            "processId": 3872,
+            "exited": true
+        },
+        {
+            "deviceId": "QV725ZV43A",
+            "name": "com.DefaultCompany.Proto",
+            "processId": 4810,
+            "exited": false
+        },
+        {
+            "deviceId": "QV725ZV43A",
+            "name": "com.DefaultCompany.Proto",
+            "processId": 5770,
+            "exited": false
+        },
+        {
+            "deviceId": "QV725ZV43A",
+            "name": "com.DefaultCompany.Proto",
+            "processId": 6975,
+            "exited": false
+        },
+        {
+            "deviceId": "QV725ZV43A",
+            "name": "com.DefaultCompany.Proto",
+            "processId": 7966,
+            "exited": false
+        },
+        {
+            "deviceId": "QV725ZV43A",
+            "name": "com.DefaultCompany.Proto",
+            "processId": 8828,
+            "exited": false
+        },
+        {
+            "deviceId": "QV725ZV43A",
+            "name": "com.DefaultCompany.Proto",
+            "processId": 10057,
+            "exited": false
+        },
+        {
+            "deviceId": "QV725ZV43A",
+            "name": "com.DefaultCompany.Proto",
+            "processId": 12645,
             "exited": false
         },
         {

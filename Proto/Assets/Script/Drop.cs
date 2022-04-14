@@ -71,7 +71,7 @@ public class Drop : MonoBehaviour, IDropHandler
     private void SpawnPenalty(int rankPenalty) 
     {
         Vector3 penaltyPosition = new Vector3(transform.position.x, transform.position.y, transform.position.z);
-        penaltyPosition.x += 172;
+        penaltyPosition.x += 158;
         penaltyPosition.y += 36;
 
         Instantiate(prefabPenalty, penaltyPosition, transform.rotation);   
@@ -82,7 +82,6 @@ public class Drop : MonoBehaviour, IDropHandler
 
     void Update()
     {
-        Debug.Log("Check pyramid");
         if (foodsTargetPyramid.foodTargetPyramid != "" && boxPartOfPyramid != foodsTargetPyramid.foodTargetPyramid)
         {
             image.color = new Color(image.color.r, image.color.g, image.color.b, 0);

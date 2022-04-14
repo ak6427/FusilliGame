@@ -18,6 +18,7 @@ public class DragDrop : MonoBehaviour, IPointerDownHandler, IPointerUpHandler, I
     public Vector2 lastCoords;
     public GameObject button;
     private RectTransform buttonRectTransform;
+    private RectTransform canvasRectTransform;
 
     private void Awake()
     {
@@ -28,6 +29,7 @@ public class DragDrop : MonoBehaviour, IPointerDownHandler, IPointerUpHandler, I
         foodsTargetPyramid = foodsTargetPyramid.GetComponent<TargetPyramid>();
         button = GameObject.Find("Main Menu - button");
         buttonRectTransform = button.GetComponent<RectTransform>();
+        canvasRectTransform = canvas.GetComponent<RectTransform>();
     }
 
     public void OnBeginDrag(PointerEventData eventData) 
@@ -70,16 +72,13 @@ public class DragDrop : MonoBehaviour, IPointerDownHandler, IPointerUpHandler, I
 
         foodsTargetPyramid.resetAlpha = true;
 
-        float foodX = rectTransform.anchoredPosition.x - rectTransform.rect.xMax + Screen.width / 2;
-        float foodY = rectTransform.anchoredPosition.y - rectTransform.rect.yMax + Screen.height / 2;
-        if(foodX < buttonRectTransform.offsetMax.x && foodY < buttonRectTransform.offsetMax.y)
+        float foodX = rectTransform.anchoredPosition.x - rectTransform.rect.xMax + canvasRectTransform.rect.width / 2;
+        float foodY = rectTransform.anchoredPosition.y - rectTransform.rect.yMax + canvasRectTransform.rect.height / 2;
+        float buttonX = buttonRectTransform.rect.width;
+        float buttonY = buttonRectTransform.rect.height;
+        if(foodX < buttonX && foodY < buttonY)
         {
             rectTransform.anchoredPosition = lastCoords;
         }
-    }
-
-    void Update()
-    {
-        
     }
 }
