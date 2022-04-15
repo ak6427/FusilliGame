@@ -13,11 +13,11 @@ public class SceneSwitch : MonoBehaviour
        sceneSaver = FindObjectOfType<SceneSaver>();
     }
 
-    public void ScenePeli() {
-        SceneManager.LoadScene("Peli");
-    }
     public void SceneValikko() {
         SceneManager.LoadScene("Valikko");
+    }
+    public void ScenePeli() {
+        SceneManager.LoadScene("Peli");
     }
     public void SceneEasy() {
         sceneSaver.retry = "Easy";
@@ -31,13 +31,14 @@ public class SceneSwitch : MonoBehaviour
         sceneSaver.retry = "Hard";
         SceneManager.LoadScene("Hard");
     }
-    public void SceneExtreme() {
-        sceneSaver.retry = "Extreme";
-        SceneManager.LoadScene("Extreme");
-    }
     public void SceneScores() {
-        sceneSaver.retry = "Scores";
         SceneManager.LoadScene("Scores");
+    }
+    public void SceneInfo() {
+        SceneManager.LoadScene("Info");
+    }
+    public void SceneSettings() {
+        SceneManager.LoadScene("Settings");
     }
 
     public void SceneRetry()
@@ -53,15 +54,6 @@ public class SceneSwitch : MonoBehaviour
         case "Hard":
             SceneHard();
             break;
-        case "Extreme":
-            SceneExtreme();
-            break;
         }
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 }
