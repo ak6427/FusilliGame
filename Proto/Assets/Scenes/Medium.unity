@@ -834,10 +834,18 @@ PrefabInstance:
     - target: {fileID: 2192528540711708638, guid: 09bfe4d43d63feb4981723f638193c90, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 474290528}
+      objectReference: {fileID: 474290529}
     - target: {fileID: 2192528540711708638, guid: 09bfe4d43d63feb4981723f638193c90, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: SceneValikko
+      value: ConfirmOrSetTimer
+      objectReference: {fileID: 0}
+    - target: {fileID: 2192528540711708638, guid: 09bfe4d43d63feb4981723f638193c90, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: ToMenuConfirmation, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 2192528541276832433, guid: 09bfe4d43d63feb4981723f638193c90, type: 3}
+      propertyPath: m_Name
+      value: Main Menu - text
       objectReference: {fileID: 0}
     - target: {fileID: 2192528541276832435, guid: 09bfe4d43d63feb4981723f638193c90, type: 3}
       propertyPath: m_FontData.m_FontSize
@@ -1745,17 +1753,26 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2772041286710782912, guid: e92f6b46b55367e41b4e7334315c40de, type: 3}
   m_PrefabInstance: {fileID: 474290526}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &474290528 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 2772041286710782943, guid: e92f6b46b55367e41b4e7334315c40de, type: 3}
+--- !u!1 &474290528 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2772041286710782913, guid: e92f6b46b55367e41b4e7334315c40de, type: 3}
   m_PrefabInstance: {fileID: 474290526}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+--- !u!114 &474290529
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 474290528}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 02015d511f508bb488f214822b9b9f68, type: 3}
+  m_Script: {fileID: 11500000, guid: a1268d9a3cc837c4bbbfad830fbb2eaa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  childText: {fileID: 0}
+  sceneSwitch: {fileID: 0}
+  confirmTimer: 0
 --- !u!1001 &481772634
 PrefabInstance:
   m_ObjectHideFlags: 0
