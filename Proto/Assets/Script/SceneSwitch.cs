@@ -1,20 +1,39 @@
- using System.Collections;
- using System.Collections.Generic;
- using UnityEngine;
- using UnityEngine.SceneManagement;
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.SceneManagement;
+using UnityEngine.UI;
+using UnityEngine.EventSystems;
  
 public class SceneSwitch : MonoBehaviour
 {
-    private SceneSaver sceneSaver;
+    public SceneSaver sceneSaver;
+    public GameObject dB;
+    public GameObject saveSceneForRetry;
+    public string activeScene;
 
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
        sceneSaver = FindObjectOfType<SceneSaver>();
+       dB = GameObject.Find("DB");
+       saveSceneForRetry = GameObject.Find("SaveSceneForRetry");
     }
 
     public void SceneValikko() {
-        SceneManager.LoadScene("Valikko");
+        if (sceneSaver.resume == "")
+        {
+            Destroy(dB);
+            Destroy(saveSceneForRetry);
+            SceneManager.LoadScene("Valikko");
+        }
+        else 
+        {
+            SceneManager.UnloadSceneAsync(sceneSaver.resume);
+            sceneSaver.eventSystem.enabled = true;
+            sceneSaver.audioListener.enabled = true;
+            sceneSaver.resume = "";
+        }
     }
     public void ScenePeli() {
         SceneManager.LoadScene("Peli");
@@ -40,6 +59,18 @@ public class SceneSwitch : MonoBehaviour
     public void SceneSettings() {
         SceneManager.LoadScene("Settings");
     }
+    public void SceneInfoAsync() {
+        sceneSaver = FindObjectOfType<SceneSaver>();
+        sceneSaver.eventSystem.enabled = false;
+        sceneSaver.audioListener.enabled = false;
+        sceneSaver.resume = "Info";
+        SceneManager.LoadSceneAsync("Info", LoadSceneMode.Additive);
+    }
+    public void SceneSettingsAsync() {
+        sceneSaver = FindObjectOfType<SceneSaver>();
+        sceneSaver.resume = "Settings";
+        SceneManager.LoadSceneAsync("Settings", LoadSceneMode.Additive);
+    }
 
     public void SceneRetry()
     {
@@ -54,6 +85,16 @@ public class SceneSwitch : MonoBehaviour
         case "Hard":
             SceneHard();
             break;
+        }
+    }
+
+    public void Update()
+    {
+        activeScene = SceneManager.GetActiveScene().name;
+        if (activeScene == "Easy" || activeScene == "Medium" || activeScene == "Hard")
+        {
+            sceneSaver.eventSystem = GameObject.Find("EventSystem").GetComponent<EventSystem>();
+            sceneSaver.audioListener = GameObject.Find("Main Camera").GetComponent<AudioListener>();
         }
     }
 }

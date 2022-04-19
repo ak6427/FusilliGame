@@ -4002,7 +4002,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4168694512712950022, guid: b74752ea1c457644a959e8ae494cf87c, type: 3}
       propertyPath: m_VerticalAlignment
-      value: 512
+      value: 256
       objectReference: {fileID: 0}
     - target: {fileID: 4168694512712950022, guid: b74752ea1c457644a959e8ae494cf87c, type: 3}
       propertyPath: m_HorizontalAlignment
@@ -4078,7 +4078,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4168694512712950023, guid: b74752ea1c457644a959e8ae494cf87c, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -50
+      value: -25
       objectReference: {fileID: 0}
     - target: {fileID: 4168694512712950023, guid: b74752ea1c457644a959e8ae494cf87c, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -7225,6 +7225,14 @@ PrefabInstance:
     - target: {fileID: 2892988700758233253, guid: cdd94255284482e49a201f84011bb081, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3911544441866532723, guid: cdd94255284482e49a201f84011bb081, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 474290529}
+    - target: {fileID: 3911544441866532723, guid: cdd94255284482e49a201f84011bb081, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ConfirmOrSetTimer
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cdd94255284482e49a201f84011bb081, type: 3}
