@@ -16,8 +16,8 @@ public class DragDrop : MonoBehaviour, IPointerDownHandler, IPointerUpHandler, I
     private GameScore gameScore;
     public TargetPyramid foodsTargetPyramid;
     public Vector2 lastCoords;
-    public GameObject button;
-    private RectTransform buttonRectTransform;
+    public GameObject buttons;
+    private RectTransform buttonsRectTransform;
     private RectTransform canvasRectTransform;
 
     private void Awake()
@@ -27,8 +27,8 @@ public class DragDrop : MonoBehaviour, IPointerDownHandler, IPointerUpHandler, I
         gameScore=FindObjectOfType<GameScore>();
         foodsTargetPyramid = FindObjectOfType<TargetPyramid>();
         foodsTargetPyramid = foodsTargetPyramid.GetComponent<TargetPyramid>();
-        button = GameObject.Find("Main Menu - button");
-        buttonRectTransform = button.GetComponent<RectTransform>();
+        buttons = GameObject.Find("Buttons group");
+        buttonsRectTransform = buttons.GetComponent<RectTransform>();
         canvasRectTransform = canvas.GetComponent<RectTransform>();
     }
 
@@ -72,11 +72,11 @@ public class DragDrop : MonoBehaviour, IPointerDownHandler, IPointerUpHandler, I
 
         foodsTargetPyramid.resetAlpha = true;
 
-        float foodX = rectTransform.anchoredPosition.x - rectTransform.rect.xMax + canvasRectTransform.rect.width / 2;
-        float foodY = rectTransform.anchoredPosition.y - rectTransform.rect.yMax + canvasRectTransform.rect.height / 2;
-        float buttonX = buttonRectTransform.rect.width;
-        float buttonY = buttonRectTransform.rect.height;
-        if(foodX < buttonX && foodY < buttonY)
+        float foodX = rectTransform.anchoredPosition.x + rectTransform.rect.xMax + canvasRectTransform.rect.width / 2;
+        float foodY = rectTransform.anchoredPosition.y + rectTransform.rect.yMax + canvasRectTransform.rect.height / 2;
+        float buttonX = canvasRectTransform.rect.width - buttonsRectTransform.rect.width;
+        float buttonY = canvasRectTransform.rect.height - buttonsRectTransform.rect.height;
+        if(foodX > buttonX && foodY > buttonY)
         {
             rectTransform.anchoredPosition = lastCoords;
         }
