@@ -193,7 +193,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Play Again
+  m_Text: Pelaa uudelleen
 --- !u!222 &171279957
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -349,7 +349,7 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: dacaba55f9f14d74f89a1446821916d0, type: 3}
-    m_FontSize: 161
+    m_FontSize: 162
     m_FontStyle: 1
     m_BestFit: 0
     m_MinSize: 0
@@ -360,7 +360,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Victory!
+  m_Text: Voitto!
 --- !u!222 &796929852
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -572,7 +572,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Victory!
+  m_Text: Voitto!
 --- !u!222 &1060931989
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -982,6 +982,10 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: SceneValikko
       objectReference: {fileID: 0}
+    - target: {fileID: 2192528541276832435, guid: 09bfe4d43d63feb4981723f638193c90, type: 3}
+      propertyPath: m_Text
+      value: "P\xE4\xE4valikko"
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 09bfe4d43d63feb4981723f638193c90, type: 3}
 --- !u!1001 &8458792985080228215
@@ -991,6 +995,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1776327135}
     m_Modifications:
+    - target: {fileID: 8458792984575124598, guid: 53bb3dc074a4c6d429f37dec041181b5, type: 3}
+      propertyPath: m_Text
+      value: Vaikeusaste
+      objectReference: {fileID: 0}
     - target: {fileID: 8458792985731128828, guid: 53bb3dc074a4c6d429f37dec041181b5, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 

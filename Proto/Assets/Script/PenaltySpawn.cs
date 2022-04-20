@@ -11,7 +11,6 @@ public class PenaltySpawn : MonoBehaviour
     public TMP_Text timePenalty;
     public RectTransform rectTransform;
 
-    // Start is called before the first frame update
     void Awake()
     {
         rectTransform = GetComponent<RectTransform>();
