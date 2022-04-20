@@ -11,6 +11,8 @@ public class SceneSaver : MonoBehaviour
     public string resume = "";
     public EventSystem eventSystem;
     public AudioListener audioListener;
+    public bool mutedBGM = false;
+    public bool mutedSFX = false;
 
     // Start is called before the first frame update
     void Start()

@@ -8,28 +8,28 @@ using UnityEngine.EventSystems;
 public class SceneSwitch : MonoBehaviour
 {
     public SceneSaver sceneSaver;
-    public GameObject dB;
-    public GameObject saveSceneForRetry;
     public string activeScene;
+    public float oldTimeScale;
 
     // Start is called before the first frame update
     void Awake()
     {
        sceneSaver = FindObjectOfType<SceneSaver>();
-       dB = GameObject.Find("DB");
-       saveSceneForRetry = GameObject.Find("SaveSceneForRetry");
     }
 
     public void SceneValikko() {
         if (sceneSaver.resume == "")
         {
-            Destroy(dB);
-            Destroy(saveSceneForRetry);
             SceneManager.LoadScene("Valikko");
         }
         else 
         {
             SceneManager.UnloadSceneAsync(sceneSaver.resume);
+            if (Time.timeScale == 0)
+            {
+                Time.timeScale = oldTimeScale;
+                oldTimeScale = 0;
+            }
             sceneSaver.eventSystem.enabled = true;
             sceneSaver.audioListener.enabled = true;
             sceneSaver.resume = "";
@@ -67,7 +67,11 @@ public class SceneSwitch : MonoBehaviour
         SceneManager.LoadSceneAsync("Info", LoadSceneMode.Additive);
     }
     public void SceneSettingsAsync() {
+        oldTimeScale = Time.timeScale;
+        Time.timeScale = 0;
         sceneSaver = FindObjectOfType<SceneSaver>();
+        sceneSaver.eventSystem.enabled = false;
+        sceneSaver.audioListener.enabled = false;
         sceneSaver.resume = "Settings";
         SceneManager.LoadSceneAsync("Settings", LoadSceneMode.Additive);
     }

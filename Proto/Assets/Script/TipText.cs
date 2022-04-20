@@ -11,6 +11,8 @@ public class TipText : MonoBehaviour
     public static Action<string, Vector2> OnPointerDown;
     public static Action OnPointerDownLost;
     private float droid;
+
+    public RectTransform canvasRectTransform;
     
     private void OnEnable(){
         OnPointerDown += ShowTip;
@@ -21,6 +23,11 @@ public class TipText : MonoBehaviour
         OnPointerDown -= ShowTip;
         OnPointerDownLost -= HideTip;
 
+    }
+
+    void Awake()
+    {
+        canvasRectTransform = canvas.GetComponent<RectTransform>();
     }
     void Start()
     {
@@ -35,9 +42,17 @@ public class TipText : MonoBehaviour
 
         if (Application.platform == RuntimePlatform.Android)
         {
-            float ratioX = ((float) Screen.width / 1920);
-            float ratioY = ((float) tipWindow.lossyScale.y / 0.015625f);
+            float ratioX = ((float) tipWindow.lossyScale.x / 0.015625f);//Screen.width / 1920);
+            float ratioY = ((float) Screen.height / 1080);//tipWindow.lossyScale.y / 0.015625f);
+            /*float ratioX = ((float) canvasRectTransform.rect.width / 1920);
+            float ratioY = ((float) canvasRectTransform.rect.height / 1080);*/
             tipWindow.transform.position = new Vector3( MousePos.x / ratioX * tipWindow.lossyScale.x - 4.75f, MousePos.y / ratioY * tipWindow.lossyScale.y + (128 * tipWindow.lossyScale.y), canvas.planeDistance);
+            Debug.Log("ratiox " + ratioX);
+            Debug.Log("ratioy " + ratioY);
+            Debug.Log("mousex " + MousePos.x);
+            Debug.Log("mousey " + MousePos.y);
+            Debug.Log("lossyx " + tipWindow.lossyScale.x);
+            Debug.Log("lossyy " + tipWindow.lossyScale.y);
         }
         else 
         {

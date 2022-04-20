@@ -90,7 +90,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rankBox: 0
+  boxPartOfPyramid: 
   prefabPenalty: {fileID: 7731813831835887839, guid: b81112a2b229a6548b927afa6f7738a9, type: 3}
+  foodsTargetPyramid: {fileID: 0}
 --- !u!225 &4849721580422224391
 CanvasGroup:
   m_ObjectHideFlags: 0
