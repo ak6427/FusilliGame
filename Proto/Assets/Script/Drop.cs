@@ -71,8 +71,8 @@ public class Drop : MonoBehaviour, IDropHandler
     private void SpawnPenalty(int rankPenalty) 
     {
         Vector3 penaltyPosition = new Vector3(transform.position.x, transform.position.y, transform.position.z);
-        penaltyPosition.x += 158;
-        penaltyPosition.y += 36;
+        penaltyPosition.x += 128;
+        penaltyPosition.y += 64;
 
         Instantiate(prefabPenalty, penaltyPosition, transform.rotation);   
         penaltySpawn = FindObjectOfType<PenaltySpawn>();

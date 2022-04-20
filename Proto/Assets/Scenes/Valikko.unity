@@ -409,7 +409,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Play
+  m_Text: Pelaa
 --- !u!222 &689950657
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -488,7 +488,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Settings
+  m_Text: Asetukset
 --- !u!222 &769189044
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -704,7 +704,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Scores
+  m_Text: Pisteet
 --- !u!222 &1065988579
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -959,7 +959,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Info
+  m_Text: "Lis\xE4tietoa"
 --- !u!222 &1630694548
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1344,9 +1344,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Quit
-
-'
+  m_Text: Poistu
 --- !u!222 &1844092614
 CanvasRenderer:
   m_ObjectHideFlags: 0

@@ -2351,6 +2351,10 @@ PrefabInstance:
       propertyPath: m_Color.a
       value: 0.4117647
       objectReference: {fileID: 0}
+    - target: {fileID: 3911544442446369310, guid: cdd94255284482e49a201f84011bb081, type: 3}
+      propertyPath: m_Text
+      value: "P\xE4\xE4valikko"
+      objectReference: {fileID: 0}
     - target: {fileID: 4787455200003007188, guid: cdd94255284482e49a201f84011bb081, type: 3}
       propertyPath: m_Color.a
       value: 0.4117647
@@ -2701,7 +2705,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4168694512712950022, guid: b74752ea1c457644a959e8ae494cf87c, type: 3}
       propertyPath: m_fontColor.g
-      value: 0.60784316
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4168694512712950022, guid: b74752ea1c457644a959e8ae494cf87c, type: 3}
       propertyPath: m_fontColor.r
@@ -2749,7 +2753,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4168694512712950023, guid: b74752ea1c457644a959e8ae494cf87c, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 368.49
+      value: 500
       objectReference: {fileID: 0}
     - target: {fileID: 4168694512712950023, guid: b74752ea1c457644a959e8ae494cf87c, type: 3}
       propertyPath: m_SizeDelta.y
@@ -2785,11 +2789,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4168694512712950023, guid: b74752ea1c457644a959e8ae494cf87c, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 184.245
+      value: 250
       objectReference: {fileID: 0}
     - target: {fileID: 4168694512712950023, guid: b74752ea1c457644a959e8ae494cf87c, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -25
+      value: -20
       objectReference: {fileID: 0}
     - target: {fileID: 4168694512712950023, guid: b74752ea1c457644a959e8ae494cf87c, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x

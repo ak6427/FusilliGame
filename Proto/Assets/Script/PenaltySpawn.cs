@@ -20,8 +20,8 @@ public class PenaltySpawn : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        timePenalty.text = "-"+ retrievePenalty;
-        timePenalty.rectTransform.anchoredPosition3D = new Vector3(timePenalty.rectTransform.anchoredPosition.x, timePenalty.rectTransform.anchoredPosition.y + 0.1f, -5.0f);
+        timePenalty.text = "-"+ retrievePenalty +"s";
+        timePenalty.rectTransform.anchoredPosition3D = new Vector3(timePenalty.rectTransform.anchoredPosition.x, timePenalty.rectTransform.anchoredPosition.y + 1, -5.0f);
         timePenalty.alpha -= Time.deltaTime;
 
         Destroy(gameObject, 1);
