@@ -1,16 +1,19 @@
 ScriptsOnlyBuild:
   usedScripts:
     Assembly-CSharp.dll:
+    - AudioControl
     - Better.StreamingAssets.BSA
     - DragDrop
     - Drop
     - Exit
     - GameScore
     - GetScores
+    - Info
     - Instantiate
     - PenaltySpawn
     - SceneSaver
     - SceneSwitch
+    - SettingsControl
     - TargetPyramid
     - TipText
     - ToMenuConfirmation
@@ -36,6 +39,7 @@ ScriptsOnlyBuild:
     - UnityEditor.Tilemaps.TileDragAndDropManager
     - UnityEditor.Tilemaps.TilemapPrefabStageHelper
     Unity.Mobile.AndroidLogcat.Editor.dll:
+    - Unity.Android.Logcat.AndroidLogcatConsoleWindow
     - Unity.Android.Logcat.AndroidLogcatManager
     Unity.Rider.Editor.dll:
     - Packages.Rider.Editor.UnitTesting.CallbackData
@@ -56,6 +60,7 @@ ScriptsOnlyBuild:
     - UnityEngine.UI.CanvasScaler
     - UnityEngine.UI.GraphicRaycaster
     - UnityEngine.UI.Image
+    - UnityEngine.UI.Slider
     - UnityEngine.UI.Text
   sceneClasses:
     Assets/Scenes/Easy.unity:
@@ -266,7 +271,11 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 20
       Script: {instanceID: 0}
+    - Class: 21
+      Script: {instanceID: 0}
     - Class: 28
+      Script: {instanceID: 0}
+    - Class: 48
       Script: {instanceID: 0}
     - Class: 81
       Script: {instanceID: 0}
@@ -275,9 +284,15 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 1502}
     - Class: 114
+      Script: {instanceID: 1896}
+    - Class: 114
+      Script: {instanceID: 2322}
+    - Class: 114
       Script: {instanceID: 2774}
     - Class: 114
       Script: {instanceID: 2956}
+    - Class: 114
+      Script: {instanceID: 3008}
     - Class: 114
       Script: {instanceID: 3214}
     - Class: 114
@@ -286,7 +301,11 @@ ScriptsOnlyBuild:
       Script: {instanceID: 3598}
     - Class: 114
       Script: {instanceID: 4834}
+    - Class: 114
+      Script: {instanceID: 28044}
     - Class: 115
+      Script: {instanceID: 0}
+    - Class: 128
       Script: {instanceID: 0}
     - Class: 157
       Script: {instanceID: 0}
@@ -525,6 +544,67 @@ ScriptsOnlyBuild:
     - Class: 223
       Script: {instanceID: 0}
     - Class: 224
+      Script: {instanceID: 0}
+    Assets/Scenes/Settings.unity:
+    - Class: 1
+      Script: {instanceID: 0}
+    - Class: 4
+      Script: {instanceID: 0}
+    - Class: 20
+      Script: {instanceID: 0}
+    - Class: 21
+      Script: {instanceID: 0}
+    - Class: 28
+      Script: {instanceID: 0}
+    - Class: 48
+      Script: {instanceID: 0}
+    - Class: 81
+      Script: {instanceID: 0}
+    - Class: 104
+      Script: {instanceID: 0}
+    - Class: 114
+      Script: {instanceID: 1502}
+    - Class: 114
+      Script: {instanceID: 1772}
+    - Class: 114
+      Script: {instanceID: 2322}
+    - Class: 114
+      Script: {instanceID: 2574}
+    - Class: 114
+      Script: {instanceID: 2774}
+    - Class: 114
+      Script: {instanceID: 2956}
+    - Class: 114
+      Script: {instanceID: 3214}
+    - Class: 114
+      Script: {instanceID: 3472}
+    - Class: 114
+      Script: {instanceID: 3598}
+    - Class: 114
+      Script: {instanceID: 3736}
+    - Class: 114
+      Script: {instanceID: 4834}
+    - Class: 115
+      Script: {instanceID: 0}
+    - Class: 128
+      Script: {instanceID: 0}
+    - Class: 157
+      Script: {instanceID: 0}
+    - Class: 196
+      Script: {instanceID: 0}
+    - Class: 213
+      Script: {instanceID: 0}
+    - Class: 222
+      Script: {instanceID: 0}
+    - Class: 223
+      Script: {instanceID: 0}
+    - Class: 224
+      Script: {instanceID: 0}
+    - Class: 241
+      Script: {instanceID: 0}
+    - Class: 243
+      Script: {instanceID: 0}
+    - Class: 245
       Script: {instanceID: 0}
     Assets/Scenes/Valikko.unity:
     - Class: 1
@@ -851,7 +931,7 @@ ScriptsOnlyBuild:
     className: TextMeshProUGUI
   - hash:
       serializedVersion: 2
-      Hash: 3840b3e72dc2c856c7d91054853dcfc8
+      Hash: d25cdbadd0912eae4fcde3b05db3159f
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: SceneSaver
@@ -1281,6 +1361,12 @@ ScriptsOnlyBuild:
     assemblyName: Assembly-CSharp.dll
     namespaceName: db
     className: PathWrite
+  - hash:
+      serializedVersion: 2
+      Hash: e194af165dcbad45a463cc16375b4efc
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Info
   platform: 13
   scenePathNames:
   - Assets/Scenes/Instantiate.unity
@@ -1288,6 +1374,7 @@ ScriptsOnlyBuild:
   - Assets/Scenes/Peli.unity
   - Assets/Scenes/Info.unity
   - Assets/Scenes/Scores.unity
+  - Assets/Scenes/Settings.unity
   - Assets/Scenes/Easy.unity
   - Assets/Scenes/Medium.unity
   - Assets/Scenes/Hard.unity

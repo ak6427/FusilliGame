@@ -1,183 +1,183 @@
 INSERT INTO foods VALUES (
-    1, 'Avokado', 1, 1
+    1, 'Avokado', 'Avocado', 1, 1
 );
 
 INSERT INTO foods VALUES (
-    2, 'Parsakaali', 1, 1
+    2, 'Parsakaali', 'Broccoli', 1, 1
 );
 
 INSERT INTO foods VALUES (
-    3, 'Kiivi', 1, 1
+    3, 'Kiivi', 'Kiwi', 1, 1
 );
 
 INSERT INTO foods VALUES (
-    4, 'Porkkana', 1, 1
+    4, 'Porkkana', 'Carrot', 1, 1
 );
 
 INSERT INTO foods VALUES (
-    5, 'Maissi', 1, 1
+    5, 'Maissi', 'Corn', 1, 1
 );
 
 INSERT INTO foods VALUES (
-    6, 'Munakoiso', 1, 1
+    6, 'Munakoiso', 'Eggplant', 1, 1
 );
 
 INSERT INTO foods VALUES (
-    7, 'Omena', 1, 1
+    7, 'Omena', 'Apple', 1, 1
 );
 
 INSERT INTO foods VALUES (
-    8, 'Oliiviöljy', 2, 2
+    8, 'Oliiviöljy', 'Olive oil', 2, 2
 );
 
 INSERT INTO foods VALUES (
-    9, 'Kvinoa', 2, 2
+    9, 'Kvinoa', 'Quinoa', 2, 2
 );
 
 INSERT INTO foods VALUES (
-    10, 'Manteli', 2, 2
+    10, 'Manteli', 'Almond', 2, 2
 );
 
 INSERT INTO foods VALUES (
-    11, 'Hasselpähkinä', 2, 2
+    11, 'Hasselpähkinä', 'Hazelnut', 2, 2
 );
 
 INSERT INTO foods VALUES (
-    12, 'Cashewpähkinä', 2, 2
+    12, 'Cashewpähkinä', 'Cashew', 2, 2
 );
 
 INSERT INTO foods VALUES (
-    13, 'Piimä', 2, 3
+    13, 'Piimä', 'Sour milk', 2, 3
 );
 
 INSERT INTO foods VALUES (
-    14, 'Herne', 3, 1
+    14, 'Herne', 'Pea', 3, 1
 );
 
 INSERT INTO foods VALUES (
-    15, 'Soijapapu', 3, 1
+    15, 'Soijapapu', 'Soybean', 3, 1
 );
 
 INSERT INTO foods VALUES (
-    16, 'Ahven', 3, 4
+    16, 'Ahven', 'Bass', 3, 4
 );
 
 INSERT INTO foods VALUES (
-    17, 'Tonnikala', 3, 4
+    17, 'Tonnikala', 'Tuna', 3, 4
 );
 
 INSERT INTO foods VALUES (
-    18, 'Hummeri', 3, 4
+    18, 'Hummeri', 'Lobster', 3, 4
 );
 
 INSERT INTO foods VALUES (
-    19, 'Katkarapu', 3, 4
+    19, 'Katkarapu', 'Shrimp', 3, 4
 );
 
 INSERT INTO foods VALUES (
-    20, 'Kanankoipi', 4, 3
+    20, 'Kanankoipi', 'Chicken leg', 4, 3
 );
 
 INSERT INTO foods VALUES (
-    21, 'Kananmuna', 4, 3
+    21, 'Kananmuna', 'Egg', 4, 3
 );
 
 INSERT INTO foods VALUES (
-    22, 'Ankka', 4, 3
+    22, 'Ankka', 'Duck', 4, 3
 );
 
 INSERT INTO foods VALUES (
-    23, 'Kalkkuna', 4, 3
+    23, 'Kalkkuna', 'Turkey', 4, 3
 );
 
 INSERT INTO foods VALUES (
-    24, 'Juusto', 4, 6
+    24, 'Juusto', 'Cheese', 4, 6
 );
 
 INSERT INTO foods VALUES (
-    25, 'Feta', 4, 6
+    25, 'Feta', 'Feta', 4, 6
 );
 
 INSERT INTO foods VALUES (
-    26, 'Leipäjuusto', 4, 6
+    26, 'Leipäjuusto', 'Squeaky cheese', 4, 6
 );
 
 INSERT INTO foods VALUES (
-    27, 'Aurajuusto', 4, 6
+    27, 'Aurajuusto', 'Blue cheese', 4, 6
 );
 
 INSERT INTO foods VALUES (
-    28, 'Mozzarella', 4, 6
+    28, 'Mozzarella', 'Mozzarella', 4, 6
 );
 
 INSERT INTO foods VALUES (
-    29, 'Cheddar', 4, 6
+    29, 'Cheddar', 'Cheddar', 4, 6
 );
 
 INSERT INTO foods VALUES (
-    30, 'Emmental', 4, 6
+    30, 'Emmental', 'Emmentaler', 4, 6
 );
 
 INSERT INTO foods VALUES (
-    31, 'Peruna', 5, 1
+    31, 'Peruna', 'Potato', 5, 1
 );
 
 INSERT INTO foods VALUES (
-    32, 'Riisi', 5, 1
+    32, 'Riisi', 'Rice', 5, 1
 );
 
 INSERT INTO foods VALUES (
-    33, 'Bataatti', 5, 1
+    33, 'Bataatti', 'Sweet potato', 5, 1
 );
 
 INSERT INTO foods VALUES (
-    34, 'Kakku', 6, 2
+    34, 'Kakku', 'Cake', 6, 2
 );
 
 INSERT INTO foods VALUES (
-    35, 'Naudanlihapihvi', 6, 7
+    35, 'Naudanlihapihvi', 'Beef', 6, 7
 );
 
 INSERT INTO foods VALUES (
-    36, 'Sianliha', 6, 7
+    36, 'Sianliha', 'Pork', 6, 7
 );
 
 INSERT INTO foods VALUES (
-    37, 'Lampaanliha', 6, 7
+    37, 'Lampaanliha', 'Mutton', 6, 7
 );
 
 INSERT INTO foods VALUES (
-    38, 'Hevosenliha', 6, 7
+    38, 'Hevosenliha', 'Horsemeat', 6, 7
 );
 
 INSERT INTO foods VALUES (
-    39, 'Hirvenliha', 6, 7
+    39, 'Hirvenliha', 'Venison', 6, 7
 );
 
 INSERT INTO foods VALUES (
-    40, 'Jauheliha', 6, 7
+    40, 'Jauheliha', 'Mince', 6, 7
 );
 
 INSERT INTO foods VALUES (
-    41, 'Jäniksenliha', 6, 7
+    41, 'Jäniksenliha', 'Hare meat', 6, 7
 );
 
 INSERT INTO foods VALUES (
-    42, 'Meetvursti', 7, 5
+    42, 'Meetvursti', 'Mettwurst', 7, 5
 );
 
 INSERT INTO foods VALUES (
-    43, 'Maksamakkara', 7, 5
+    43, 'Maksamakkara', 'Liverwurst', 7, 5
 );
 
 INSERT INTO foods VALUES (
-    44, 'Grillimakkara', 7, 5
+    44, 'Grillimakkara', 'Grilled sausage', 7, 5
 );
 
 INSERT INTO foods VALUES (
-    45, 'Pekoni', 7, 5
+    45, 'Pekoni', 'Bacon', 7, 5
 );
 
 INSERT INTO foods VALUES (
-    46, 'Kinkku', 7, 5
+    46, 'Kinkku', 'Ham', 7, 5
 );

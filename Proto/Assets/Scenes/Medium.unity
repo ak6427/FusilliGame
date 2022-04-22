@@ -1667,6 +1667,17 @@ MonoBehaviour:
   childText: {fileID: 0}
   sceneSwitch: {fileID: 0}
   confirmTimer: 0
+--- !u!114 &474290530 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2772041286710782943, guid: e92f6b46b55367e41b4e7334315c40de, type: 3}
+  m_PrefabInstance: {fileID: 474290526}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 474290528}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02015d511f508bb488f214822b9b9f68, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &481772634
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7349,11 +7360,35 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3911544442113981022, guid: cdd94255284482e49a201f84011bb081, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
-      value: 0
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3911544442113981022, guid: cdd94255284482e49a201f84011bb081, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3911544442113981022, guid: cdd94255284482e49a201f84011bb081, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 474290530}
+    - target: {fileID: 3911544442113981022, guid: cdd94255284482e49a201f84011bb081, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3911544442113981022, guid: cdd94255284482e49a201f84011bb081, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SceneSettingsAsync
+      objectReference: {fileID: 0}
+    - target: {fileID: 3911544442113981022, guid: cdd94255284482e49a201f84011bb081, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: SceneSwitch, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 3911544442113981022, guid: cdd94255284482e49a201f84011bb081, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 3911544442113981023, guid: cdd94255284482e49a201f84011bb081, type: 3}
       propertyPath: m_Color.a
-      value: 0.4117647
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3911544442446369310, guid: cdd94255284482e49a201f84011bb081, type: 3}
       propertyPath: m_Text
@@ -7361,7 +7396,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4787455200003007188, guid: cdd94255284482e49a201f84011bb081, type: 3}
       propertyPath: m_Color.a
-      value: 0.4117647
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cdd94255284482e49a201f84011bb081, type: 3}

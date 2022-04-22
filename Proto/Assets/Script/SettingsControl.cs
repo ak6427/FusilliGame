@@ -58,7 +58,6 @@ public class SettingsControl : MonoBehaviour
 
     private void Awake()
     {
-        
         sceneSaver = FindObjectOfType<SceneSaver>();
         BGMControlAC = BGMControlGO.GetComponent<AudioControl>();
         SFXControlAC = SFXControlGO.GetComponent<AudioControl>();
@@ -66,13 +65,24 @@ public class SettingsControl : MonoBehaviour
 
     private void Start()
     {
-        if (sceneSaver.mutedBGM == false)
+        BGMControlAC.Setup(mixer, BGMVolumeName, sceneSaver.mutedBGM, sceneSaver.storedSliderBGM);
+        SFXControlAC.Setup(mixer, SFXVolumeName, sceneSaver.mutedSFX, sceneSaver.storedSliderSFX);
+
+        if (sceneSaver.mutedBGM == true)
         {
-            BGMControlAC.Setup(mixer, BGMVolumeName);
+            BGMMuteButton.SetActive(false);
+            BGMUnmuteButton.SetActive(true);
+            BGMControlSlider.color = new Color32(255, 255, 0, 105);
+            BGMControlBackground.color = new Color32(255, 0, 0, 105);
+            BGMControlFill.color = new Color32(0, 255, 0, 105);
         }
-        if (sceneSaver.mutedSFX == false)
+        if (sceneSaver.mutedSFX == true)
         {
-            SFXControlAC.Setup(mixer, SFXVolumeName);
+            SFXMuteButton.SetActive(false);
+            SFXUnmuteButton.SetActive(true);
+            SFXControlSlider.color = new Color32(255, 255, 0, 105);
+            SFXControlBackground.color = new Color32(255, 0, 0, 105);
+            SFXControlFill.color = new Color32(0, 255, 0, 105);
         }
     }
 
@@ -120,15 +130,9 @@ public class SettingsControl : MonoBehaviour
         SFXControlFill.color = new Color32(0, 255, 0, 255);
     }
 
-    public void Close()
+    public void Update()
     {
-        if (sceneSaver.mutedSFX == false)
-        {
-            BGMControlAC.Save();
-        }
-        if (sceneSaver.mutedSFX == false)
-        {
-            SFXControlAC.Save();
-        }
+        sceneSaver.storedSliderBGM = BGMControlAC.Save(sceneSaver.mutedBGM, sceneSaver.storedSliderBGM);
+        sceneSaver.storedSliderSFX = SFXControlAC.Save(sceneSaver.mutedSFX, sceneSaver.storedSliderSFX);
     }
 }

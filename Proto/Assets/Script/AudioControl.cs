@@ -14,19 +14,31 @@ public class AudioControl : MonoBehaviour
         slider = GetComponentInChildren<Slider>();
     }
 
-    public void Setup(AudioMixer mixer, string volumeName)
+    public void Setup(AudioMixer mixer, string volumeName, bool muted, float storedSlider)
     {
         this.mixer = mixer;
         this.volumeName = volumeName;
 
-        if (mixer.GetFloat(volumeName, out float volume))
+        if (mixer.GetFloat(volumeName, out float volume) && muted == false)
         {
             slider.value = volume;
         }
+        else if (muted == true)
+        {
+            slider.value = storedSlider;
+        }
     }
 
-    public void Save()
+    public float Save(bool muted, float storedSlider)
     {
-        mixer.SetFloat(volumeName, slider.value);
+        if (muted == false)
+        {
+            mixer.SetFloat(volumeName, slider.value);
+            return 0;
+        }
+        else 
+        {
+            return storedSlider = slider.value;
+        }
     }
 }

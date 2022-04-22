@@ -20,6 +20,7 @@ public class Drop : MonoBehaviour, IDropHandler
 
     private int rankPenalty = 0;
     public TargetPyramid foodsTargetPyramid;
+    private bool penalty;
 
     private void Awake() 
     {
@@ -48,6 +49,14 @@ public class Drop : MonoBehaviour, IDropHandler
                     image.color = Color.green;
                     canvasGroup.blocksRaycasts = false;
                     eventData.pointerDrag.GetComponent<DragDrop>().correct = 1;
+
+                    rankPenalty = 1;
+
+                    gameScore.timeR += rankPenalty;
+
+                    penalty = false;
+
+                    SpawnPenalty(rankPenalty, penalty);
                 }
                 else 
                 {
@@ -58,7 +67,9 @@ public class Drop : MonoBehaviour, IDropHandler
 
                     gameScore.timeR -= rankPenalty;
 
-                    SpawnPenalty(rankPenalty);
+                    penalty = true;
+
+                    SpawnPenalty(rankPenalty, penalty);
                 }
             }
             else
@@ -68,7 +79,7 @@ public class Drop : MonoBehaviour, IDropHandler
         }
     }
 
-    private void SpawnPenalty(int rankPenalty) 
+    private void SpawnPenalty(int rankPenalty, bool penalty) 
     {
         Vector3 penaltyPosition = new Vector3(transform.position.x, transform.position.y, transform.position.z);
         penaltyPosition.x += 128;
@@ -78,6 +89,15 @@ public class Drop : MonoBehaviour, IDropHandler
         penaltySpawn = FindObjectOfType<PenaltySpawn>();
         penaltySpawn.retrievePenalty = rankPenalty;
         penaltySpawn.transform.SetParent(gameObject.transform, false);
+        if (penalty == true)
+        {
+            penaltySpawn.timePenalty.text = "-";
+        }
+        else 
+        {
+            penaltySpawn.timePenalty.color = new Color32(0, 255, 0, 255);
+            penaltySpawn.timePenalty.text = "+";
+        }
     }
 
     void Update()

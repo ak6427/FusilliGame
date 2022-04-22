@@ -27,8 +27,8 @@ public class SceneSwitch : MonoBehaviour
             SceneManager.UnloadSceneAsync(sceneSaver.resume);
             if (Time.timeScale == 0)
             {
-                Time.timeScale = oldTimeScale;
-                oldTimeScale = 0;
+                Time.timeScale = sceneSaver.oldTimeScale;
+                sceneSaver.oldTimeScale = 0;
             }
             sceneSaver.eventSystem.enabled = true;
             sceneSaver.audioListener.enabled = true;
@@ -64,10 +64,24 @@ public class SceneSwitch : MonoBehaviour
         sceneSaver.eventSystem.enabled = false;
         sceneSaver.audioListener.enabled = false;
         sceneSaver.resume = "Info";
+
+        if (sceneSaver.retry == "Easy")
+        {
+            sceneSaver.levelPage = 2;
+        }
+        else if (sceneSaver.retry == "Medium")
+        {
+            sceneSaver.levelPage = 3;
+        }
+        else if (sceneSaver.retry == "Hard")
+        {
+            sceneSaver.levelPage = 4;
+        }
+
         SceneManager.LoadSceneAsync("Info", LoadSceneMode.Additive);
     }
     public void SceneSettingsAsync() {
-        oldTimeScale = Time.timeScale;
+        sceneSaver.oldTimeScale = Time.timeScale;
         Time.timeScale = 0;
         sceneSaver = FindObjectOfType<SceneSaver>();
         sceneSaver.eventSystem.enabled = false;

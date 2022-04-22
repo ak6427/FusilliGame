@@ -3,7 +3,7 @@
     "m_SelectedPackage": {
         "deviceId": "QV725ZV43A",
         "name": "com.DefaultCompany.Proto",
-        "processId": 28682,
+        "processId": 22822,
         "exited": false
     },
     "m_SelectedPriority": 0,
@@ -60,6 +60,24 @@
             "deviceId": "QV725ZV43A",
             "name": "com.DefaultCompany.Proto",
             "processId": 28682,
+            "exited": false
+        },
+        {
+            "deviceId": "QV725ZV43A",
+            "name": "com.DefaultCompany.Proto",
+            "processId": 19420,
+            "exited": false
+        },
+        {
+            "deviceId": "QV725ZV43A",
+            "name": "com.DefaultCompany.Proto",
+            "processId": 21683,
+            "exited": false
+        },
+        {
+            "deviceId": "QV725ZV43A",
+            "name": "com.DefaultCompany.Proto",
+            "processId": 22822,
             "exited": false
         },
         {

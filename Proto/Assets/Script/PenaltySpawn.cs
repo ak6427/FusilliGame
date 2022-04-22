@@ -16,10 +16,14 @@ public class PenaltySpawn : MonoBehaviour
         rectTransform = GetComponent<RectTransform>();
     }
 
+    void Start()
+    {
+        timePenalty.text += retrievePenalty +"s";
+    }
+
     // Update is called once per frame
     void Update()
     {
-        timePenalty.text = "-"+ retrievePenalty +"s";
         timePenalty.rectTransform.anchoredPosition3D = new Vector3(timePenalty.rectTransform.anchoredPosition.x, timePenalty.rectTransform.anchoredPosition.y + 1, -5.0f);
         timePenalty.alpha -= Time.deltaTime;
 
