@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using TMPro;
 
 public class Info : MonoBehaviour
@@ -17,7 +18,38 @@ public class Info : MonoBehaviour
     private SceneSaver sceneSaver;
 
     public int allPages = 4;
+
     public int currentPage;
+
+    [SerializeField]
+    public GameObject pageOne;
+
+    [SerializeField]
+    public GameObject pageTwo;
+
+    [SerializeField]
+    public Sprite pageTwoImageFI;
+
+    [SerializeField]
+    public Sprite pageTwoImageEN;
+
+    [SerializeField]
+    public GameObject pageThree;
+
+    [SerializeField]
+    public Sprite pageThreeImageFI;
+
+    [SerializeField]
+    public Sprite pageThreeImageEN;
+
+    [SerializeField]
+    public GameObject pageFour;
+
+    [SerializeField]
+    public Sprite pageFourImageFI;
+
+    [SerializeField]
+    public Sprite pageFourImageEN;
 
     void Awake()
     {
@@ -44,22 +76,42 @@ public class Info : MonoBehaviour
         // page numbers
         pageNumber.text = currentPage + "/" + allPages;
 
-        // Arrow visibility
+        // Page De/Activate and arrow visibility
         if (currentPage == 1)
         {
+            pageOne.SetActive(true);
+            pageTwo.SetActive(false);
+            pageThree.SetActive(false);
+            pageFour.SetActive(false);
             leftArrow.SetActive(false);
-        }
-        else 
-        {
-            leftArrow.SetActive(true);
-        }
-        if (currentPage == 4)
-        {
-            rightArrow.SetActive(false);
-        }
-        else 
-        {
             rightArrow.SetActive(true);
+        }
+        else if (currentPage == 2)
+        {
+            pageOne.SetActive(false);
+            pageTwo.SetActive(true);
+            pageThree.SetActive(false);
+            pageFour.SetActive(false);
+            leftArrow.SetActive(true);
+            rightArrow.SetActive(true);
+        }
+        else if (currentPage == 3)
+        {
+            pageOne.SetActive(false);
+            pageTwo.SetActive(false);
+            pageThree.SetActive(true);
+            pageFour.SetActive(false);
+            leftArrow.SetActive(true);
+            rightArrow.SetActive(true);
+        }
+        else if (currentPage == 4)
+        {
+            pageOne.SetActive(false);
+            pageTwo.SetActive(false);
+            pageThree.SetActive(false);
+            pageFour.SetActive(true);
+            leftArrow.SetActive(true);
+            rightArrow.SetActive(false);
         }
     }
 }
