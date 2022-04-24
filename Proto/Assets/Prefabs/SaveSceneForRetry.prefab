@@ -44,8 +44,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   retry: 
+  levelPage: 1
   resume: 
   eventSystem: {fileID: 0}
   audioListener: {fileID: 0}
   mutedBGM: 0
   mutedSFX: 0
+  storedSliderBGM: 0
+  storedSliderSFX: 0
+  oldTimeScale: 0
+  pageOneScale: 1

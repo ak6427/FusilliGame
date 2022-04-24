@@ -38,14 +38,10 @@ public class TipText : MonoBehaviour
         tipWindow.sizeDelta = new Vector2(tipText.preferredWidth > 10000 ? 10000 : tipText.preferredWidth, tipText.preferredHeight);
         tipWindow.gameObject.SetActive(true);
 
-        //tipWindow.transform.position = new Vector3(MousePos.x * 0.015625f, MousePos.y * 0.015625f + (64 * 0.015625f), 100);
-
         if (Application.platform == RuntimePlatform.Android)
         {
-            float ratioX = ((float) tipWindow.lossyScale.x / 0.015625f);//Screen.width / 1920);
-            float ratioY = ((float) Screen.height / 1080);//tipWindow.lossyScale.y / 0.015625f);
-            /*float ratioX = ((float) canvasRectTransform.rect.width / 1920);
-            float ratioY = ((float) canvasRectTransform.rect.height / 1080);*/
+            float ratioX = ((float) tipWindow.lossyScale.x / 0.015625f);
+            float ratioY = ((float) Screen.height / 1080);
             tipWindow.transform.position = new Vector3( MousePos.x / ratioX * tipWindow.lossyScale.x - 4.75f, MousePos.y / ratioY * tipWindow.lossyScale.y + (128 * tipWindow.lossyScale.y), canvas.planeDistance);
             Debug.Log("ratiox " + ratioX);
             Debug.Log("ratioy " + ratioY);

@@ -9,6 +9,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Instantiate.unity
     guid: 4de88c54ca4dbd54ba4323fe29a39d4d
   - enabled: 1
+    path: Assets/Scenes/Settings.unity
+    guid: 4014180186f5e59428b05dee2315f9a8
+  - enabled: 1
     path: Assets/Scenes/Valikko.unity
     guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 1
@@ -20,9 +23,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Scores.unity
     guid: f6a73ec8bde591148b5edbe50d159e17
-  - enabled: 1
-    path: Assets/Scenes/Settings.unity
-    guid: 4014180186f5e59428b05dee2315f9a8
   - enabled: 1
     path: Assets/Scenes/Easy.unity
     guid: 85796c9f9565f064fa27f1d8c5ba5251

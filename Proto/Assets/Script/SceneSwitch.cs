@@ -20,6 +20,7 @@ public class SceneSwitch : MonoBehaviour
     public void SceneValikko() {
         if (sceneSaver.resume == "")
         {
+            sceneSaver.levelPage = 1;
             SceneManager.LoadScene("Valikko");
         }
         else 
@@ -40,20 +41,24 @@ public class SceneSwitch : MonoBehaviour
     }
     public void SceneEasy() {
         sceneSaver.retry = "Easy";
+        sceneSaver.levelPage = 2;
         SceneManager.LoadScene("Easy");
     }
     public void SceneMedium() {
         sceneSaver.retry = "Medium";
+        sceneSaver.levelPage = 3;
         SceneManager.LoadScene("Medium");
     }
     public void SceneHard() {
         sceneSaver.retry = "Hard";
+        sceneSaver.levelPage = 4;
         SceneManager.LoadScene("Hard");
     }
     public void SceneScores() {
         SceneManager.LoadScene("Scores");
     }
     public void SceneInfo() {
+        sceneSaver.pageOneScale = 1;
         SceneManager.LoadScene("Info");
     }
     public void SceneSettings() {
@@ -64,19 +69,7 @@ public class SceneSwitch : MonoBehaviour
         sceneSaver.eventSystem.enabled = false;
         sceneSaver.audioListener.enabled = false;
         sceneSaver.resume = "Info";
-
-        if (sceneSaver.retry == "Easy")
-        {
-            sceneSaver.levelPage = 2;
-        }
-        else if (sceneSaver.retry == "Medium")
-        {
-            sceneSaver.levelPage = 3;
-        }
-        else if (sceneSaver.retry == "Hard")
-        {
-            sceneSaver.levelPage = 4;
-        }
+        sceneSaver.pageOneScale = 1.17f;
 
         SceneManager.LoadSceneAsync("Info", LoadSceneMode.Additive);
     }

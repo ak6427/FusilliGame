@@ -6,6 +6,8 @@ using TMPro;
 
 public class Info : MonoBehaviour
 {
+    public RectTransform myRect;
+
     [SerializeField]
     public GameObject rightArrow;
 
@@ -22,10 +24,21 @@ public class Info : MonoBehaviour
     public int currentPage;
 
     [SerializeField]
+    public RectTransform background;
+
+    [SerializeField]
     public GameObject pageOne;
+
+    public RectTransform pageOneAnchor;
+
+    [SerializeField]
+    public RectTransform pageOneAnimation;
 
     [SerializeField]
     public GameObject pageTwo;
+
+    [SerializeField]
+    public RectTransform pageTwoImage;
 
     [SerializeField]
     public Sprite pageTwoImageFI;
@@ -37,6 +50,9 @@ public class Info : MonoBehaviour
     public GameObject pageThree;
 
     [SerializeField]
+    public RectTransform pageThreeImage;
+
+    [SerializeField]
     public Sprite pageThreeImageFI;
 
     [SerializeField]
@@ -44,6 +60,9 @@ public class Info : MonoBehaviour
 
     [SerializeField]
     public GameObject pageFour;
+
+    [SerializeField]
+    public RectTransform pageFourImage;
 
     [SerializeField]
     public Sprite pageFourImageFI;
@@ -54,11 +73,44 @@ public class Info : MonoBehaviour
     void Awake()
     {
         sceneSaver = FindObjectOfType<SceneSaver>();
+        pageOneAnchor = pageOne.GetComponent<RectTransform>();
+        myRect = GetComponent<RectTransform>();
     }
 
     void Start()
     {
         currentPage = sceneSaver.levelPage;
+
+        float ratioX = ((float) Screen.width / 1920);
+        float ratioY = ((float) Screen.height / 1080);
+        /*float ratioX = ((float) myRect.rect.width / 1920);
+        float ratioY = ((float) myRect.rect.height / 1080);
+        Debug.Log("canvasWidth: " + myRect.rect.width);
+        Debug.Log("canvasHeight: " + myRect.rect.height);*/
+        Debug.Log("screenWidth: " + Screen.width);
+        Debug.Log("screenHeight: " + Screen.height);
+        Debug.Log("ratioX: " + ratioX);
+        Debug.Log("ratioY: " + ratioY);
+
+        // Anchor
+        pageOneAnchor.anchoredPosition = new Vector3(pageOneAnchor.anchoredPosition.x / pageOneAnchor.lossyScale.x, pageOneAnchor.anchoredPosition.y / pageOneAnchor.lossyScale.y, 0); 
+        Debug.Log("anchorX: " + pageOneAnchor.anchoredPosition.x);
+        Debug.Log("anchorY: " + pageOneAnchor.anchoredPosition.y);
+        Debug.Log("lossyX: " + pageOneAnchor.lossyScale.x);
+        Debug.Log("lossyY: " + pageOneAnchor.lossyScale.y);
+
+        // Scale
+        pageOneAnimation.localScale = new Vector3(sceneSaver.pageOneScale * ratioX / pageOneAnchor.lossyScale.x, sceneSaver.pageOneScale * ratioY / pageOneAnchor.lossyScale.y, 0);
+        Debug.Log("pageonscale: " + sceneSaver.pageOneScale);
+        Debug.Log("AniWidth: " + pageOneAnimation.rect.width);
+        Debug.Log("AniHeight: " + pageOneAnimation.rect.height);
+        Debug.Log("AniScale: " + pageOneAnimation.localScale);
+
+        pageTwoImage.localScale = new Vector3(/*sceneSaver.pageOneScale **/ ratioX / pageOneAnchor.lossyScale.x, /*sceneSaver.pageOneScale **/ ratioY / pageOneAnchor.lossyScale.y, 0);
+        pageThreeImage.localScale = new Vector3(/*sceneSaver.pageOneScale **/ ratioX / pageOneAnchor.lossyScale.x, /*sceneSaver.pageOneScale **/ ratioY / pageOneAnchor.lossyScale.y, 0);
+        pageFourImage.localScale = new Vector3(/*sceneSaver.pageOneScale **/ ratioX / pageOneAnchor.lossyScale.x, /*sceneSaver.pageOneScale **/ ratioY / pageOneAnchor.lossyScale.y, 0);
+
+
     }
 
     public void TurnLeft()

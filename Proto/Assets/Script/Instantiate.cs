@@ -14,7 +14,6 @@ public class Instantiate : MonoBehaviour
     }
     void Start()
     {
-        
-        SceneManager.LoadScene("Valikko");
+        SceneManager.LoadScene("Info");
     }
 }

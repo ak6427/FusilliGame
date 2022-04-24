@@ -17,6 +17,7 @@ public class SceneSaver : MonoBehaviour
     public float storedSliderBGM;
     public float storedSliderSFX;
     public float oldTimeScale;
+    public float pageOneScale;
 
     // Start is called before the first frame update
     void Start()
