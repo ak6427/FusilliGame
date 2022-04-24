@@ -990,7 +990,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2192528541276832435, guid: 09bfe4d43d63feb4981723f638193c90, type: 3}
       propertyPath: m_Text
-      value: Close
+      value: Sulje
       objectReference: {fileID: 0}
     - target: {fileID: 2192528541276832435, guid: 09bfe4d43d63feb4981723f638193c90, type: 3}
       propertyPath: m_FontData.m_FontSize
@@ -1509,7 +1509,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Mute background music
+  m_Text: "Mykist\xE4 taustamusiikki"
 --- !u!222 &1172838579
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1975,7 +1975,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Mute sound effects
+  m_Text: "Mykist\xE4 \xE4\xE4niefektit"
 --- !u!222 &1673955031
 CanvasRenderer:
   m_ObjectHideFlags: 0

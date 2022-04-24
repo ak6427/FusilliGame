@@ -13,6 +13,7 @@ public class GameScore : MonoBehaviour
     private string activeScene;
     public int Score;
     private int maxScore;
+    public string timeRemainingText = "Aikaa jäljellä: ";
     
     void Awake()
     {
@@ -37,7 +38,7 @@ public class GameScore : MonoBehaviour
     void Update()
     {
         //PlayerPrefs.DeleteAll();
-        R.text = "Aikaa jäljellä: "+ Math.Floor(timeR) + "s"; 
+        R.text = timeRemainingText + Math.Floor(timeR) + "s"; 
         if(Score == maxScore) 
         {
             if (activeScene == "Easy"){

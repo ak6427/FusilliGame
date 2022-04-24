@@ -252,12 +252,19 @@ namespace db
             compareString = foodID.ToString();
 
             // STRING QUERY
-            foodsArrayList = db.SingleSelectWhereString(foodTable, "nimi", "id", "=", compareString);
+            foodsArrayList = db.SingleSelectWhereString(foodTable, "nimi, name", "id", "=", compareString);
 
             // Set food name and image
-            foodName = (string)foodsArrayList[0].ToString();
+            // if (suomi)
+            // {
+                foodName = (string)foodsArrayList[0].ToString();
+            // }
+            // else
+            // {
+            //  foodName = (string)foodsArrayList[1].ToString();
+            // }
 
-            Sprite sp = Resources.Load<Sprite>(foodName) as Sprite;
+            Sprite sp = Resources.Load<Sprite>((string)foodsArrayList[0].ToString()) as Sprite;
             image.sprite = sp;
         }
     }

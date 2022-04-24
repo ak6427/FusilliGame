@@ -157,6 +157,7 @@ namespace db
             while(reader.Read())
             {
                 readArray.Add(reader.GetString(0)); // Fill array with all matches
+                readArray.Add(reader.GetString(1));
             }
             return readArray; // return matches
         }
