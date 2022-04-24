@@ -3,7 +3,7 @@
     "m_SelectedPackage": {
         "deviceId": "QV725ZV43A",
         "name": "com.DefaultCompany.Proto",
-        "processId": 19372,
+        "processId": 24775,
         "exited": false
     },
     "m_SelectedPriority": 0,
@@ -66,6 +66,12 @@
             "deviceId": "QV725ZV43A",
             "name": "com.DefaultCompany.Proto",
             "processId": 19372,
+            "exited": false
+        },
+        {
+            "deviceId": "QV725ZV43A",
+            "name": "com.DefaultCompany.Proto",
+            "processId": 24775,
             "exited": false
         },
         {

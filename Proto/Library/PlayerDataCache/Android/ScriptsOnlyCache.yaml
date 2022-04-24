@@ -1115,7 +1115,7 @@ ScriptsOnlyBuild:
     className: FoodsNeededEz
   - hash:
       serializedVersion: 2
-      Hash: 429bed441d83f02f7cf19e40878bfb32
+      Hash: 1647884b2f06e4579240bdf242bd93f2
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: GameScore

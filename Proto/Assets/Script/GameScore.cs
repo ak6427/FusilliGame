@@ -14,9 +14,11 @@ public class GameScore : MonoBehaviour
     public int Score;
     private int maxScore;
     public string timeRemainingText = "Aikaa jäljellä: ";
+    public SceneSaver sceneSaver;
     
     void Awake()
     {
+        sceneSaver = FindObjectOfType<SceneSaver>();
         activeScene = SceneManager.GetActiveScene().name;
         if (activeScene == "Easy") 
         {
@@ -102,6 +104,20 @@ public class GameScore : MonoBehaviour
                     if(i==10)F=2;
                 }
             }
+
+            if (sceneSaver.resume != "")
+            {
+                SceneManager.UnloadSceneAsync(sceneSaver.resume);
+                if (Time.timeScale == 0)
+                {
+                    Time.timeScale = sceneSaver.oldTimeScale;
+                    sceneSaver.oldTimeScale = 0;
+                }
+                sceneSaver.eventSystem.enabled = true;
+                sceneSaver.audioListener.enabled = true;
+                sceneSaver.resume = "";
+            }
+
             SceneManager.LoadScene("Victory");
         }    
         
@@ -113,6 +129,19 @@ public class GameScore : MonoBehaviour
 
         else if(timeR <= 0) 
         {
+            if (sceneSaver.resume != "")
+            {
+                SceneManager.UnloadSceneAsync(sceneSaver.resume);
+                if (Time.timeScale == 0)
+                {
+                    Time.timeScale = sceneSaver.oldTimeScale;
+                    sceneSaver.oldTimeScale = 0;
+                }
+                sceneSaver.eventSystem.enabled = true;
+                sceneSaver.audioListener.enabled = true;
+                sceneSaver.resume = "";
+            }
+
             SceneManager.LoadScene("Failure");
         }
     }

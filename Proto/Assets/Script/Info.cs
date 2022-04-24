@@ -83,34 +83,16 @@ public class Info : MonoBehaviour
 
         float ratioX = ((float) Screen.width / 1920);
         float ratioY = ((float) Screen.height / 1080);
-        /*float ratioX = ((float) myRect.rect.width / 1920);
-        float ratioY = ((float) myRect.rect.height / 1080);
-        Debug.Log("canvasWidth: " + myRect.rect.width);
-        Debug.Log("canvasHeight: " + myRect.rect.height);*/
-        Debug.Log("screenWidth: " + Screen.width);
-        Debug.Log("screenHeight: " + Screen.height);
-        Debug.Log("ratioX: " + ratioX);
-        Debug.Log("ratioY: " + ratioY);
 
         // Anchor
         pageOneAnchor.anchoredPosition = new Vector3(pageOneAnchor.anchoredPosition.x / pageOneAnchor.lossyScale.x, pageOneAnchor.anchoredPosition.y / pageOneAnchor.lossyScale.y, 0); 
-        Debug.Log("anchorX: " + pageOneAnchor.anchoredPosition.x);
-        Debug.Log("anchorY: " + pageOneAnchor.anchoredPosition.y);
-        Debug.Log("lossyX: " + pageOneAnchor.lossyScale.x);
-        Debug.Log("lossyY: " + pageOneAnchor.lossyScale.y);
 
         // Scale
         pageOneAnimation.localScale = new Vector3(sceneSaver.pageOneScale * ratioX / pageOneAnchor.lossyScale.x, sceneSaver.pageOneScale * ratioY / pageOneAnchor.lossyScale.y, 0);
-        Debug.Log("pageonscale: " + sceneSaver.pageOneScale);
-        Debug.Log("AniWidth: " + pageOneAnimation.rect.width);
-        Debug.Log("AniHeight: " + pageOneAnimation.rect.height);
-        Debug.Log("AniScale: " + pageOneAnimation.localScale);
 
         pageTwoImage.localScale = new Vector3(/*sceneSaver.pageOneScale **/ ratioX / pageOneAnchor.lossyScale.x, /*sceneSaver.pageOneScale **/ ratioY / pageOneAnchor.lossyScale.y, 0);
         pageThreeImage.localScale = new Vector3(/*sceneSaver.pageOneScale **/ ratioX / pageOneAnchor.lossyScale.x, /*sceneSaver.pageOneScale **/ ratioY / pageOneAnchor.lossyScale.y, 0);
         pageFourImage.localScale = new Vector3(/*sceneSaver.pageOneScale **/ ratioX / pageOneAnchor.lossyScale.x, /*sceneSaver.pageOneScale **/ ratioY / pageOneAnchor.lossyScale.y, 0);
-
-
     }
 
     public void TurnLeft()
