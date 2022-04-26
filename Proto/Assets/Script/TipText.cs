@@ -41,7 +41,9 @@ public class TipText : MonoBehaviour
         if (Application.platform == RuntimePlatform.Android)
         {
             float ratioX = ((float) tipWindow.lossyScale.x / 0.015625f);
-            float ratioY = ((float) Screen.height / 1080);
+            float ratioY = ((float) tipWindow.lossyScale.y / 0.015625f);
+            //float ratioX = ((float) Screen.width / 1920);
+            //float ratioY = ((float) Screen.height / 1080);
             
             if (ratioX >= ratioY)
             {

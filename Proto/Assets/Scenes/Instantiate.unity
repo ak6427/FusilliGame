@@ -154,6 +154,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   DB: {fileID: 1037416473747680432, guid: 00915f7a3780b5740a6c20fa58e119ef, type: 3}
   SaveSceneForRetry: {fileID: 3945442593905719101, guid: f83a6476d12a1e44a910f60889310e2e, type: 3}
+  DataContainer: {fileID: 278925553614977605, guid: cb9ea5b8d74cb8f4f9630ef97b16c0a9, type: 3}
 --- !u!4 &680721290
 Transform:
   m_ObjectHideFlags: 0
