@@ -7,7 +7,6 @@ using UnityEngine.Audio;
 public class SettingsControl : MonoBehaviour
 {
     public SceneSaver sceneSaver;
-    //public GameObject saveSceneForRetry;
     
     [SerializeField]
     public GameObject BGMControlGO;
@@ -26,6 +25,12 @@ public class SettingsControl : MonoBehaviour
     [SerializeField]
     public AudioMixer mixer;
 
+    /*[SerializeField]
+    public AudioMixerGroup BGM;
+
+    [SerializeField]
+    public AudioMixerGroup SFX;*/
+
     [SerializeField]
     public GameObject BGMMuteButton;
     
@@ -33,7 +38,7 @@ public class SettingsControl : MonoBehaviour
     public GameObject BGMUnmuteButton;
     
     [SerializeField]
-    public Image BGMControlSlider;
+    public Image BGMControlSliderImage;
     
     [SerializeField]
     public Image BGMControlBackground;
@@ -48,7 +53,7 @@ public class SettingsControl : MonoBehaviour
     public GameObject SFXUnmuteButton;
     
     [SerializeField]
-    public Image SFXControlSlider;
+    public Image SFXControlSliderImage;
     
     [SerializeField]
     public Image SFXControlBackground;
@@ -72,7 +77,7 @@ public class SettingsControl : MonoBehaviour
         {
             BGMMuteButton.SetActive(false);
             BGMUnmuteButton.SetActive(true);
-            BGMControlSlider.color = new Color32(255, 255, 0, 105);
+            BGMControlSliderImage.color = new Color32(255, 255, 0, 105);
             BGMControlBackground.color = new Color32(255, 0, 0, 105);
             BGMControlFill.color = new Color32(0, 255, 0, 105);
         }
@@ -80,7 +85,7 @@ public class SettingsControl : MonoBehaviour
         {
             SFXMuteButton.SetActive(false);
             SFXUnmuteButton.SetActive(true);
-            SFXControlSlider.color = new Color32(255, 255, 0, 105);
+            SFXControlSliderImage.color = new Color32(255, 255, 0, 105);
             SFXControlBackground.color = new Color32(255, 0, 0, 105);
             SFXControlFill.color = new Color32(0, 255, 0, 105);
         }
@@ -92,7 +97,7 @@ public class SettingsControl : MonoBehaviour
         mixer.SetFloat(BGMVolumeName, -80);
         BGMMuteButton.SetActive(false);
         BGMUnmuteButton.SetActive(true);
-        BGMControlSlider.color = new Color32(255, 255, 0, 105);
+        BGMControlSliderImage.color = new Color32(255, 255, 0, 105);
         BGMControlBackground.color = new Color32(255, 0, 0, 105);
         BGMControlFill.color = new Color32(0, 255, 0, 105);
     }
@@ -103,7 +108,7 @@ public class SettingsControl : MonoBehaviour
         mixer.SetFloat(BGMVolumeName, 0);
         BGMUnmuteButton.SetActive(false);
         BGMMuteButton.SetActive(true);
-        BGMControlSlider.color = new Color32(255, 255, 0, 255);
+        BGMControlSliderImage.color = new Color32(255, 255, 0, 255);
         BGMControlBackground.color = new Color32(255, 0, 0, 255);
         BGMControlFill.color = new Color32(0, 255, 0, 255);
     }
@@ -114,7 +119,7 @@ public class SettingsControl : MonoBehaviour
         mixer.SetFloat(SFXVolumeName, -80);
         SFXMuteButton.SetActive(false);
         SFXUnmuteButton.SetActive(true);
-        SFXControlSlider.color = new Color32(255, 255, 0, 105);
+        SFXControlSliderImage.color = new Color32(255, 255, 0, 105);
         SFXControlBackground.color = new Color32(255, 0, 0, 105);
         SFXControlFill.color = new Color32(0, 255, 0, 105);
     }
@@ -125,14 +130,14 @@ public class SettingsControl : MonoBehaviour
         mixer.SetFloat(SFXVolumeName, 0);
         SFXUnmuteButton.SetActive(false);
         SFXMuteButton.SetActive(true);
-        SFXControlSlider.color = new Color32(255, 255, 0, 255);
+        SFXControlSliderImage.color = new Color32(255, 255, 0, 255);
         SFXControlBackground.color = new Color32(255, 0, 0, 255);
         SFXControlFill.color = new Color32(0, 255, 0, 255);
     }
 
     public void Update()
     {
-        sceneSaver.storedSliderBGM = BGMControlAC.Save(sceneSaver.mutedBGM, sceneSaver.storedSliderBGM);
-        sceneSaver.storedSliderSFX = SFXControlAC.Save(sceneSaver.mutedSFX, sceneSaver.storedSliderSFX);
+        sceneSaver.storedSliderBGM = BGMControlAC.Save(mixer, BGMVolumeName, sceneSaver.mutedBGM, sceneSaver.storedSliderBGM);
+        sceneSaver.storedSliderSFX = SFXControlAC.Save(mixer, SFXVolumeName, sceneSaver.mutedSFX, sceneSaver.storedSliderSFX);
     }
 }

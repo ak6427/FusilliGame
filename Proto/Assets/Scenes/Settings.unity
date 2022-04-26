@@ -1825,12 +1825,12 @@ MonoBehaviour:
   mixer: {fileID: 24100000, guid: bcd72750c78610849a2154d8a810472b, type: 2}
   BGMMuteButton: {fileID: 465320135}
   BGMUnmuteButton: {fileID: 1163434336}
-  BGMControlSlider: {fileID: 2074525815}
+  BGMControlSliderImage: {fileID: 2074525815}
   BGMControlBackground: {fileID: 435166101}
   BGMControlFill: {fileID: 1747592802}
   SFXMuteButton: {fileID: 2128571727}
   SFXUnmuteButton: {fileID: 1970849791}
-  SFXControlSlider: {fileID: 1111442327}
+  SFXControlSliderImage: {fileID: 1111442327}
   SFXControlBackground: {fileID: 1214699736}
   SFXControlFill: {fileID: 661680327}
 --- !u!1 &1614602382

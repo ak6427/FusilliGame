@@ -3,7 +3,7 @@
     "m_SelectedPackage": {
         "deviceId": "QV725ZV43A",
         "name": "com.DefaultCompany.Proto",
-        "processId": 24775,
+        "processId": 5883,
         "exited": false
     },
     "m_SelectedPriority": 0,
@@ -16,62 +16,38 @@
         },
         {
             "deviceId": "QV725ZV43A",
-            "name": "com.google.android.packageinstaller",
-            "processId": 5316,
+            "name": "com.DefaultCompany.Proto",
+            "processId": 27533,
             "exited": true
         },
         {
             "deviceId": "QV725ZV43A",
             "name": "com.DefaultCompany.Proto",
-            "processId": 7693,
+            "processId": 28317,
             "exited": true
         },
         {
             "deviceId": "QV725ZV43A",
             "name": "com.DefaultCompany.Proto",
-            "processId": 8751,
+            "processId": 29004,
             "exited": true
         },
         {
             "deviceId": "QV725ZV43A",
             "name": "com.DefaultCompany.Proto",
-            "processId": 10703,
+            "processId": 32571,
             "exited": true
         },
         {
             "deviceId": "QV725ZV43A",
             "name": "com.DefaultCompany.Proto",
-            "processId": 12027,
+            "processId": 2691,
             "exited": true
         },
         {
             "deviceId": "QV725ZV43A",
-            "name": "com.google.android.packageinstaller",
-            "processId": 11967,
-            "exited": false
-        },
-        {
-            "deviceId": "QV725ZV43A",
             "name": "com.DefaultCompany.Proto",
-            "processId": 12980,
-            "exited": false
-        },
-        {
-            "deviceId": "QV725ZV43A",
-            "name": "com.DefaultCompany.Proto",
-            "processId": 13366,
-            "exited": false
-        },
-        {
-            "deviceId": "QV725ZV43A",
-            "name": "com.DefaultCompany.Proto",
-            "processId": 19372,
-            "exited": false
-        },
-        {
-            "deviceId": "QV725ZV43A",
-            "name": "com.DefaultCompany.Proto",
-            "processId": 24775,
+            "processId": 5883,
             "exited": false
         },
         {

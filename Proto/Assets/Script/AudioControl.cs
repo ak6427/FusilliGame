@@ -19,21 +19,29 @@ public class AudioControl : MonoBehaviour
         this.mixer = mixer;
         this.volumeName = volumeName;
 
+        Debug.Log("volumeName: " + volumeName);
+
         if (mixer.GetFloat(volumeName, out float volume) && muted == false)
         {
             slider.value = volume;
+            Debug.Log("volume: " + volume);
         }
         else if (muted == true)
         {
             slider.value = storedSlider;
+            Debug.Log("storedSlider: " + storedSlider);
         }
     }
 
-    public float Save(bool muted, float storedSlider)
+    public float Save(AudioMixer mixer, string volumeName, bool muted, float storedSlider)
     {
         if (muted == false)
         {
+            mixer.GetFloat(volumeName, out float volume);
             mixer.SetFloat(volumeName, slider.value);
+            Debug.Log(volumeName + " slider " + slider.value);
+            Debug.Log(volumeName + " volume " + volume);
+            //return slider.value;
             return 0;
         }
         else 
