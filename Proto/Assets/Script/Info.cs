@@ -84,15 +84,28 @@ public class Info : MonoBehaviour
         float ratioX = ((float) Screen.width / 1920);
         float ratioY = ((float) Screen.height / 1080);
 
-        // Anchor
-        pageOneAnchor.anchoredPosition = new Vector3(pageOneAnchor.anchoredPosition.x / pageOneAnchor.lossyScale.x, pageOneAnchor.anchoredPosition.y / pageOneAnchor.lossyScale.y, 0); 
+        Debug.Log(ratioX);
+        Debug.Log(ratioY);
 
-        // Scale
-        pageOneAnimation.localScale = new Vector3(sceneSaver.pageOneScale * ratioX / pageOneAnchor.lossyScale.x, sceneSaver.pageOneScale * ratioY / pageOneAnchor.lossyScale.y, 0);
+        //pageOneAnchor.anchoredPosition = new Vector3(pageOneAnchor.anchoredPosition.x / pageOneAnchor.lossyScale.x, pageOneAnchor.anchoredPosition.y / pageOneAnchor.lossyScale.y, 0); 
 
-        pageTwoImage.localScale = new Vector3(/*sceneSaver.pageOneScale **/ ratioX / pageOneAnchor.lossyScale.x, /*sceneSaver.pageOneScale **/ ratioY / pageOneAnchor.lossyScale.y, 0);
-        pageThreeImage.localScale = new Vector3(/*sceneSaver.pageOneScale **/ ratioX / pageOneAnchor.lossyScale.x, /*sceneSaver.pageOneScale **/ ratioY / pageOneAnchor.lossyScale.y, 0);
-        pageFourImage.localScale = new Vector3(/*sceneSaver.pageOneScale **/ ratioX / pageOneAnchor.lossyScale.x, /*sceneSaver.pageOneScale **/ ratioY / pageOneAnchor.lossyScale.y, 0);
+        // Scale and Anchor
+        if (ratioX >= ratioY)
+        {
+            pageOneAnimation.localScale = new Vector3(sceneSaver.pageOneScale * ratioX / pageOneAnchor.lossyScale.x, sceneSaver.pageOneScale * ratioY / pageOneAnchor.lossyScale.y, 0);
+            pageOneAnchor.anchoredPosition = new Vector3(pageOneAnchor.anchoredPosition.x / pageOneAnchor.lossyScale.x, pageOneAnchor.anchoredPosition.y / pageOneAnchor.lossyScale.y, 0); 
+            pageTwoImage.localScale = new Vector3(ratioX / pageOneAnchor.lossyScale.x, ratioY / pageOneAnchor.lossyScale.y, 0);
+            pageThreeImage.localScale = new Vector3(ratioX / pageOneAnchor.lossyScale.x, ratioY / pageOneAnchor.lossyScale.y, 0);
+            pageFourImage.localScale = new Vector3(ratioX / pageOneAnchor.lossyScale.x, ratioY / pageOneAnchor.lossyScale.y, 0);
+        }
+        else
+        {
+            pageOneAnimation.localScale = new Vector3(sceneSaver.pageOneScale / ratioX / pageOneAnchor.lossyScale.x, sceneSaver.pageOneScale / ratioY * pageOneAnchor.lossyScale.y, 0);
+            pageOneAnchor.anchoredPosition = new Vector3(pageOneAnchor.anchoredPosition.x * pageOneAnchor.lossyScale.x - 0.8f, pageOneAnchor.anchoredPosition.y * pageOneAnchor.lossyScale.y - 0.8f, 0); 
+            pageTwoImage.localScale = new Vector3(ratioX / pageOneAnchor.lossyScale.x + 0.08f, ratioY / pageOneAnchor.lossyScale.y + 0.08f, 0);
+            pageThreeImage.localScale = new Vector3(ratioX / pageOneAnchor.lossyScale.x + 0.08f, ratioY / pageOneAnchor.lossyScale.y + 0.08f, 0);
+            pageFourImage.localScale = new Vector3(ratioX / pageOneAnchor.lossyScale.x + 0.08f, ratioY / pageOneAnchor.lossyScale.y + 0.08f, 0);
+        }
     }
 
     public void TurnLeft()

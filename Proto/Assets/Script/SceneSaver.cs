@@ -18,10 +18,25 @@ public class SceneSaver : MonoBehaviour
     public float storedSliderSFX;
     public float oldTimeScale;
     public float pageOneScale;
+    public float widthOrHeight;
 
     // Start is called before the first frame update
     void Start()
     {
         DontDestroyOnLoad(this.gameObject);
+        float ratioX = (float)Screen.width / 1920;
+        float ratioY = (float)Screen.height / 1080;
+        if (ratioX > ratioY)
+        {
+            widthOrHeight = 0.75f;
+        }
+        else if (ratioX < ratioY)
+        {
+            widthOrHeight = 0.0f;
+        }
+        else 
+        {
+            widthOrHeight = 0.5f;
+        }
     }
 }

@@ -50,7 +50,7 @@ public class Drop : MonoBehaviour, IDropHandler
                     canvasGroup.blocksRaycasts = false;
                     eventData.pointerDrag.GetComponent<DragDrop>().correct = 1;
 
-                    rankPenalty = 1;
+                    rankPenalty = 2;
 
                     gameScore.timeR += rankPenalty;
 

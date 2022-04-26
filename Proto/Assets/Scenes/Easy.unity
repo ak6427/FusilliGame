@@ -709,6 +709,8 @@ MonoBehaviour:
   childText: {fileID: 0}
   sceneSwitch: {fileID: 0}
   confirmTimer: 0
+  askConfirmText: Vahvista?
+  beforeConfirmText: "P\xE4\xE4valikko"
 --- !u!1001 &499089604
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1666,6 +1668,7 @@ GameObject:
   - component: {fileID: 1524004941}
   - component: {fileID: 1524004940}
   - component: {fileID: 1524004944}
+  - component: {fileID: 1524004945}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -1789,6 +1792,18 @@ MonoBehaviour:
   tipText: {fileID: 1165140402}
   tipWindow: {fileID: 42265323}
   canvasRectTransform: {fileID: 0}
+--- !u!114 &1524004945
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1524004939}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 89bd1348c968ea84f90271fc9c768298, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1564430252
 GameObject:
   m_ObjectHideFlags: 0

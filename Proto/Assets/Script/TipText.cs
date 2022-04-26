@@ -42,7 +42,16 @@ public class TipText : MonoBehaviour
         {
             float ratioX = ((float) tipWindow.lossyScale.x / 0.015625f);
             float ratioY = ((float) Screen.height / 1080);
-            tipWindow.transform.position = new Vector3( MousePos.x / ratioX * tipWindow.lossyScale.x - 4.75f, MousePos.y / ratioY * tipWindow.lossyScale.y + (128 * tipWindow.lossyScale.y), canvas.planeDistance);
+            
+            if (ratioX >= ratioY)
+            {
+                tipWindow.transform.position = new Vector3( MousePos.x / ratioX * tipWindow.lossyScale.x - 4.75f, MousePos.y / ratioY * tipWindow.lossyScale.y + (128 * tipWindow.lossyScale.y), canvas.planeDistance);
+            }
+            else 
+            {
+                tipWindow.transform.position = new Vector3( MousePos.x / ratioX * tipWindow.lossyScale.x + 0.125f, MousePos.y / ratioY * tipWindow.lossyScale.y + (128 * tipWindow.lossyScale.y), canvas.planeDistance);
+            }
+            
             Debug.Log("ratiox " + ratioX);
             Debug.Log("ratioy " + ratioY);
             Debug.Log("mousex " + MousePos.x);

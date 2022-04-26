@@ -21,7 +21,9 @@ public class AudioControl : MonoBehaviour
 
         Debug.Log("volumeName: " + volumeName);
 
-        if (mixer.GetFloat(volumeName, out float volume) && muted == false)
+        mixer.GetFloat(volumeName, out float volume);
+
+        if (muted == false)
         {
             slider.value = volume;
             Debug.Log("volume: " + volume);
@@ -30,6 +32,7 @@ public class AudioControl : MonoBehaviour
         {
             slider.value = storedSlider;
             Debug.Log("storedSlider: " + storedSlider);
+            Debug.Log("volume: " + volume);
         }
     }
 
@@ -37,11 +40,7 @@ public class AudioControl : MonoBehaviour
     {
         if (muted == false)
         {
-            mixer.GetFloat(volumeName, out float volume);
             mixer.SetFloat(volumeName, slider.value);
-            Debug.Log(volumeName + " slider " + slider.value);
-            Debug.Log(volumeName + " volume " + volume);
-            //return slider.value;
             return 0;
         }
         else 

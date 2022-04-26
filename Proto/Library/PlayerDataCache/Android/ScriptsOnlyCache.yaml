@@ -13,6 +13,7 @@ ScriptsOnlyBuild:
     - PenaltySpawn
     - SceneSaver
     - SceneSwitch
+    - SetMatchWidthOrScale
     - SettingsControl
     - TargetPyramid
     - TipText
@@ -49,6 +50,8 @@ ScriptsOnlyBuild:
     - TMPro.TMP_SpriteAsset
     - TMPro.TMP_StyleSheet
     - TMPro.TextMeshProUGUI
+    Unity.Timeline.Editor.dll:
+    - TimelineProjectSettings
     UnityEditor.Graphs.dll:
     - UnityEditor.Graphs.AnimationBlendTree.Graph
     - UnityEditor.Graphs.AnimationBlendTree.GraphGUI
@@ -126,6 +129,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 5162}
     - Class: 114
       Script: {instanceID: 5428}
+    - Class: 114
+      Script: {instanceID: 174122}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -179,6 +184,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 3600}
     - Class: 114
       Script: {instanceID: 4836}
+    - Class: 114
+      Script: {instanceID: 174122}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -252,6 +259,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 5162}
     - Class: 114
       Script: {instanceID: 5428}
+    - Class: 114
+      Script: {instanceID: 174122}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -315,6 +324,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 3600}
     - Class: 114
       Script: {instanceID: 4836}
+    - Class: 114
+      Script: {instanceID: 174122}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -435,6 +446,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 5428}
     - Class: 114
       Script: {instanceID: 5536}
+    - Class: 114
+      Script: {instanceID: 174122}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -488,6 +501,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 3600}
     - Class: 114
       Script: {instanceID: 4836}
+    - Class: 114
+      Script: {instanceID: 174122}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -543,6 +558,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 3600}
     - Class: 114
       Script: {instanceID: 4836}
+    - Class: 114
+      Script: {instanceID: 174122}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -598,6 +615,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 3738}
     - Class: 114
       Script: {instanceID: 4836}
+    - Class: 114
+      Script: {instanceID: 174122}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -655,6 +674,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 3600}
     - Class: 114
       Script: {instanceID: 4836}
+    - Class: 114
+      Script: {instanceID: 174122}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -704,6 +725,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 3600}
     - Class: 114
       Script: {instanceID: 4836}
+    - Class: 114
+      Script: {instanceID: 174122}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -951,7 +974,7 @@ ScriptsOnlyBuild:
     className: TextMeshProUGUI
   - hash:
       serializedVersion: 2
-      Hash: 9071fec75ebd07d9440dea5886dc3ed2
+      Hash: 0bc7613b9e63165666bbc84033e8b2ea
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: SceneSaver
@@ -1381,6 +1404,12 @@ ScriptsOnlyBuild:
     assemblyName: Assembly-CSharp.dll
     namespaceName: db
     className: PathWrite
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: SetMatchWidthOrScale
   platform: 13
   scenePathNames:
   - Assets/Scenes/Instantiate.unity
@@ -1394,4 +1423,4 @@ ScriptsOnlyBuild:
   - Assets/Scenes/Hard.unity
   - Assets/Scenes/Victory.unity
   - Assets/Scenes/Failure.unity
-  playerPath: V:/Ville/Dropbox/Dropbox/TAMK/Unity/Projektit/Fusilli/FusilliGame/Proto/foneVilleDT.apk
+  playerPath: C:/Users/vlehd/Dropbox/TAMK/Unity/Projektit/Fusilli/FusilliGame/Proto/testiFone.apk

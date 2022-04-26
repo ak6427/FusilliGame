@@ -5692,6 +5692,8 @@ MonoBehaviour:
   childText: {fileID: 0}
   sceneSwitch: {fileID: 0}
   confirmTimer: 0
+  askConfirmText: Vahvista?
+  beforeConfirmText: "P\xE4\xE4valikko"
 --- !u!114 &739462183 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2772041286710782943, guid: e92f6b46b55367e41b4e7334315c40de, type: 3}
@@ -11709,6 +11711,7 @@ GameObject:
   - component: {fileID: 1775905213}
   - component: {fileID: 1775905212}
   - component: {fileID: 1775905216}
+  - component: {fileID: 1775905217}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -11750,7 +11753,7 @@ MonoBehaviour:
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 1920, y: 1080}
   m_ScreenMatchMode: 0
-  m_MatchWidthOrHeight: 0.75
+  m_MatchWidthOrHeight: 0
   m_PhysicalUnit: 3
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
@@ -11932,6 +11935,18 @@ MonoBehaviour:
   tipText: {fileID: 1499342602}
   tipWindow: {fileID: 1499342601}
   canvasRectTransform: {fileID: 0}
+--- !u!114 &1775905217
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1775905211}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 89bd1348c968ea84f90271fc9c768298, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1783079294
 PrefabInstance:
   m_ObjectHideFlags: 0
