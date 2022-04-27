@@ -14,6 +14,7 @@ public class ToMenuConfirmation : MonoBehaviour
     private string askConfirmText;
     private string beforeConfirmText;
     public SceneSaver sceneSaver;
+    private int localeToggle = 0;
 
     void Awake()
     {
@@ -24,9 +25,18 @@ public class ToMenuConfirmation : MonoBehaviour
 
     void Start()
 	{
+        SetText();
+	}
+
+    public void SetText()
+    {
         askConfirmText = sceneSaver.localizedConfirm.GetLocalizedString();
         beforeConfirmText = sceneSaver.localizedMenu.GetLocalizedString();
-	}
+        if (localeToggle != sceneSaver.localeToggle)
+        {
+            localeToggle = sceneSaver.localeToggle;
+        }
+    }
 
 	public void ConfirmOrSetTimer()
     {
@@ -54,19 +64,11 @@ public class ToMenuConfirmation : MonoBehaviour
             childText.text = beforeConfirmText;
             childText.color = new Color(255, 0, 0, 255);
         }
-        /*if (!localeSet && LocalizationSettings.SelectedLocale != null)
+
+        if (localeToggle != sceneSaver.localeToggle)
         {
-            if (LocalizationSettings.SelectedLocale == LocalizationSettings.AvailableLocales.Locales[0])
-			{
-				askConfirmText = "Vahvista?";
-				beforeConfirmText = "Valikko";
-			}
-			else if (LocalizationSettings.SelectedLocale == LocalizationSettings.AvailableLocales.Locales[1])
-			{
-				askConfirmText = "Confirm?";
-				beforeConfirmText = "Menu";
-			}
-            localeSet = true;
-        }*/
+            SetText();
+        }
+
     }
 }

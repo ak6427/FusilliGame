@@ -32,6 +32,7 @@ namespace db
         private string activeScene;
         public string hardColumn;
         private SceneSaver sceneSaver;
+        private int localeToggle = 0;
 
         void Awake()
         {
@@ -261,7 +262,7 @@ namespace db
             // Set food name and image
             /*if (LocalizationSettings.SelectedLocale == LocalizationSettings.AvailableLocales.Locales[0])
             {*/
-                foodName = (string)foodsArrayList[sceneSaver.localizedFoodColumnParsed].ToString();
+                SetText();
             /*}
             else if (LocalizationSettings.SelectedLocale == LocalizationSettings.AvailableLocales.Locales[1])
             {
@@ -270,6 +271,23 @@ namespace db
 
             Sprite sp = Resources.Load<Sprite>((string)foodsArrayList[0].ToString()) as Sprite;
             image.sprite = sp;
+        }
+
+        public void SetText()
+        {
+            foodName = (string)foodsArrayList[sceneSaver.localizedFoodColumnParsed].ToString();
+            if (localeToggle != sceneSaver.localeToggle)
+            {
+                localeToggle = sceneSaver.localeToggle;
+            }
+        }
+
+        void Update()
+        {
+            if (localeToggle != sceneSaver.localeToggle)
+            {
+                SetText();
+            }
         }
     }
 }

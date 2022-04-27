@@ -19,19 +19,5 @@ public class SelectLocale : MonoBehaviour
     public void SetLocale()
     {
         LocalizationSettings.SelectedLocale = locale;
-        /*if (locale == LocalizationSettings.AvailableLocales.Locales[0])
-        {
-            sceneSaver.askConfirmText = "Vahvista?";
-            sceneSaver.beforeConfirmText = "Valikko";
-            sceneSaver.timeRemainingText = "Aikaa jäljellä: ";
-            sceneSaver.foodColumn = 0;
-        }
-        else if (locale == LocalizationSettings.AvailableLocales.Locales[1])
-        {
-            sceneSaver.askConfirmText = "Confirm?";
-            sceneSaver.beforeConfirmText = "Menu";
-            sceneSaver.timeRemainingText = "Time remaining: ";
-            sceneSaver.foodColumn = 1;
-        }*/
     }
 }

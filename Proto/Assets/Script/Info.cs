@@ -24,7 +24,10 @@ public class Info : MonoBehaviour
     public int currentPage;
 
     [SerializeField]
-    public RectTransform background;
+    public RectTransform GameBackground;
+
+    [SerializeField]
+    public GameObject MenuBackground;
 
     [SerializeField]
     public GameObject pageOne;
@@ -79,6 +82,11 @@ public class Info : MonoBehaviour
 
     void Start()
     {
+        if (sceneSaver.hideMenuBackground)
+        {
+            MenuBackground.SetActive(false);
+        }
+
         currentPage = sceneSaver.levelPage;
 
         float ratioX = ((float) Screen.width / 1920);
@@ -86,8 +94,6 @@ public class Info : MonoBehaviour
 
         Debug.Log(ratioX);
         Debug.Log(ratioY);
-
-        //pageOneAnchor.anchoredPosition = new Vector3(pageOneAnchor.anchoredPosition.x / pageOneAnchor.lossyScale.x, pageOneAnchor.anchoredPosition.y / pageOneAnchor.lossyScale.y, 0); 
 
         // Scale and Anchor
         if (ratioX >= ratioY)

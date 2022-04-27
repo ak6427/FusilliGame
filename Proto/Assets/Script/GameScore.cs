@@ -17,6 +17,7 @@ public class GameScore : MonoBehaviour
     private int maxScore;
     public string timeRemainingText;
     public SceneSaver sceneSaver;
+    private int localeToggle = 0;
     
     void Awake()
     {
@@ -41,19 +42,20 @@ public class GameScore : MonoBehaviour
 
     void Start()
 	{
-        /*if (LocalizationSettings.SelectedLocale == LocalizationSettings.AvailableLocales.Locales[0])
-        {*/
-            timeRemainingText = sceneSaver.localizedTimeRemaining.GetLocalizedString();
-        /*}
-        else if (LocalizationSettings.SelectedLocale == LocalizationSettings.AvailableLocales.Locales[1])
-        {
-            timeRemainingText = "Time remaining: ";
-        }*/
+        SetText();
 	}
+
+    public void SetText()
+    {
+        timeRemainingText = sceneSaver.localizedTimeRemaining.GetLocalizedString();
+        if (localeToggle != sceneSaver.localeToggle)
+        {
+            localeToggle = sceneSaver.localeToggle;
+        }
+    }
 
     void Update()
     {
-        //PlayerPrefs.DeleteAll();
         R.text = timeRemainingText + Math.Floor(timeR) + "s"; 
         if(Score == maxScore) 
         {
@@ -158,5 +160,11 @@ public class GameScore : MonoBehaviour
 
             SceneManager.LoadScene("Failure");
         }
+
+        if (localeToggle != sceneSaver.localeToggle)
+        {
+            SetText();
+        }
+
     }
 }

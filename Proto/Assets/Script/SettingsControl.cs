@@ -25,12 +25,6 @@ public class SettingsControl : MonoBehaviour
     [SerializeField]
     public AudioMixer mixer;
 
-    /*[SerializeField]
-    public AudioMixerGroup BGM;
-
-    [SerializeField]
-    public AudioMixerGroup SFX;*/
-
     [SerializeField]
     public GameObject BGMMuteButton;
     
@@ -61,6 +55,9 @@ public class SettingsControl : MonoBehaviour
     [SerializeField]
     public Image SFXControlFill;
 
+    [SerializeField]
+    public GameObject MenuBackground;
+
     private void Awake()
     {
         sceneSaver = FindObjectOfType<SceneSaver>();
@@ -70,6 +67,11 @@ public class SettingsControl : MonoBehaviour
 
     private void Start()
     {
+        if (sceneSaver.hideMenuBackground)
+        {
+            MenuBackground.SetActive(false);
+        }
+        
         BGMControlAC.Setup(mixer, BGMVolumeName, sceneSaver.mutedBGM, sceneSaver.storedSliderBGM);
         SFXControlAC.Setup(mixer, SFXVolumeName, sceneSaver.mutedSFX, sceneSaver.storedSliderSFX);
 
@@ -141,7 +143,7 @@ public class SettingsControl : MonoBehaviour
 
     public void Update()
     {
-        sceneSaver.storedSliderBGM = BGMControlAC.Save(mixer, BGMVolumeName, sceneSaver.mutedBGM, sceneSaver.storedSliderBGM, "prefVolumeBGM", "prefStoredSliderBGM");
-        sceneSaver.storedSliderSFX = SFXControlAC.Save(mixer, SFXVolumeName, sceneSaver.mutedSFX, sceneSaver.storedSliderSFX, "prefVolumeSFX", "prefStoredSliderSFX");
+        sceneSaver.storedSliderBGM = BGMControlAC.Save(mixer, BGMVolumeName, sceneSaver.mutedBGM, sceneSaver.storedSliderBGM, "prefVolumeBGM");
+        sceneSaver.storedSliderSFX = SFXControlAC.Save(mixer, SFXVolumeName, sceneSaver.mutedSFX, sceneSaver.storedSliderSFX, "prefVolumeSFX");
     }
 }

@@ -32,25 +32,14 @@ public class SceneSaver : MonoBehaviour
     private LocalizedString localizedFoodColumn;
     public int localizedFoodColumnParsed;
 
+    public int localeToggle = 0;
+    
+    public bool hideMenuBackground = false;
+
     // Start is called before the first frame update
     void Awake()
     {
         DontDestroyOnLoad(this.gameObject);
-
-        /*if (LocalizationSettings.SelectedLocale == LocalizationSettings.AvailableLocales.Locales[0])
-        {
-            askConfirmText = "Vahvista?";
-            beforeConfirmText = "Valikko";
-            timeRemainingText = "Aikaa jäljellä: ";
-            foodColumn = 0;
-        }
-        else if (LocalizationSettings.SelectedLocale == LocalizationSettings.AvailableLocales.Locales[1])
-        {
-            askConfirmText = "Confirm?";
-            beforeConfirmText = "Menu";
-            timeRemainingText = "Time remaining: ";
-            foodColumn = 1;
-        }*/
 
         float ratioX = (float)Screen.width / 1920;
         float ratioY = (float)Screen.height / 1080;
@@ -85,6 +74,13 @@ public class SceneSaver : MonoBehaviour
 
     private void OnLocaleChanged(Locale obj)
     {
-
+        if(localeToggle == 0)
+        {
+            localeToggle = 1;
+        }
+        else 
+        {
+            localeToggle = 0;
+        }
     }
 }

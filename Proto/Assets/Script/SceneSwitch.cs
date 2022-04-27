@@ -34,6 +34,7 @@ public class SceneSwitch : MonoBehaviour
             sceneSaver.eventSystem.enabled = true;
             sceneSaver.audioListener.enabled = true;
             sceneSaver.resume = "";
+            sceneSaver.hideMenuBackground = false;
         }
     }
     public void ScenePeli() {
@@ -70,7 +71,7 @@ public class SceneSwitch : MonoBehaviour
         sceneSaver.audioListener.enabled = false;
         sceneSaver.resume = "Info";
         sceneSaver.pageOneScale = 1.17f;
-
+        sceneSaver.hideMenuBackground = true;
         SceneManager.LoadSceneAsync("Info", LoadSceneMode.Additive);
     }
     public void SceneSettingsAsync() {
@@ -80,6 +81,7 @@ public class SceneSwitch : MonoBehaviour
         sceneSaver.eventSystem.enabled = false;
         sceneSaver.audioListener.enabled = false;
         sceneSaver.resume = "Settings";
+        sceneSaver.hideMenuBackground = true;
         SceneManager.LoadSceneAsync("Settings", LoadSceneMode.Additive);
     }
 
