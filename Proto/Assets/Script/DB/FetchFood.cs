@@ -3,6 +3,8 @@ using System.IO;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using UnityEngine.Localization;
+using UnityEngine.Localization.Settings;
 
 namespace db
 {
@@ -29,9 +31,11 @@ namespace db
         public Image image;
         private string activeScene;
         public string hardColumn;
+        private SceneSaver sceneSaver;
 
         void Awake()
         {
+            sceneSaver = FindObjectOfType<SceneSaver>();
             db = FindObjectOfType<DBAccess>();
             pathWrite = db.GetComponent<PathWrite>();
             db = db.GetComponent<DBAccess>();
@@ -255,14 +259,14 @@ namespace db
             foodsArrayList = db.SingleSelectWhereString(foodTable, "nimi, name", "id", "=", compareString);
 
             // Set food name and image
-            // if (suomi)
-            // {
-                foodName = (string)foodsArrayList[0].ToString();
-            // }
-            // else
-            // {
-            //  foodName = (string)foodsArrayList[1].ToString();
-            // }
+            /*if (LocalizationSettings.SelectedLocale == LocalizationSettings.AvailableLocales.Locales[0])
+            {*/
+                foodName = (string)foodsArrayList[sceneSaver.localizedFoodColumnParsed].ToString();
+            /*}
+            else if (LocalizationSettings.SelectedLocale == LocalizationSettings.AvailableLocales.Locales[1])
+            {
+                foodName = (string)foodsArrayList[1].ToString();
+            }*/
 
             Sprite sp = Resources.Load<Sprite>((string)foodsArrayList[0].ToString()) as Sprite;
             image.sprite = sp;

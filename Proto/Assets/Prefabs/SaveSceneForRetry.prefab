@@ -54,3 +54,42 @@ MonoBehaviour:
   storedSliderSFX: 0
   oldTimeScale: 0
   pageOneScale: 1
+  widthOrHeight: 0
+  localizedConfirm:
+    m_TableReference:
+      m_TableCollectionName: GUID:704a3d3d7e4798d4b8a2f798059bdc04
+    m_TableEntryReference:
+      m_KeyId: 248867177906176
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  localizedMenu:
+    m_TableReference:
+      m_TableCollectionName: GUID:704a3d3d7e4798d4b8a2f798059bdc04
+    m_TableEntryReference:
+      m_KeyId: 223961878904832
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  localizedTimeRemaining:
+    m_TableReference:
+      m_TableCollectionName: GUID:704a3d3d7e4798d4b8a2f798059bdc04
+    m_TableEntryReference:
+      m_KeyId: 345419867242496
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  localizedFoodColumn:
+    m_TableReference:
+      m_TableCollectionName: GUID:704a3d3d7e4798d4b8a2f798059bdc04
+    m_TableEntryReference:
+      m_KeyId: 345516063604736
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  references:
+    version: 1

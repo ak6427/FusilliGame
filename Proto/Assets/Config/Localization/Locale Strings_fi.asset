@@ -1,0 +1,114 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9620f8c34305754d8cc9a7e49e852d9, type: 3}
+  m_Name: Locale Strings_fi
+  m_EditorClassIdentifier: 
+  m_LocaleId:
+    m_Code: fi
+  m_SharedData: {fileID: 11400000, guid: 704a3d3d7e4798d4b8a2f798059bdc04, type: 2}
+  m_Metadata:
+    m_Items: []
+  m_TableData:
+  - m_Id: 26058964992
+    m_Localized: Helppo
+    m_Metadata:
+      m_Items: []
+  - m_Id: 100096819200
+    m_Localized: Keskivaikea
+    m_Metadata:
+      m_Items: []
+  - m_Id: 144904568832
+    m_Localized: Vaikea
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4215187193856
+    m_Localized: "P\xE4\xE4valikko"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7029028306944
+    m_Localized: Taustamusiikki (BGM)
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23969205600256
+    m_Localized: Pelaa
+    m_Metadata:
+      m_Items: []
+  - m_Id: 24016458629120
+    m_Localized: Asetukset
+    m_Metadata:
+      m_Items: []
+  - m_Id: 24065712340992
+    m_Localized: Poistu
+    m_Metadata:
+      m_Items: []
+  - m_Id: 24105029746688
+    m_Localized: "Enn\xE4tykset"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 24278116089856
+    m_Localized: "Lis\xE4tietoa"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 32734294327296
+    m_Localized: Voitto!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 33975451795456
+    m_Localized: Pelaa uudelleen
+    m_Metadata:
+      m_Items: []
+  - m_Id: 34019223552000
+    m_Localized: Vaikeusaste
+    m_Metadata:
+      m_Items: []
+  - m_Id: 41926610665472
+    m_Localized: Edellinen sivu
+    m_Metadata:
+      m_Items: []
+  - m_Id: 41973159051264
+    m_Localized: Seuraava sivu
+    m_Metadata:
+      m_Items: []
+  - m_Id: 106284820742144
+    m_Localized: "\xC4\xE4niefektit (SFX)"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 114018915991552
+    m_Localized: "H\xE4visit."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 114555396833280
+    m_Localized: "Yrit\xE4 uudelleen"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 223961878904832
+    m_Localized: Valikko
+    m_Metadata:
+      m_Items: []
+  - m_Id: 228873236922368
+    m_Localized: Sulje
+    m_Metadata:
+      m_Items: []
+  - m_Id: 248867177906176
+    m_Localized: Vahvista?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 345419867242496
+    m_Localized: "Aikaa j\xE4ljell\xE4: "
+    m_Metadata:
+      m_Items: []
+  - m_Id: 345516063604736
+    m_Localized: 0
+    m_Metadata:
+      m_Items: []
+  references:
+    version: 1

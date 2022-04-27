@@ -4,6 +4,8 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
+using UnityEngine.Localization;
+using UnityEngine.Localization.Settings;
 
 public class SceneSaver : MonoBehaviour
 {
@@ -20,10 +22,36 @@ public class SceneSaver : MonoBehaviour
     public float pageOneScale;
     public float widthOrHeight;
 
+    public LocalizedString localizedConfirm;
+
+    public LocalizedString localizedMenu;
+
+    public LocalizedString localizedTimeRemaining;
+
+    [SerializeField]
+    private LocalizedString localizedFoodColumn;
+    public int localizedFoodColumnParsed;
+
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
         DontDestroyOnLoad(this.gameObject);
+
+        /*if (LocalizationSettings.SelectedLocale == LocalizationSettings.AvailableLocales.Locales[0])
+        {
+            askConfirmText = "Vahvista?";
+            beforeConfirmText = "Valikko";
+            timeRemainingText = "Aikaa jäljellä: ";
+            foodColumn = 0;
+        }
+        else if (LocalizationSettings.SelectedLocale == LocalizationSettings.AvailableLocales.Locales[1])
+        {
+            askConfirmText = "Confirm?";
+            beforeConfirmText = "Menu";
+            timeRemainingText = "Time remaining: ";
+            foodColumn = 1;
+        }*/
+
         float ratioX = (float)Screen.width / 1920;
         float ratioY = (float)Screen.height / 1080;
         if (ratioX > ratioY)
@@ -38,5 +66,25 @@ public class SceneSaver : MonoBehaviour
         {
             widthOrHeight = 0.5f;
         }
+    }
+
+    void Update()
+    {
+        localizedFoodColumnParsed = int.Parse(localizedFoodColumn.GetLocalizedString());
+    }
+
+    private void OnEnable()
+    {
+        LocalizationSettings.SelectedLocaleChanged += OnLocaleChanged;
+    }
+
+    private void OnDisable()
+    {   
+        LocalizationSettings.SelectedLocaleChanged -= OnLocaleChanged;
+    }
+
+    OnLocaleChanged(Locale obj)
+    {
+
     }
 }

@@ -1,0 +1,119 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b11a58205ec3474ca216360e9fa74a8, type: 3}
+  m_Name: Locale Strings Shared Data
+  m_EditorClassIdentifier: 
+  m_TableCollectionName: Locale Strings
+  m_TableCollectionNameGuidString: 704a3d3d7e4798d4b8a2f798059bdc04
+  m_Entries:
+  - m_Id: 26058964992
+    m_Key: Easy
+    m_Metadata:
+      m_Items: []
+  - m_Id: 100096819200
+    m_Key: Medium
+    m_Metadata:
+      m_Items: []
+  - m_Id: 144904568832
+    m_Key: Hard
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4215187193856
+    m_Key: Main Menu
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7029028306944
+    m_Key: Background Music
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23969205600256
+    m_Key: Play
+    m_Metadata:
+      m_Items: []
+  - m_Id: 24016458629120
+    m_Key: Settings
+    m_Metadata:
+      m_Items: []
+  - m_Id: 24065712340992
+    m_Key: Quit
+    m_Metadata:
+      m_Items: []
+  - m_Id: 24105029746688
+    m_Key: Highscores
+    m_Metadata:
+      m_Items: []
+  - m_Id: 24278116089856
+    m_Key: Info
+    m_Metadata:
+      m_Items: []
+  - m_Id: 32734294327296
+    m_Key: Victory!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 33975451795456
+    m_Key: Play again
+    m_Metadata:
+      m_Items: []
+  - m_Id: 34019223552000
+    m_Key: Difficulty
+    m_Metadata:
+      m_Items: []
+  - m_Id: 41926610665472
+    m_Key: Previous page
+    m_Metadata:
+      m_Items: []
+  - m_Id: 41973159051264
+    m_Key: Next page
+    m_Metadata:
+      m_Items: []
+  - m_Id: 106284820742144
+    m_Key: Sound effects
+    m_Metadata:
+      m_Items: []
+  - m_Id: 114018915991552
+    m_Key: Failure
+    m_Metadata:
+      m_Items: []
+  - m_Id: 114555396833280
+    m_Key: Try again
+    m_Metadata:
+      m_Items: []
+  - m_Id: 223961878904832
+    m_Key: Menu (short)
+    m_Metadata:
+      m_Items: []
+  - m_Id: 228873236922368
+    m_Key: Close
+    m_Metadata:
+      m_Items: []
+  - m_Id: 248867177906176
+    m_Key: Confirm
+    m_Metadata:
+      m_Items: []
+  - m_Id: 345419867242496
+    m_Key: Time remaining
+    m_Metadata:
+      m_Items: []
+  - m_Id: 345516063604736
+    m_Key: Food column
+    m_Metadata:
+      m_Items: []
+  m_Metadata:
+    m_Items: []
+  m_KeyGenerator:
+    id: 0
+  references:
+    version: 1
+    00000000:
+      type: {class: DistributedUIDGenerator, ns: UnityEngine.Localization.Tables, asm: Unity.Localization}
+      data:
+        m_CustomEpoch: 1650994809773

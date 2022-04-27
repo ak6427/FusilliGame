@@ -21,6 +21,8 @@ public class Drop : MonoBehaviour, IDropHandler
     private int rankPenalty = 0;
     public TargetPyramid foodsTargetPyramid;
     private bool penalty;
+    public Color myColor;
+    //public bool filled;
 
     private void Awake() 
     {
@@ -29,6 +31,8 @@ public class Drop : MonoBehaviour, IDropHandler
         gameScore = FindObjectOfType<GameScore>();
         foodsTargetPyramid = FindObjectOfType<TargetPyramid>();
         foodsTargetPyramid = foodsTargetPyramid.GetComponent<TargetPyramid>();
+        myColor = image.color;
+        //filled = false;
     }
 
     public void OnDrop(PointerEventData eventData) 
@@ -49,8 +53,9 @@ public class Drop : MonoBehaviour, IDropHandler
                     image.color = Color.green;
                     canvasGroup.blocksRaycasts = false;
                     eventData.pointerDrag.GetComponent<DragDrop>().correct = 1;
+                    //filled = true;
 
-                    rankPenalty = 2;
+                    rankPenalty = 1;
 
                     gameScore.timeR += rankPenalty;
 
@@ -61,6 +66,11 @@ public class Drop : MonoBehaviour, IDropHandler
                 else 
                 {
                     image.color = Color.red;
+                    eventData.pointerDrag.GetComponent<DragDrop>().myBox = gameObject;
+                    eventData.pointerDrag.GetComponent<DragDrop>().myBoxImage = image;
+                    eventData.pointerDrag.GetComponent<DragDrop>().myBoxColor = myColor;
+                    eventData.pointerDrag.GetComponent<DragDrop>().myBoxAnchoredPosition = GetComponent<RectTransform>().anchoredPosition;
+                    //filled = true;
 
                     //PENALTY
                     rankPenalty = Mathf.Abs(rankBox - eventData.pointerDrag.GetComponent<DragDrop>().rankFood) * 2;
@@ -108,7 +118,14 @@ public class Drop : MonoBehaviour, IDropHandler
         }
         if (foodsTargetPyramid.resetAlpha == true) 
         {
-            image.color = new Color(image.color.r, image.color.g, image.color.b, 1);
+            if (image.color.r != 1 && image.color.g != 1)
+            {
+                image.color = new Color(image.color.r, image.color.g, image.color.b, 0.5f);
+            }
+            else
+            {
+                image.color = new Color(image.color.r, image.color.g, image.color.b, 1);
+            }
         }
     }
 }

@@ -2,22 +2,33 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
+using UnityEngine.Localization;
+using UnityEngine.Localization.Settings;
 
 public class ToMenuConfirmation : MonoBehaviour
 {
-    public Text childText;
+    public TMP_Text childText;
     public SceneSwitch sceneSwitch;
     public float confirmTimer = 0.0f;
-    public string askConfirmText = "Vahvista?";
-    public string beforeConfirmText = "Päävalikko";
+    private string askConfirmText;
+    private string beforeConfirmText;
+    public SceneSaver sceneSaver;
+
     void Awake()
     {
-        childText = GameObject.FindObjectOfType<Text>();
         sceneSwitch = FindObjectOfType<SceneSwitch>();
         sceneSwitch = sceneSwitch.GetComponent<SceneSwitch>();
+        sceneSaver = FindObjectOfType<SceneSaver>();
     }
 
-    public void ConfirmOrSetTimer()
+    void Start()
+	{
+        askConfirmText = sceneSaver.localizedConfirm.GetLocalizedString();
+        beforeConfirmText = sceneSaver.localizedMenu.GetLocalizedString();
+	}
+
+	public void ConfirmOrSetTimer()
     {
         if (confirmTimer == 0.0f)
         {
@@ -35,6 +46,7 @@ public class ToMenuConfirmation : MonoBehaviour
         {
             childText.text = askConfirmText;
             childText.color = new Color(255, 255, 0, 255);
+            childText.fontSize = 52.5f;
             confirmTimer = Mathf.Clamp(confirmTimer - Time.deltaTime, 0.0f, 3.0f);
         }
         else
@@ -42,5 +54,19 @@ public class ToMenuConfirmation : MonoBehaviour
             childText.text = beforeConfirmText;
             childText.color = new Color(255, 0, 0, 255);
         }
+        /*if (!localeSet && LocalizationSettings.SelectedLocale != null)
+        {
+            if (LocalizationSettings.SelectedLocale == LocalizationSettings.AvailableLocales.Locales[0])
+			{
+				askConfirmText = "Vahvista?";
+				beforeConfirmText = "Valikko";
+			}
+			else if (LocalizationSettings.SelectedLocale == LocalizationSettings.AvailableLocales.Locales[1])
+			{
+				askConfirmText = "Confirm?";
+				beforeConfirmText = "Menu";
+			}
+            localeSet = true;
+        }*/
     }
 }

@@ -5,6 +5,8 @@ using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using TMPro;
 using System;
+using UnityEngine.Localization;
+using UnityEngine.Localization.Settings;
 
 public class GameScore : MonoBehaviour
 {
@@ -13,7 +15,7 @@ public class GameScore : MonoBehaviour
     private string activeScene;
     public int Score;
     private int maxScore;
-    public string timeRemainingText = "Aikaa jäljellä: ";
+    public string timeRemainingText;
     public SceneSaver sceneSaver;
     
     void Awake()
@@ -36,6 +38,18 @@ public class GameScore : MonoBehaviour
             maxScore = 56;
         }
     }
+
+    void Start()
+	{
+        /*if (LocalizationSettings.SelectedLocale == LocalizationSettings.AvailableLocales.Locales[0])
+        {*/
+            timeRemainingText = sceneSaver.localizedTimeRemaining.GetLocalizedString();
+        /*}
+        else if (LocalizationSettings.SelectedLocale == LocalizationSettings.AvailableLocales.Locales[1])
+        {
+            timeRemainingText = "Time remaining: ";
+        }*/
+	}
 
     void Update()
     {

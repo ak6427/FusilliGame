@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.UI;
 
 
 public class DragDrop : MonoBehaviour, IPointerDownHandler, IPointerUpHandler, IBeginDragHandler, IEndDragHandler, IDragHandler  {
@@ -19,6 +20,10 @@ public class DragDrop : MonoBehaviour, IPointerDownHandler, IPointerUpHandler, I
     public GameObject buttons;
     private RectTransform buttonsRectTransform;
     private RectTransform canvasRectTransform;
+    public GameObject myBox; 
+    public Image myBoxImage;
+    public Color myBoxColor;
+    public Vector2 myBoxAnchoredPosition;
 
     private void Awake()
     {
@@ -57,6 +62,12 @@ public class DragDrop : MonoBehaviour, IPointerDownHandler, IPointerUpHandler, I
     {
         Debug.Log("OnDrag");
         rectTransform.anchoredPosition += eventData.delta / canvas.scaleFactor;
+        if (myBox != null && rectTransform.anchoredPosition != myBoxAnchoredPosition)
+        {
+            //myBox.filled = false;
+            myBoxImage.color = myBoxColor;
+            myBox = null;
+        }
     }
 
     public void OnPointerDown(PointerEventData eventData)

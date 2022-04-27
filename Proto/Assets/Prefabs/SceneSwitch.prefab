@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2772041286710782912}
   - component: {fileID: 2772041286710782943}
+  - component: {fileID: -3415676963685345265}
   m_Layer: 0
   m_Name: SceneSwitch
   m_TagString: Untagged
@@ -43,3 +44,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 02015d511f508bb488f214822b9b9f68, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sceneSaver: {fileID: 0}
+  activeScene: 
+  oldTimeScale: 0
+--- !u!114 &-3415676963685345265
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2772041286710782913}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a1268d9a3cc837c4bbbfad830fbb2eaa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  childText: {fileID: 0}
+  sceneSwitch: {fileID: 0}
+  confirmTimer: 0
+  askConfirmText: Vahvista?
+  beforeConfirmText: "P\xE4\xE4valikko"

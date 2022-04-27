@@ -1,0 +1,114 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9620f8c34305754d8cc9a7e49e852d9, type: 3}
+  m_Name: Locale Strings_en
+  m_EditorClassIdentifier: 
+  m_LocaleId:
+    m_Code: en
+  m_SharedData: {fileID: 11400000, guid: 704a3d3d7e4798d4b8a2f798059bdc04, type: 2}
+  m_Metadata:
+    m_Items: []
+  m_TableData:
+  - m_Id: 26058964992
+    m_Localized: Easy
+    m_Metadata:
+      m_Items: []
+  - m_Id: 100096819200
+    m_Localized: Medium
+    m_Metadata:
+      m_Items: []
+  - m_Id: 144904568832
+    m_Localized: Hard
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4215187193856
+    m_Localized: Main Menu
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7029028306944
+    m_Localized: Background Music (BGM)
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23969205600256
+    m_Localized: Play
+    m_Metadata:
+      m_Items: []
+  - m_Id: 24016458629120
+    m_Localized: Settings
+    m_Metadata:
+      m_Items: []
+  - m_Id: 24065712340992
+    m_Localized: Quit
+    m_Metadata:
+      m_Items: []
+  - m_Id: 24105029746688
+    m_Localized: Highscores
+    m_Metadata:
+      m_Items: []
+  - m_Id: 24278116089856
+    m_Localized: Info
+    m_Metadata:
+      m_Items: []
+  - m_Id: 32734294327296
+    m_Localized: Victory!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 33975451795456
+    m_Localized: Play again
+    m_Metadata:
+      m_Items: []
+  - m_Id: 34019223552000
+    m_Localized: Difficulty
+    m_Metadata:
+      m_Items: []
+  - m_Id: 41926610665472
+    m_Localized: Previous page
+    m_Metadata:
+      m_Items: []
+  - m_Id: 41973159051264
+    m_Localized: Next page
+    m_Metadata:
+      m_Items: []
+  - m_Id: 106284820742144
+    m_Localized: Sound effects (SFX)
+    m_Metadata:
+      m_Items: []
+  - m_Id: 114018915991552
+    m_Localized: Failure.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 114555396833280
+    m_Localized: Try again
+    m_Metadata:
+      m_Items: []
+  - m_Id: 223961878904832
+    m_Localized: Menu
+    m_Metadata:
+      m_Items: []
+  - m_Id: 228873236922368
+    m_Localized: Close
+    m_Metadata:
+      m_Items: []
+  - m_Id: 248867177906176
+    m_Localized: Confirm?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 345419867242496
+    m_Localized: 'Time remaining: '
+    m_Metadata:
+      m_Items: []
+  - m_Id: 345516063604736
+    m_Localized: 1
+    m_Metadata:
+      m_Items: []
+  references:
+    version: 1

@@ -94,6 +94,7 @@ public class SettingsControl : MonoBehaviour
     public void MuteBGM()
     {
         sceneSaver.mutedBGM = true;
+        PlayerPrefs.SetInt("mutedBGM", 1);
         mixer.SetFloat(BGMVolumeName, -80);
         BGMMuteButton.SetActive(false);
         BGMUnmuteButton.SetActive(true);
@@ -105,6 +106,7 @@ public class SettingsControl : MonoBehaviour
     public void UnmuteBGM()
     {
         sceneSaver.mutedBGM = false;
+        PlayerPrefs.SetInt("mutedBGM", 0);
         mixer.SetFloat(BGMVolumeName, 0);
         BGMUnmuteButton.SetActive(false);
         BGMMuteButton.SetActive(true);
@@ -116,6 +118,7 @@ public class SettingsControl : MonoBehaviour
     public void MuteSFX()
     {
         sceneSaver.mutedSFX = true;
+        PlayerPrefs.SetInt("mutedSFX", 1);
         mixer.SetFloat(SFXVolumeName, -80);
         SFXMuteButton.SetActive(false);
         SFXUnmuteButton.SetActive(true);
@@ -127,6 +130,7 @@ public class SettingsControl : MonoBehaviour
     public void UnmuteSFX()
     {
         sceneSaver.mutedSFX = false;
+        PlayerPrefs.SetInt("mutedSFX", 0);
         mixer.SetFloat(SFXVolumeName, 0);
         SFXUnmuteButton.SetActive(false);
         SFXMuteButton.SetActive(true);
@@ -137,7 +141,7 @@ public class SettingsControl : MonoBehaviour
 
     public void Update()
     {
-        sceneSaver.storedSliderBGM = BGMControlAC.Save(mixer, BGMVolumeName, sceneSaver.mutedBGM, sceneSaver.storedSliderBGM);
-        sceneSaver.storedSliderSFX = SFXControlAC.Save(mixer, SFXVolumeName, sceneSaver.mutedSFX, sceneSaver.storedSliderSFX);
+        sceneSaver.storedSliderBGM = BGMControlAC.Save(mixer, BGMVolumeName, sceneSaver.mutedBGM, sceneSaver.storedSliderBGM, "prefVolumeBGM", "prefStoredSliderBGM");
+        sceneSaver.storedSliderSFX = SFXControlAC.Save(mixer, SFXVolumeName, sceneSaver.mutedSFX, sceneSaver.storedSliderSFX, "prefVolumeSFX", "prefStoredSliderSFX");
     }
 }

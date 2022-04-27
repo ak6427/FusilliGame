@@ -9,6 +9,7 @@ public class Instantiate : MonoBehaviour
     public GameObject SaveSceneForRetry;
 
     public GameObject DataContainer;
+    private int tutorialSeen = 0; //0 = false, 1 = true
     
     void Awake()
     {
@@ -17,7 +18,16 @@ public class Instantiate : MonoBehaviour
         Instantiate(DataContainer);
     }
     void Start()
-    {
-        SceneManager.LoadScene("Info");
+    {  
+        PlayerPrefs.DeleteAll();
+        if (PlayerPrefs.GetInt("tutorialSeen") == 0)
+        {
+            SceneManager.LoadScene("Info");
+            PlayerPrefs.SetInt("tutorialSeen", 1);
+        }
+        else if (PlayerPrefs.GetInt("tutorialSeen") == 1)
+        {
+            SceneManager.LoadScene("Valikko");
+        }
     }
 }
