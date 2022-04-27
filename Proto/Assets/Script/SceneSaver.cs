@@ -83,7 +83,7 @@ public class SceneSaver : MonoBehaviour
         LocalizationSettings.SelectedLocaleChanged -= OnLocaleChanged;
     }
 
-    OnLocaleChanged(Locale obj)
+    private void OnLocaleChanged(Locale obj)
     {
 
     }
