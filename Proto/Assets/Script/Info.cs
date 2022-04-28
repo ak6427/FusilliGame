@@ -37,10 +37,8 @@ public class Info : MonoBehaviour
     [SerializeField]
     public RectTransform pageOneAnimation;
 
-    private Animator pageOneAnimator;
-
-    public RuntimeAnimatorController TutorialAnimationFI;
-    public RuntimeAnimatorController TutorialAnimationEN;
+    [SerializeField]
+    private RectTransform tut1Text;
 
     [SerializeField]
     public GameObject pageTwo;
@@ -85,7 +83,6 @@ public class Info : MonoBehaviour
         sceneSaver = FindObjectOfType<SceneSaver>();
         pageOneAnchor = pageOne.GetComponent<RectTransform>();
         myRect = GetComponent<RectTransform>();
-        pageOneAnimator = pageOne.transform.Find("PageOneAnimation").GetComponent<Animator>();
     }
 
     void Start()
@@ -108,6 +105,7 @@ public class Info : MonoBehaviour
         {
             pageOneAnimation.localScale = new Vector3(sceneSaver.pageOneScale * ratioX / pageOneAnchor.lossyScale.x, sceneSaver.pageOneScale * ratioY / pageOneAnchor.lossyScale.y, 0);
             pageOneAnchor.anchoredPosition = new Vector3(pageOneAnchor.anchoredPosition.x / pageOneAnchor.lossyScale.x, pageOneAnchor.anchoredPosition.y / pageOneAnchor.lossyScale.y, 0); 
+            tut1Text.anchoredPosition = new Vector3(tut1Text.anchoredPosition.x / tut1Text.lossyScale.x, tut1Text.anchoredPosition.y / tut1Text.lossyScale.y, 0); 
             pageTwoImage.localScale = new Vector3(ratioX / pageOneAnchor.lossyScale.x, ratioY / pageOneAnchor.lossyScale.y, 0);
             pageThreeImage.localScale = new Vector3(ratioX / pageOneAnchor.lossyScale.x, ratioY / pageOneAnchor.lossyScale.y, 0);
             pageFourImage.localScale = new Vector3(ratioX / pageOneAnchor.lossyScale.x, ratioY / pageOneAnchor.lossyScale.y, 0);
@@ -116,6 +114,7 @@ public class Info : MonoBehaviour
         {
             pageOneAnimation.localScale = new Vector3(sceneSaver.pageOneScale / ratioX / pageOneAnchor.lossyScale.x, sceneSaver.pageOneScale / ratioY * pageOneAnchor.lossyScale.y, 0);
             pageOneAnchor.anchoredPosition = new Vector3(pageOneAnchor.anchoredPosition.x * pageOneAnchor.lossyScale.x - 0.8f, pageOneAnchor.anchoredPosition.y * pageOneAnchor.lossyScale.y - 0.8f, 0); 
+            tut1Text.anchoredPosition = new Vector3(tut1Text.anchoredPosition.x * tut1Text.lossyScale.x - 0.8f, tut1Text.anchoredPosition.y * tut1Text.lossyScale.y - 0.8f, 0); 
             pageTwoImage.localScale = new Vector3(ratioX / pageOneAnchor.lossyScale.x + 0.08f, ratioY / pageOneAnchor.lossyScale.y + 0.08f, 0);
             pageThreeImage.localScale = new Vector3(ratioX / pageOneAnchor.lossyScale.x + 0.08f, ratioY / pageOneAnchor.lossyScale.y + 0.08f, 0);
             pageFourImage.localScale = new Vector3(ratioX / pageOneAnchor.lossyScale.x + 0.08f, ratioY / pageOneAnchor.lossyScale.y + 0.08f, 0);
@@ -126,14 +125,6 @@ public class Info : MonoBehaviour
 
     public void SetText()
     {
-        if (sceneSaver.localizedTutorialImagesParsed == 0)
-        {
-            pageOneAnimator.runtimeAnimatorController = TutorialAnimationFI;
-        }
-        else
-        {
-            pageOneAnimator.runtimeAnimatorController = TutorialAnimationEN;
-        }
 
         if (localeToggle != sceneSaver.localeToggle)
         {
