@@ -3,7 +3,7 @@
     "m_SelectedPackage": {
         "deviceId": "QV725ZV43A",
         "name": "com.DefaultCompany.Proto",
-        "processId": 22756,
+        "processId": 14951,
         "exited": false
     },
     "m_SelectedPriority": 0,
@@ -13,24 +13,6 @@
             "name": "com.sonymobile.launcher",
             "processId": 5044,
             "exited": false
-        },
-        {
-            "deviceId": "QV725ZV43A",
-            "name": "com.DefaultCompany.Proto",
-            "processId": 15898,
-            "exited": true
-        },
-        {
-            "deviceId": "QV725ZV43A",
-            "name": "com.DefaultCompany.Proto",
-            "processId": 16632,
-            "exited": true
-        },
-        {
-            "deviceId": "QV725ZV43A",
-            "name": "com.DefaultCompany.Proto",
-            "processId": 18010,
-            "exited": true
         },
         {
             "deviceId": "QV725ZV43A",
@@ -48,12 +30,24 @@
             "deviceId": "QV725ZV43A",
             "name": "com.DefaultCompany.Proto",
             "processId": 15364,
-            "exited": false
+            "exited": true
         },
         {
             "deviceId": "QV725ZV43A",
             "name": "com.DefaultCompany.Proto",
             "processId": 22756,
+            "exited": true
+        },
+        {
+            "deviceId": "QV725ZV43A",
+            "name": "com.DefaultCompany.Proto",
+            "processId": 12233,
+            "exited": true
+        },
+        {
+            "deviceId": "QV725ZV43A",
+            "name": "com.DefaultCompany.Proto",
+            "processId": 14951,
             "exited": false
         },
         {

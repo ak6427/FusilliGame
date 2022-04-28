@@ -1554,6 +1554,14 @@ PrefabInstance:
       propertyPath: m_fontColor32.rgba
       value: 4278255615
       objectReference: {fileID: 0}
+    - target: {fileID: 3971532601602598210, guid: 1c62ff0dc6d76e64994931177e5d9414, type: 3}
+      propertyPath: m_Interactable
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3971532601602598210, guid: 1c62ff0dc6d76e64994931177e5d9414, type: 3}
+      propertyPath: m_BlocksRaycasts
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3971532601602598214, guid: 1c62ff0dc6d76e64994931177e5d9414, type: 3}
       propertyPath: m_Name
       value: TipWindow
