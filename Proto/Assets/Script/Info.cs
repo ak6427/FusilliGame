@@ -37,6 +37,11 @@ public class Info : MonoBehaviour
     [SerializeField]
     public RectTransform pageOneAnimation;
 
+    private Animator pageOneAnimator;
+
+    public RuntimeAnimatorController TutorialAnimationFI;
+    public RuntimeAnimatorController TutorialAnimationEN;
+
     [SerializeField]
     public GameObject pageTwo;
 
@@ -73,11 +78,14 @@ public class Info : MonoBehaviour
     [SerializeField]
     public Sprite pageFourImageEN;
 
+    private int localeToggle = 0;
+
     void Awake()
     {
         sceneSaver = FindObjectOfType<SceneSaver>();
         pageOneAnchor = pageOne.GetComponent<RectTransform>();
         myRect = GetComponent<RectTransform>();
+        pageOneAnimator = pageOne.transform.Find("PageOneAnimation").GetComponent<Animator>();
     }
 
     void Start()
@@ -111,6 +119,25 @@ public class Info : MonoBehaviour
             pageTwoImage.localScale = new Vector3(ratioX / pageOneAnchor.lossyScale.x + 0.08f, ratioY / pageOneAnchor.lossyScale.y + 0.08f, 0);
             pageThreeImage.localScale = new Vector3(ratioX / pageOneAnchor.lossyScale.x + 0.08f, ratioY / pageOneAnchor.lossyScale.y + 0.08f, 0);
             pageFourImage.localScale = new Vector3(ratioX / pageOneAnchor.lossyScale.x + 0.08f, ratioY / pageOneAnchor.lossyScale.y + 0.08f, 0);
+        }
+
+        SetText();
+    }
+
+    public void SetText()
+    {
+        if (sceneSaver.localizedTutorialImagesParsed == 0)
+        {
+            pageOneAnimator.runtimeAnimatorController = TutorialAnimationFI;
+        }
+        else
+        {
+            pageOneAnimator.runtimeAnimatorController = TutorialAnimationEN;
+        }
+
+        if (localeToggle != sceneSaver.localeToggle)
+        {
+            localeToggle = sceneSaver.localeToggle;
         }
     }
 
@@ -165,6 +192,11 @@ public class Info : MonoBehaviour
             pageFour.SetActive(true);
             leftArrow.SetActive(true);
             rightArrow.SetActive(false);
+        }
+
+        if (localeToggle != sceneSaver.localeToggle)
+        {
+            SetText();
         }
     }
 }

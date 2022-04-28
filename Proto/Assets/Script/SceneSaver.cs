@@ -29,6 +29,11 @@ public class SceneSaver : MonoBehaviour
     public LocalizedString localizedTimeRemaining;
 
     [SerializeField]
+    private LocalizedString localizedTutorialImages;
+
+    public int localizedTutorialImagesParsed;
+
+    [SerializeField]
     private LocalizedString localizedFoodColumn;
     public int localizedFoodColumnParsed;
 
@@ -60,6 +65,7 @@ public class SceneSaver : MonoBehaviour
     void Update()
     {
         localizedFoodColumnParsed = int.Parse(localizedFoodColumn.GetLocalizedString());
+        localizedTutorialImagesParsed = int.Parse(localizedTutorialImages.GetLocalizedString());
     }
 
     private void OnEnable()

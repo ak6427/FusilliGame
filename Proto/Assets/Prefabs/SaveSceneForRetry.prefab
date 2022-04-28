@@ -82,6 +82,16 @@ MonoBehaviour:
     m_FallbackState: 0
     m_WaitForCompletion: 0
     m_LocalVariables: []
+  localizedTutorialImages:
+    m_TableReference:
+      m_TableCollectionName: GUID:704a3d3d7e4798d4b8a2f798059bdc04
+    m_TableEntryReference:
+      m_KeyId: 621316773916672
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  localizedTutorialImagesParsed: 0
   localizedFoodColumn:
     m_TableReference:
       m_TableCollectionName: GUID:704a3d3d7e4798d4b8a2f798059bdc04
@@ -91,5 +101,8 @@ MonoBehaviour:
     m_FallbackState: 0
     m_WaitForCompletion: 0
     m_LocalVariables: []
+  localizedFoodColumnParsed: 0
+  localeToggle: 0
+  hideMenuBackground: 0
   references:
     version: 1

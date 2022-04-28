@@ -1302,6 +1302,8 @@ MonoBehaviour:
   pageOne: {fileID: 1853888235}
   pageOneAnchor: {fileID: 0}
   pageOneAnimation: {fileID: 689960716}
+  TutorialAnimationFI: {fileID: 9100000, guid: e0b713b2d096feb4798943d18ca6d98a, type: 2}
+  TutorialAnimationEN: {fileID: 9100000, guid: 53d4f66792a649d4f9ba97f09d0b42e2, type: 2}
   pageTwo: {fileID: 524641978}
   pageTwoImage: {fileID: 1291599732}
   pageTwoImageFI: {fileID: 21300000, guid: fd74428b11810c64090dc5d63a8f45c6, type: 3}

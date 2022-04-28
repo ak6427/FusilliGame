@@ -110,5 +110,9 @@ MonoBehaviour:
     m_Localized: 0
     m_Metadata:
       m_Items: []
+  - m_Id: 621316773916672
+    m_Localized: 0
+    m_Metadata:
+      m_Items: []
   references:
     version: 1
