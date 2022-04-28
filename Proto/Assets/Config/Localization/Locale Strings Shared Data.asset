@@ -111,6 +111,82 @@ MonoBehaviour:
     m_Key: Tutorial Page One
     m_Metadata:
       m_Items: []
+  - m_Id: 734826369662976
+    m_Key: EasyTutorialText3
+    m_Metadata:
+      m_Items: []
+  - m_Id: 738959021588480
+    m_Key: EasyTutorialText2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 739652495228928
+    m_Key: EasyTutorialText
+    m_Metadata:
+      m_Items: []
+  - m_Id: 761186911797248
+    m_Key: MediumHealth1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 761259288707072
+    m_Key: MediumHealth2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 761306717896704
+    m_Key: MediumHealth3
+    m_Metadata:
+      m_Items: []
+  - m_Id: 761323193122816
+    m_Key: MediumHealth4
+    m_Metadata:
+      m_Items: []
+  - m_Id: 761340700147712
+    m_Key: MediumHealth5
+    m_Metadata:
+      m_Items: []
+  - m_Id: 761369997361152
+    m_Key: MediumHealth6
+    m_Metadata:
+      m_Items: []
+  - m_Id: 761386812325888
+    m_Key: MediumHealth7
+    m_Metadata:
+      m_Items: []
+  - m_Id: 769901484326912
+    m_Key: HardClimate1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 770006484533248
+    m_Key: HardClimate2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 770023802814464
+    m_Key: HardClimate3
+    m_Metadata:
+      m_Items: []
+  - m_Id: 770033764286464
+    m_Key: HardClimate4
+    m_Metadata:
+      m_Items: []
+  - m_Id: 770039082663936
+    m_Key: HardClimate5
+    m_Metadata:
+      m_Items: []
+  - m_Id: 770044115828736
+    m_Key: HardClimate6
+    m_Metadata:
+      m_Items: []
+  - m_Id: 770049119633408
+    m_Key: HardClimate7
+    m_Metadata:
+      m_Items: []
+  - m_Id: 778136421416960
+    m_Key: Health
+    m_Metadata:
+      m_Items: []
+  - m_Id: 778151588020224
+    m_Key: Climate
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

@@ -114,5 +114,87 @@ MonoBehaviour:
     m_Localized: Raahaa ruoat pyramidiin
     m_Metadata:
       m_Items: []
+  - m_Id: 734826369662976
+    m_Localized: "Kasvikset,\nHedelm\xE4t,\nY\xE4ysjyv\xE4t,\nP\xE4hkin\xE4t,\nSiemenet,\nEi-trooppiset
+      kasvi\xF6ljyt,\nMatalan glykeemisen indeksin ruuat,\nPiim\xE4"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 738959021588480
+    m_Localized: "Kalat,\nPalkokasvit,\nJuusto,\nMaito,\nMunat,\nSiivekk\xE4\xE4t,\nKorkean
+      glykeemisen indeksin ruuat (peruna, riisi jne.)"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 739652495228928
+    m_Localized: "Kakut,\nLeivonnaiset,\nPunainen liha,\nEl\xE4inrasvat,\ntrooppiset
+      \xF6ljyt,\nProsessoitu liha"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 761186911797248
+    m_Localized: "Vihannekset, hedelm\xE4t, t\xE4ysjyv\xE4t"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 761259288707072
+    m_Localized: "P\xE4hkin\xE4t, siemenet, ei-trooppiset kasvi\xF6ljyt, Matalan
+      glykeemisen indeksin ruuat, piim\xE4"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 761306717896704
+    m_Localized: Kalat & palkokasvit
+    m_Metadata:
+      m_Items: []
+  - m_Id: 761323193122816
+    m_Localized: Juusto, maito, munat, siipikarja
+    m_Metadata:
+      m_Items: []
+  - m_Id: 761340700147712
+    m_Localized: Korkean glykeemisen indeksin ruuat (peruna, riisi jne.)
+    m_Metadata:
+      m_Items: []
+  - m_Id: 761369997361152
+    m_Localized: "Kakut, leivonnaiset, el\xE4inrasvat, punainen liha"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 761386812325888
+    m_Localized: Prosessoitu liha
+    m_Metadata:
+      m_Items: []
+  - m_Id: 769901484326912
+    m_Localized: "Kasvikset, hedelm\xE4t, t\xE4ysjyv\xE4t, palkokasvit, matalan &
+      korkean glykeemisen indeksin ruuat"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 770006484533248
+    m_Localized: "P\xE4hkin\xE4t, siemenet, ei-trooppiset kasvi\xF6ljyt, maito, kakut,
+      leivonnaiset"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 770023802814464
+    m_Localized: "Piim\xE4, munat, siipikarja"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 770033764286464
+    m_Localized: "Kalat, el\xE4inrasvat, trooppiset kasvi\xF6ljyt"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 770039082663936
+    m_Localized: Prosessoity liha
+    m_Metadata:
+      m_Items: []
+  - m_Id: 770044115828736
+    m_Localized: Juustot
+    m_Metadata:
+      m_Items: []
+  - m_Id: 770049119633408
+    m_Localized: Punainen liha
+    m_Metadata:
+      m_Items: []
+  - m_Id: 778136421416960
+    m_Localized: Terveys
+    m_Metadata:
+      m_Items: []
+  - m_Id: 778151588020224
+    m_Localized: Ilmasto
+    m_Metadata:
+      m_Items: []
   references:
     version: 1

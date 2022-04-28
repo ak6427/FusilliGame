@@ -114,5 +114,124 @@ MonoBehaviour:
     m_Localized: Drag foods to pyramid
     m_Metadata:
       m_Items: []
+  - m_Id: 734826369662976
+    m_Localized: 'Vegetables,
+
+      Fruits,
+
+      Whole grains,
+
+      Nuts,
+
+      Seeds,
+
+      Non-tropical
+
+      Vegetable
+      oils,
+
+      Low glycemic index foods,
+
+      Fermented milk'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 738959021588480
+    m_Localized: 'Fish,
+
+      Legumes,
+
+      Cheese,
+
+      Milk,
+
+      Eggs,
+
+      Poultry,
+
+      High
+      glycemic index foods'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 739652495228928
+    m_Localized: 'Cakes,
+
+      Pastries,
+
+      Red meat,
+
+      Animal fats,
+
+      Tropical
+      vegetable oils,
+
+      Processed meat'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 761186911797248
+    m_Localized: Vegetables, fruits, whole grains
+    m_Metadata:
+      m_Items: []
+  - m_Id: 761259288707072
+    m_Localized: Nuts, seeds, non-tropical vegetable oils, low glycemic index foods,
+      fermented milk
+    m_Metadata:
+      m_Items: []
+  - m_Id: 761306717896704
+    m_Localized: Fish & legumes
+    m_Metadata:
+      m_Items: []
+  - m_Id: 761323193122816
+    m_Localized: Cheese, milk, eggs, poultry
+    m_Metadata:
+      m_Items: []
+  - m_Id: 761340700147712
+    m_Localized: High glycemic index foods
+    m_Metadata:
+      m_Items: []
+  - m_Id: 761369997361152
+    m_Localized: Cakes, pastries, animal fats, red meat
+    m_Metadata:
+      m_Items: []
+  - m_Id: 761386812325888
+    m_Localized: Processed meat
+    m_Metadata:
+      m_Items: []
+  - m_Id: 769901484326912
+    m_Localized: Vegetables, fruits, whole grains, legumes, low & high -glycemic
+      index foods
+    m_Metadata:
+      m_Items: []
+  - m_Id: 770006484533248
+    m_Localized: Nuts, seeds, non-tropical vegetable oils, milk, cakes, pastries
+    m_Metadata:
+      m_Items: []
+  - m_Id: 770023802814464
+    m_Localized: Fermented milk, eggs, poultry
+    m_Metadata:
+      m_Items: []
+  - m_Id: 770033764286464
+    m_Localized: Fish, animal fats, tropical vegetable oils
+    m_Metadata:
+      m_Items: []
+  - m_Id: 770039082663936
+    m_Localized: Processed meat
+    m_Metadata:
+      m_Items: []
+  - m_Id: 770044115828736
+    m_Localized: Cheese
+    m_Metadata:
+      m_Items: []
+  - m_Id: 770049119633408
+    m_Localized: Red meat
+    m_Metadata:
+      m_Items: []
+  - m_Id: 778136421416960
+    m_Localized: Health
+    m_Metadata:
+      m_Items: []
+  - m_Id: 778151588020224
+    m_Localized: Climate
+    m_Metadata:
+      m_Items: []
   references:
     version: 1

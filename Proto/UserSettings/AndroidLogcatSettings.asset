@@ -1,9 +1,9 @@
 {
-    "m_SelectedDeviceId": "QV725ZV43A",
+    "m_SelectedDeviceId": "QV7811C39E",
     "m_SelectedPackage": {
-        "deviceId": "QV725ZV43A",
+        "deviceId": "QV7811C39E",
         "name": "com.DefaultCompany.Proto",
-        "processId": 26695,
+        "processId": 7013,
         "exited": false
     },
     "m_SelectedPriority": 0,
@@ -168,6 +168,24 @@
             "deviceId": "QV7811C39E",
             "name": "com.DefaultCompany.Proto",
             "processId": 16162,
+            "exited": false
+        },
+        {
+            "deviceId": "QV7811C39E",
+            "name": "com.DefaultCompany.Proto",
+            "processId": 5014,
+            "exited": false
+        },
+        {
+            "deviceId": "QV7811C39E",
+            "name": "com.DefaultCompany.Proto",
+            "processId": 6288,
+            "exited": false
+        },
+        {
+            "deviceId": "QV7811C39E",
+            "name": "com.DefaultCompany.Proto",
+            "processId": 7013,
             "exited": false
         },
         {
