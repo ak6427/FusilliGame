@@ -22,7 +22,8 @@ public class Drop : MonoBehaviour, IDropHandler
     public TargetPyramid foodsTargetPyramid;
     private bool penalty;
     public Color myColor;
-    //public bool filled;
+
+    private AudioSource audioSource;
 
     private void Awake() 
     {
@@ -32,7 +33,7 @@ public class Drop : MonoBehaviour, IDropHandler
         foodsTargetPyramid = FindObjectOfType<TargetPyramid>();
         foodsTargetPyramid = foodsTargetPyramid.GetComponent<TargetPyramid>();
         myColor = image.color;
-        //filled = false;
+        audioSource = GetComponent<AudioSource>();
     }
 
     public void OnDrop(PointerEventData eventData) 
@@ -53,7 +54,8 @@ public class Drop : MonoBehaviour, IDropHandler
                     image.color = Color.green;
                     canvasGroup.blocksRaycasts = false;
                     eventData.pointerDrag.GetComponent<DragDrop>().correct = 1;
-                    //filled = true;
+                    
+                    eventData.pointerDrag.GetComponent<AudioSource>().Play();
 
                     rankPenalty = 1;
 
@@ -70,7 +72,8 @@ public class Drop : MonoBehaviour, IDropHandler
                     eventData.pointerDrag.GetComponent<DragDrop>().myBoxImage = image;
                     eventData.pointerDrag.GetComponent<DragDrop>().myBoxColor = myColor;
                     eventData.pointerDrag.GetComponent<DragDrop>().myBoxAnchoredPosition = GetComponent<RectTransform>().anchoredPosition;
-                    //filled = true;
+                    
+                    audioSource.Play();
 
                     //PENALTY
                     rankPenalty = Mathf.Abs(rankBox - eventData.pointerDrag.GetComponent<DragDrop>().rankFood) * 2;

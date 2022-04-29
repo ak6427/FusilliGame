@@ -10,8 +10,8 @@ public class SceneSwitch : MonoBehaviour
     public SceneSaver sceneSaver;
     public string activeScene;
     public float oldTimeScale;
+    public AudioSource playingAudio;
 
-    // Start is called before the first frame update
     void Awake()
     {
        sceneSaver = FindObjectOfType<SceneSaver>();

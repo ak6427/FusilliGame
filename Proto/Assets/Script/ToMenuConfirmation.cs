@@ -15,6 +15,7 @@ public class ToMenuConfirmation : MonoBehaviour
     private string beforeConfirmText;
     public SceneSaver sceneSaver;
     private int localeToggle = 0;
+    public bool notSceneSwitch = false;
 
     void Awake()
     {
@@ -52,23 +53,25 @@ public class ToMenuConfirmation : MonoBehaviour
 
     void Update()
     {
-        if (confirmTimer > 0.0f)
+        if (!notSceneSwitch)
         {
-            childText.text = askConfirmText;
-            childText.color = new Color(255, 255, 0, 255);
-            childText.fontSize = 52.5f;
-            confirmTimer = Mathf.Clamp(confirmTimer - Time.deltaTime, 0.0f, 3.0f);
-        }
-        else
-        {
-            childText.text = beforeConfirmText;
-            childText.color = new Color(255, 0, 0, 255);
-        }
+            if (confirmTimer > 0.0f)
+            {
+                childText.text = askConfirmText;
+                childText.color = new Color(255, 255, 0, 255);
+                childText.fontSize = 52.5f;
+                confirmTimer = Mathf.Clamp(confirmTimer - Time.deltaTime, 0.0f, 3.0f);
+            }
+            else
+            {
+                childText.text = beforeConfirmText;
+                childText.color = new Color(255, 0, 0, 255);
+            }
 
-        if (localeToggle != sceneSaver.localeToggle)
-        {
-            SetText();
+            if (localeToggle != sceneSaver.localeToggle)
+            {
+                SetText();
+            }
         }
-
     }
 }

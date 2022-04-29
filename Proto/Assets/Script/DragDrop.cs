@@ -12,6 +12,8 @@ public class DragDrop : MonoBehaviour, IPointerDownHandler, IPointerUpHandler, I
     [SerializeField] public int correct; //0 = false, 1 = true
     [SerializeField] public string targetPyramid;
 
+    private AudioSource canvasAudioSource;
+
     private RectTransform rectTransform;
     public CanvasGroup canvasGroup;
     private GameScore gameScore;
@@ -35,6 +37,7 @@ public class DragDrop : MonoBehaviour, IPointerDownHandler, IPointerUpHandler, I
         buttons = GameObject.Find("Buttons group");
         buttonsRectTransform = buttons.GetComponent<RectTransform>();
         canvasRectTransform = canvas.GetComponent<RectTransform>();
+        canvasAudioSource = canvas.GetComponent<AudioSource>();
     }
 
     public void OnBeginDrag(PointerEventData eventData) 
@@ -75,6 +78,7 @@ public class DragDrop : MonoBehaviour, IPointerDownHandler, IPointerUpHandler, I
         Debug.Log("OnPointerDown");
         foodsTargetPyramid.foodTargetPyramid = targetPyramid;
         foodsTargetPyramid.resetAlpha = false;
+        canvasAudioSource.Play();
     }
 
     public void OnPointerUp(PointerEventData eventData)

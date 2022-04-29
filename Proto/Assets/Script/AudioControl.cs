@@ -31,7 +31,7 @@ public class AudioControl : MonoBehaviour
         }
     }
 
-    public float Save(AudioMixer mixer, string volumeName, bool muted, float storedSlider, string prefVolume)
+    public float Save(AudioMixer mixer, string volumeName, bool muted, float storedSlider, string prefVolume, string prefSlider)
     {
         if (muted == false)
         {
@@ -41,6 +41,7 @@ public class AudioControl : MonoBehaviour
         }
         else 
         {
+            PlayerPrefs.SetFloat(prefSlider, slider.value);
             return storedSlider = slider.value;
         }
     }

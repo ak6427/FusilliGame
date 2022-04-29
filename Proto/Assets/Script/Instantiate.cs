@@ -42,6 +42,7 @@ public class Instantiate : MonoBehaviour
         {
             mixer.SetFloat("BGMVolume", -80);
             sceneSaver.mutedBGM = true;
+            sceneSaver.storedSliderBGM = PlayerPrefs.GetFloat("prefSliderBGM");
         }
         else
         {
@@ -52,6 +53,7 @@ public class Instantiate : MonoBehaviour
         {
             mixer.SetFloat("SFXVolume", -80);
             sceneSaver.mutedSFX = true;
+            sceneSaver.storedSliderSFX = PlayerPrefs.GetFloat("prefSliderSFX");
         }
         else
         {

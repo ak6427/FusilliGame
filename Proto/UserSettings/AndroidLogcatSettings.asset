@@ -1,9 +1,9 @@
 {
-    "m_SelectedDeviceId": "QV7811C39E",
+    "m_SelectedDeviceId": "QV725ZV43A",
     "m_SelectedPackage": {
-        "deviceId": "QV7811C39E",
-        "name": "com.DefaultCompany.Proto",
-        "processId": 7013,
+        "deviceId": "QV725ZV43A",
+        "name": "com.T.A.J.R.O.Foodamid",
+        "processId": 14854,
         "exited": false
     },
     "m_SelectedPriority": 0,
@@ -17,49 +17,37 @@
         {
             "deviceId": "QV725ZV43A",
             "name": "com.DefaultCompany.Proto",
-            "processId": 19559,
+            "processId": 23976,
             "exited": true
         },
         {
             "deviceId": "QV725ZV43A",
             "name": "com.DefaultCompany.Proto",
-            "processId": 11619,
+            "processId": 27399,
             "exited": true
         },
         {
             "deviceId": "QV725ZV43A",
             "name": "com.DefaultCompany.Proto",
-            "processId": 15364,
+            "processId": 28852,
             "exited": true
         },
         {
             "deviceId": "QV725ZV43A",
-            "name": "com.DefaultCompany.Proto",
-            "processId": 22756,
+            "name": "com.T.A.J.R.O.Foodamid",
+            "processId": 29514,
             "exited": true
         },
         {
             "deviceId": "QV725ZV43A",
-            "name": "com.DefaultCompany.Proto",
-            "processId": 12233,
+            "name": "com.T.A.J.R.O.Foodamid",
+            "processId": 30196,
             "exited": true
         },
         {
             "deviceId": "QV725ZV43A",
-            "name": "com.DefaultCompany.Proto",
-            "processId": 14951,
-            "exited": false
-        },
-        {
-            "deviceId": "QV725ZV43A",
-            "name": "com.DefaultCompany.Proto",
-            "processId": 24801,
-            "exited": false
-        },
-        {
-            "deviceId": "QV725ZV43A",
-            "name": "com.DefaultCompany.Proto",
-            "processId": 26695,
+            "name": "com.T.A.J.R.O.Foodamid",
+            "processId": 14854,
             "exited": false
         },
         {
