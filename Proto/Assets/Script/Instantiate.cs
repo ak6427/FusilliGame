@@ -46,7 +46,7 @@ public class Instantiate : MonoBehaviour
         }
         else
         {
-            mixer.SetFloat("BGMVolume", PlayerPrefs.GetFloat("prefVolumeBGM"));
+            mixer.SetFloat("BGMVolume", Mathf.Clamp(PlayerPrefs.GetFloat("prefVolumeBGM"), -80, -15));
             sceneSaver.mutedBGM = false;
         }
         if (PlayerPrefs.GetInt("mutedSFX") == 1)
@@ -57,7 +57,7 @@ public class Instantiate : MonoBehaviour
         }
         else
         {
-            mixer.SetFloat("SFXVolume", PlayerPrefs.GetFloat("prefVolumeSFX"));
+            mixer.SetFloat("SFXVolume", Mathf.Clamp(PlayerPrefs.GetFloat("prefVolumeSFX"), -80, 0));
             sceneSaver.mutedSFX = false;
         }
 
