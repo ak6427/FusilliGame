@@ -238,7 +238,9 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 2449792816525312
-    m_Localized: T.A.J.R.O team
+    m_Localized: 'T.A.J.R.O
+
+      Team'
     m_Metadata:
       m_Items: []
   - m_Id: 2449938262405120
@@ -267,6 +269,18 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 2450617886453760
     m_Localized: 'Thanks to:'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2542300198998016
+    m_Localized: 'Pyramids:
+
+      Barilla'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2542382281527296
+    m_Localized: 'Music:
+
+      Joel Arpula'
     m_Metadata:
       m_Items: []
   references:
