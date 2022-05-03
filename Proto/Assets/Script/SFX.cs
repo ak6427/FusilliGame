@@ -337,4 +337,22 @@ public class SFX : MonoBehaviour
         StopAllCoroutines();
         FindObjectOfType<Info>().TurnLeft();
     }
+
+    // CREDITS
+
+    public void PlaySFXCredits()
+    {
+        audioSource.Play();
+        StartCoroutine(WaitCredits());
+    }
+
+    private IEnumerator WaitCredits()
+    {
+        while(audioSource.isPlaying)
+        {
+            yield return null;
+        }
+        StopAllCoroutines();
+        sceneSwitch.SceneCredits();
+    }
 }

@@ -103,21 +103,23 @@ public class Info : MonoBehaviour
         // Scale and Anchor
         if (ratioX >= ratioY)
         {
-            pageOneAnimation.localScale = new Vector3(sceneSaver.pageOneScale * ratioX / pageOneAnchor.lossyScale.x, sceneSaver.pageOneScale * ratioY / pageOneAnchor.lossyScale.y, 0);
             pageOneAnchor.anchoredPosition = new Vector3(pageOneAnchor.anchoredPosition.x / pageOneAnchor.lossyScale.x, pageOneAnchor.anchoredPosition.y / pageOneAnchor.lossyScale.y, 0); 
-            tut1Text.anchoredPosition = new Vector3(tut1Text.anchoredPosition.x / tut1Text.lossyScale.x, tut1Text.anchoredPosition.y / tut1Text.lossyScale.y, 0); 
+            pageOneAnimation.localScale = new Vector3(sceneSaver.pageOneScale * ratioX / pageOneAnchor.lossyScale.x, sceneSaver.pageOneScale * ratioY / pageOneAnchor.lossyScale.y, 0);
+            tut1Text.anchoredPosition = new Vector3(tut1Text.anchoredPosition.x / pageOneAnchor.lossyScale.x, tut1Text.anchoredPosition.y / pageOneAnchor.lossyScale.y, 0); 
             pageTwoImage.localScale = new Vector3(ratioX / pageOneAnchor.lossyScale.x, ratioY / pageOneAnchor.lossyScale.y, 0);
             pageThreeImage.localScale = new Vector3(ratioX / pageOneAnchor.lossyScale.x, ratioY / pageOneAnchor.lossyScale.y, 0);
             pageFourImage.localScale = new Vector3(ratioX / pageOneAnchor.lossyScale.x, ratioY / pageOneAnchor.lossyScale.y, 0);
+            Debug.Log("ratiox >=");
         }
         else
         {
-            pageOneAnimation.localScale = new Vector3(sceneSaver.pageOneScale / ratioX / pageOneAnchor.lossyScale.x, sceneSaver.pageOneScale / ratioY * pageOneAnchor.lossyScale.y, 0);
-            pageOneAnchor.anchoredPosition = new Vector3(pageOneAnchor.anchoredPosition.x * pageOneAnchor.lossyScale.x - 0.8f, pageOneAnchor.anchoredPosition.y * pageOneAnchor.lossyScale.y - 0.8f, 0); 
-            tut1Text.anchoredPosition = new Vector3(tut1Text.anchoredPosition.x * tut1Text.lossyScale.x - 0.8f, tut1Text.anchoredPosition.y * tut1Text.lossyScale.y - 0.8f, 0); 
-            pageTwoImage.localScale = new Vector3(ratioX / pageOneAnchor.lossyScale.x + 0.08f, ratioY / pageOneAnchor.lossyScale.y + 0.08f, 0);
-            pageThreeImage.localScale = new Vector3(ratioX / pageOneAnchor.lossyScale.x + 0.08f, ratioY / pageOneAnchor.lossyScale.y + 0.08f, 0);
-            pageFourImage.localScale = new Vector3(ratioX / pageOneAnchor.lossyScale.x + 0.08f, ratioY / pageOneAnchor.lossyScale.y + 0.08f, 0);
+            pageOneAnchor.anchoredPosition = new Vector3(pageOneAnchor.anchoredPosition.x * pageOneAnchor.lossyScale.x - 1, pageOneAnchor.anchoredPosition.y * pageOneAnchor.lossyScale.y - 0.25f, 0); 
+            pageOneAnimation.localScale = new Vector3(sceneSaver.pageOneScale / ratioX / pageOneAnchor.lossyScale.x + 0.1f, sceneSaver.pageOneScale / ratioY * pageOneAnchor.lossyScale.y + 0.125f, 0);
+            tut1Text.anchoredPosition = new Vector3(tut1Text.anchoredPosition.x * pageOneAnchor.lossyScale.x, tut1Text.anchoredPosition.y * pageOneAnchor.lossyScale.y, 0); 
+            pageTwoImage.localScale = new Vector3(ratioX / pageOneAnchor.lossyScale.x + 0.0775f, ratioY / pageOneAnchor.lossyScale.y + 0.085f, 0);
+            pageThreeImage.localScale = new Vector3(ratioX / pageOneAnchor.lossyScale.x + 0.0775f, ratioY / pageOneAnchor.lossyScale.y + 0.085f, 0);
+            pageFourImage.localScale = new Vector3(ratioX / pageOneAnchor.lossyScale.x + 0.0775f, ratioY / pageOneAnchor.lossyScale.y + 0.085f, 0);
+            Debug.Log("ratioy >");
         }
 
         SetText();

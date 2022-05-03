@@ -187,6 +187,34 @@ MonoBehaviour:
     m_Key: Climate
     m_Metadata:
       m_Items: []
+  - m_Id: 2444049551863808
+    m_Key: Credits
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2449792816525312
+    m_Key: Team
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2449938262405120
+    m_Key: Director
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2450112401518592
+    m_Key: Artist
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2450287274635264
+    m_Key: Programmer 1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2450497241493504
+    m_Key: Programmer 2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2450617886453760
+    m_Key: Thanks
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

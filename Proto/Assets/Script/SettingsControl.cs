@@ -143,7 +143,7 @@ public class SettingsControl : MonoBehaviour
 
     public void Update()
     {
-        sceneSaver.storedSliderBGM = BGMControlAC.Save(mixer, BGMVolumeName, sceneSaver.mutedBGM, sceneSaver.storedSliderBGM, "prefVolumeBGM", "prefSliderBGM", -15);
+        sceneSaver.storedSliderBGM = BGMControlAC.Save(mixer, BGMVolumeName, sceneSaver.mutedBGM, sceneSaver.storedSliderBGM, "prefVolumeBGM", "prefSliderBGM", 0);
         sceneSaver.storedSliderSFX = SFXControlAC.Save(mixer, SFXVolumeName, sceneSaver.mutedSFX, sceneSaver.storedSliderSFX, "prefVolumeSFX", "prefSliderSFX", 0);
     }
 }

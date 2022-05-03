@@ -233,5 +233,41 @@ MonoBehaviour:
     m_Localized: Climate
     m_Metadata:
       m_Items: []
+  - m_Id: 2444049551863808
+    m_Localized: Credits
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2449792816525312
+    m_Localized: T.A.J.R.O team
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2449938262405120
+    m_Localized: 'Director:
+
+      Pasi Sundelin'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2450112401518592
+    m_Localized: 'Artist:
+
+      Eetu Vartiainen'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2450287274635264
+    m_Localized: 'Programmer:
+
+      Ville Lehdonkangas'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2450497241493504
+    m_Localized: 'Programmer:
+
+      Juuso Kemppainen'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2450617886453760
+    m_Localized: 'Thanks to:'
+    m_Metadata:
+      m_Items: []
   references:
     version: 1

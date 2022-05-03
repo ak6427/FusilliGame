@@ -65,6 +65,9 @@ public class SceneSwitch : MonoBehaviour
     public void SceneSettings() {
         SceneManager.LoadScene("Settings");
     }
+    public void SceneCredits() {
+        SceneManager.LoadScene("Credits");
+    }
     public void SceneInfoAsync() {
         sceneSaver = FindObjectOfType<SceneSaver>();
         sceneSaver.eventSystem.enabled = false;
