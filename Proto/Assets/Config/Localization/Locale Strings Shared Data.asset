@@ -223,6 +223,14 @@ MonoBehaviour:
     m_Key: Music by
     m_Metadata:
       m_Items: []
+  - m_Id: 2767328269582336
+    m_Key: HealthPyraInfo
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2767951861923840
+    m_Key: ClimatePyraInfo
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

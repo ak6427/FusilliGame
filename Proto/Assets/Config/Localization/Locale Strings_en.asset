@@ -283,5 +283,15 @@ MonoBehaviour:
       Joel Arpula'
     m_Metadata:
       m_Items: []
+  - m_Id: 2767328269582336
+    m_Localized: Foods that should be consumed less in a healthy diet belong to a
+      higher tier in the health pyramid.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2767951861923840
+    m_Localized: Foods that influence the climate more belong higher in the climate
+      pyramid.
+    m_Metadata:
+      m_Items: []
   references:
     version: 1
