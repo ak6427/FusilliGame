@@ -66,6 +66,7 @@ public class GameScore : MonoBehaviour
                     i++;
                     String ESS = "E" + i;
                     if(timeR > PlayerPrefs.GetFloat(ESS)){
+                        sceneSaver.newRecord = (float) Math.Round((double) timeR, 3);
                         for(int i2 = 10; i2 > i; i2--){
                             String OHighScore = "E"+i2;//E10
                             int ii = i2-1;
@@ -76,7 +77,10 @@ public class GameScore : MonoBehaviour
                         PlayerPrefs.SetFloat(ESS, (float)Math.Round((double)timeR,3));
                         F=2;
                     }
-                    if(i==10)F=2;
+                    if(i==10)
+                    {
+                        F=2;
+                    }
                 }
 
             }
@@ -87,6 +91,7 @@ public class GameScore : MonoBehaviour
                     i++;
                     String ESS = "M" + i;
                     if(timeR > PlayerPrefs.GetFloat(ESS)){
+                        sceneSaver.newRecord = (float) Math.Round((double) timeR, 3);
                         for(int i2 = 10; i2 > i; i2--){
                             String OHighScore = "M"+i2;//E10
                             int ii = i2-1;
@@ -97,7 +102,10 @@ public class GameScore : MonoBehaviour
                         PlayerPrefs.SetFloat(ESS, (float)Math.Round((double)timeR,3));
                         F=2;
                     }
-                    if(i==10)F=2;
+                    if(i==10)
+                    {
+                        F=2;
+                    }
                 }
             }
             else if (activeScene == "Hard"){
@@ -107,6 +115,7 @@ public class GameScore : MonoBehaviour
                     i++;
                     String ESS = "H" + i;
                     if(timeR > PlayerPrefs.GetFloat(ESS)){
+                        sceneSaver.newRecord = (float) Math.Round((double) timeR, 3);
                         for(int i2 = 10; i2 > i; i2--){
                             String OHighScore = "H"+i2;//E10
                             int ii = i2-1;
@@ -117,7 +126,10 @@ public class GameScore : MonoBehaviour
                         PlayerPrefs.SetFloat(ESS, (float)Math.Round((double)timeR,3));
                         F=2;
                     }
-                    if(i==10)F=2;
+                    if(i==10)
+                    {
+                        F=2;
+                    }
                 }
             }
 

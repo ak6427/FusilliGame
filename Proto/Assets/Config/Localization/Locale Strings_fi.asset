@@ -260,5 +260,9 @@ MonoBehaviour:
     m_Localized: Versio 1.2
     m_Metadata:
       m_Items: []
+  - m_Id: 5512904552353792
+    m_Localized: "Uusi enn\xE4tys!"
+    m_Metadata:
+      m_Items: []
   references:
     version: 1

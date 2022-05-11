@@ -235,6 +235,10 @@ MonoBehaviour:
     m_Key: Version
     m_Metadata:
       m_Items: []
+  - m_Id: 5512904552353792
+    m_Key: Record
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

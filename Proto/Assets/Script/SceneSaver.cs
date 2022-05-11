@@ -20,6 +20,7 @@ public class SceneSaver : MonoBehaviour
     public float storedSliderSFX;
     public float oldTimeScale;
     public float widthOrHeight;
+    public float newRecord;
 
     public LocalizedString localizedConfirm;
 
