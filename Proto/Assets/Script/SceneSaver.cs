@@ -19,7 +19,6 @@ public class SceneSaver : MonoBehaviour
     public float storedSliderBGM;
     public float storedSliderSFX;
     public float oldTimeScale;
-    public float pageOneScale;
     public float widthOrHeight;
 
     public LocalizedString localizedConfirm;
@@ -43,10 +42,15 @@ public class SceneSaver : MonoBehaviour
     void Awake()
     {
         DontDestroyOnLoad(this.gameObject);
+    }
+
+    void Update()
+    {
+        localizedFoodColumnParsed = int.Parse(localizedFoodColumn.GetLocalizedString());
 
         float ratioX = (float)Screen.width / 1920;
         float ratioY = (float)Screen.height / 1080;
-        if (ratioX > ratioY)
+        if (ratioX >= ratioY)
         {
             widthOrHeight = 0.75f;
         }
@@ -58,11 +62,6 @@ public class SceneSaver : MonoBehaviour
         {
             widthOrHeight = 0.5f;
         }
-    }
-
-    void Update()
-    {
-        localizedFoodColumnParsed = int.Parse(localizedFoodColumn.GetLocalizedString());
     }
 
     private void OnEnable()

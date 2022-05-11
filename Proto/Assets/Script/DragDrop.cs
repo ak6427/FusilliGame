@@ -26,6 +26,7 @@ public class DragDrop : MonoBehaviour, IPointerDownHandler, IPointerUpHandler, I
     public Image myBoxImage;
     public Color myBoxColor;
     public Vector2 myBoxAnchoredPosition;
+    private RectTransform tipWindow;
 
     private void Awake()
     {
@@ -38,11 +39,11 @@ public class DragDrop : MonoBehaviour, IPointerDownHandler, IPointerUpHandler, I
         buttonsRectTransform = buttons.GetComponent<RectTransform>();
         canvasRectTransform = canvas.GetComponent<RectTransform>();
         canvasAudioSource = canvas.GetComponent<AudioSource>();
+        tipWindow = GameObject.Find("TipWindow").GetComponent<RectTransform>();
     }
 
     public void OnBeginDrag(PointerEventData eventData) 
     {
-        Debug.Log("OnBeginDrag");
         canvasGroup.alpha = .4f; 
         canvasGroup.blocksRaycasts = false;
         lastCoords = rectTransform.anchoredPosition;
@@ -50,7 +51,6 @@ public class DragDrop : MonoBehaviour, IPointerDownHandler, IPointerUpHandler, I
 
     public void OnEndDrag(PointerEventData eventData) 
     {
-        Debug.Log("OnEndDrag");
         canvasGroup.blocksRaycasts = true;
         canvasGroup.alpha = 1f;
         if (correct == 1)
@@ -63,8 +63,11 @@ public class DragDrop : MonoBehaviour, IPointerDownHandler, IPointerUpHandler, I
 
     public void OnDrag(PointerEventData eventData)
     {
-        Debug.Log("OnDrag");
         rectTransform.anchoredPosition += eventData.delta / canvas.scaleFactor;
+        if (eventData.pointerDrag != null)
+        {
+            tipWindow.anchoredPosition = new Vector2(eventData.pointerDrag.GetComponent<RectTransform>().anchoredPosition.x, eventData.pointerDrag.GetComponent<RectTransform>().anchoredPosition.y + 128);
+        }
         if (myBox != null && rectTransform.anchoredPosition != myBoxAnchoredPosition)
         {
             //myBox.filled = false;
@@ -75,7 +78,10 @@ public class DragDrop : MonoBehaviour, IPointerDownHandler, IPointerUpHandler, I
 
     public void OnPointerDown(PointerEventData eventData)
     {
-        Debug.Log("OnPointerDown");
+        if (eventData.pointerEnter != null)
+        {
+            tipWindow.anchoredPosition = new Vector2(eventData.pointerEnter.GetComponent<RectTransform>().anchoredPosition.x, eventData.pointerEnter.GetComponent<RectTransform>().anchoredPosition.y + 128);
+        }
         foodsTargetPyramid.foodTargetPyramid = targetPyramid;
         foodsTargetPyramid.resetAlpha = false;
         canvasAudioSource.Play();
@@ -83,7 +89,6 @@ public class DragDrop : MonoBehaviour, IPointerDownHandler, IPointerUpHandler, I
 
     public void OnPointerUp(PointerEventData eventData)
     {
-        Debug.Log("OnPointerUp");
 
         foodsTargetPyramid.resetAlpha = true;
 

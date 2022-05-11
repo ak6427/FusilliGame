@@ -256,5 +256,9 @@ MonoBehaviour:
       korkeammalle tasolle ilmastopyramidiin.
     m_Metadata:
       m_Items: []
+  - m_Id: 5483337376731136
+    m_Localized: Versio 1.2
+    m_Metadata:
+      m_Items: []
   references:
     version: 1

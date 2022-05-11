@@ -11,6 +11,7 @@ public class SceneSwitch : MonoBehaviour
     public string activeScene;
     public float oldTimeScale;
     public AudioSource playingAudio;
+    public bool infoPageOneReposition = false;
 
     void Awake()
     {
@@ -59,7 +60,6 @@ public class SceneSwitch : MonoBehaviour
         SceneManager.LoadScene("Scores");
     }
     public void SceneInfo() {
-        sceneSaver.pageOneScale = 1;
         SceneManager.LoadScene("Info");
     }
     public void SceneSettings() {
@@ -73,7 +73,6 @@ public class SceneSwitch : MonoBehaviour
         sceneSaver.eventSystem.enabled = false;
         sceneSaver.audioListener.enabled = false;
         sceneSaver.resume = "Info";
-        sceneSaver.pageOneScale = 1.17f;
         sceneSaver.hideMenuBackground = true;
         SceneManager.LoadSceneAsync("Info", LoadSceneMode.Additive);
     }

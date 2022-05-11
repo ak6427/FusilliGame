@@ -38,7 +38,6 @@ public class Drop : MonoBehaviour, IDropHandler
 
     public void OnDrop(PointerEventData eventData) 
     {
-        Debug.Log("OnDrop");
 
         bool samePyramid = boxPartOfPyramid == eventData.pointerDrag.GetComponent<DragDrop>().targetPyramid;
 
@@ -94,9 +93,7 @@ public class Drop : MonoBehaviour, IDropHandler
 
     private void SpawnPenalty(int rankPenalty, bool penalty) 
     {
-        Vector3 penaltyPosition = new Vector3(transform.position.x, transform.position.y, transform.position.z);
-        penaltyPosition.x += 128;
-        penaltyPosition.y += 64;
+        Vector2 penaltyPosition = new Vector2(136, 64);
 
         Instantiate(prefabPenalty, penaltyPosition, transform.rotation);   
         penaltySpawn = FindObjectOfType<PenaltySpawn>();

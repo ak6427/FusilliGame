@@ -8,6 +8,10 @@ public class Info : MonoBehaviour
 {
     public RectTransform myRect;
 
+    public GameObject mainCamera;
+    private Transform  mainCameraTransform;
+    private Camera mainCameraCamera;
+
     [SerializeField]
     public GameObject rightArrow;
 
@@ -42,6 +46,7 @@ public class Info : MonoBehaviour
 
     [SerializeField]
     public GameObject pageTwo;
+    private RectTransform pageTwoRect;
 
     [SerializeField]
     public RectTransform pageTwoImage;
@@ -54,6 +59,7 @@ public class Info : MonoBehaviour
 
     [SerializeField]
     public GameObject pageThree;
+    private RectTransform pageThreeRect;
 
     [SerializeField]
     public RectTransform pageThreeImage;
@@ -66,6 +72,7 @@ public class Info : MonoBehaviour
 
     [SerializeField]
     public GameObject pageFour;
+    private RectTransform pageFourRect;
 
     [SerializeField]
     public RectTransform pageFourImage;
@@ -83,6 +90,11 @@ public class Info : MonoBehaviour
         sceneSaver = FindObjectOfType<SceneSaver>();
         pageOneAnchor = pageOne.GetComponent<RectTransform>();
         myRect = GetComponent<RectTransform>();
+        mainCameraTransform = mainCamera.GetComponent<Transform>();
+        mainCameraCamera = mainCamera.GetComponent<Camera>();
+        pageTwoRect = pageTwo.GetComponent<RectTransform>();
+        pageThreeRect = pageThree.GetComponent<RectTransform>();
+        pageFourRect = pageFour.GetComponent<RectTransform>();
     }
 
     void Start()
@@ -94,33 +106,39 @@ public class Info : MonoBehaviour
 
         currentPage = sceneSaver.levelPage;
 
-        float ratioX = ((float) Screen.width / 1920);
-        float ratioY = ((float) Screen.height / 1080);
+        // for camera size
+        float canvasToScreenWidth = ((float) myRect.rect.width * ((float) 4/3) / Screen.width);
+        float canvasToScreenHeight = ((float) myRect.rect.height * ((float) 4/3) / Screen.height);
 
-        Debug.Log(ratioX);
-        Debug.Log(ratioY);
+        float canvasToReferenceWidth = ((float) myRect.rect.width / 1920);
+        float canvasToReferenceHeight = ((float) myRect.rect.height / 1080);
+
+        Debug.Log("Canvas width: " + myRect.rect.width);
+        Debug.Log("Canvas height: " + myRect.rect.height);
+        Debug.Log("Screen width: " + Screen.width);
+        Debug.Log("Screen height: " + Screen.height);
+        Debug.Log("Canvas to Screen Width: " + canvasToScreenWidth);
+        Debug.Log("Canvas to Screen height: " + canvasToScreenHeight);
+        Debug.Log("Canvas to Reference Width: " + canvasToReferenceWidth);
+        Debug.Log("Canvas to Reference height: " + canvasToReferenceHeight);
 
         // Scale and Anchor
-        if (ratioX >= ratioY)
+        //myRect.anchoredPosition = new Vector2(0, 0);
+
+        mainCameraCamera.orthographicSize /= canvasToScreenWidth;
+        if (sceneSaver.resume == "Info")
         {
-            pageOneAnchor.anchoredPosition = new Vector3(pageOneAnchor.anchoredPosition.x / pageOneAnchor.lossyScale.x, pageOneAnchor.anchoredPosition.y / pageOneAnchor.lossyScale.y, 0); 
-            pageOneAnimation.localScale = new Vector3(sceneSaver.pageOneScale * ratioX / pageOneAnchor.lossyScale.x, sceneSaver.pageOneScale * ratioY / pageOneAnchor.lossyScale.y, 0);
-            tut1Text.anchoredPosition = new Vector3(tut1Text.anchoredPosition.x / pageOneAnchor.lossyScale.x, tut1Text.anchoredPosition.y / pageOneAnchor.lossyScale.y, 0); 
-            pageTwoImage.localScale = new Vector3(ratioX / pageOneAnchor.lossyScale.x, ratioY / pageOneAnchor.lossyScale.y, 0);
-            pageThreeImage.localScale = new Vector3(ratioX / pageOneAnchor.lossyScale.x, ratioY / pageOneAnchor.lossyScale.y, 0);
-            pageFourImage.localScale = new Vector3(ratioX / pageOneAnchor.lossyScale.x, ratioY / pageOneAnchor.lossyScale.y, 0);
-            Debug.Log("ratiox >=");
+            RectTransform canvasOverlay = GameObject.FindGameObjectWithTag("LevelCanvas").GetComponent<RectTransform>();
+
+            float scale = canvasOverlay.localScale.x / myRect.localScale.x * 0.75f;
+            
+            pageOneAnimation.anchoredPosition = new Vector2(-9.6f, -5.4f);
+            pageOneAnimation.localScale = new Vector2(scale, scale);
         }
-        else
-        {
-            pageOneAnchor.anchoredPosition = new Vector3(pageOneAnchor.anchoredPosition.x * pageOneAnchor.lossyScale.x - 1, pageOneAnchor.anchoredPosition.y * pageOneAnchor.lossyScale.y - 0.25f, 0); 
-            pageOneAnimation.localScale = new Vector3(sceneSaver.pageOneScale / ratioX / pageOneAnchor.lossyScale.x + 0.1f, sceneSaver.pageOneScale / ratioY * pageOneAnchor.lossyScale.y + 0.125f, 0);
-            tut1Text.anchoredPosition = new Vector3(tut1Text.anchoredPosition.x * pageOneAnchor.lossyScale.x, tut1Text.anchoredPosition.y * pageOneAnchor.lossyScale.y, 0); 
-            pageTwoImage.localScale = new Vector3(ratioX / pageOneAnchor.lossyScale.x + 0.0775f, ratioY / pageOneAnchor.lossyScale.y + 0.085f, 0);
-            pageThreeImage.localScale = new Vector3(ratioX / pageOneAnchor.lossyScale.x + 0.0775f, ratioY / pageOneAnchor.lossyScale.y + 0.085f, 0);
-            pageFourImage.localScale = new Vector3(ratioX / pageOneAnchor.lossyScale.x + 0.0775f, ratioY / pageOneAnchor.lossyScale.y + 0.085f, 0);
-            Debug.Log("ratioy >");
-        }
+        pageOneAnchor.localScale = new Vector2(pageOneAnchor.localScale.x * canvasToReferenceWidth, pageOneAnchor.localScale.y * canvasToReferenceHeight);
+        pageTwoRect.localScale  = new Vector2(pageTwoRect.localScale.x * canvasToReferenceWidth, pageTwoRect.localScale.y * canvasToReferenceHeight);
+        pageThreeRect.localScale  = new Vector2(pageThreeRect.localScale.x * canvasToReferenceWidth, pageThreeRect.localScale.y * canvasToReferenceHeight);
+        pageFourRect.localScale  = new Vector2(pageFourRect.localScale.x * canvasToReferenceWidth, pageFourRect.localScale.y * canvasToReferenceHeight);
 
         SetText();
     }
@@ -146,6 +164,7 @@ public class Info : MonoBehaviour
 
     void Update()
     {
+
         // page numbers
         pageNumber.text = currentPage + "/" + allPages;
 

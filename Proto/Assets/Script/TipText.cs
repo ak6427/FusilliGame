@@ -12,7 +12,7 @@ public class TipText : MonoBehaviour
     public static Action OnPointerDownLost;
     private float droid;
 
-    public RectTransform canvasRectTransform;
+    private RectTransform canvasRectTransform;
     
     private void OnEnable(){
         OnPointerDown += ShowTip;
@@ -32,48 +32,24 @@ public class TipText : MonoBehaviour
     void Start()
     {
         HideTip();
+        
+        Debug.Log("screenX: " + Screen.width);
+        Debug.Log("screenY: " + Screen.height);
+        Debug.Log("canvasX: " + canvasRectTransform.rect.width);
+        Debug.Log("canvasY: " + canvasRectTransform.rect.height);
+        Debug.Log("canvasScaleX: " + (canvasRectTransform.rect.width * canvasRectTransform.localScale.x));
+        Debug.Log("canvasScaleY: " + (canvasRectTransform.rect.height * canvasRectTransform.localScale.y));
     }
     private void ShowTip(string tip, Vector2 MousePos){
+
         tipText.text = tip;
         tipWindow.sizeDelta = new Vector2(tipText.preferredWidth > 10000 ? 10000 : tipText.preferredWidth, tipText.preferredHeight);
         tipWindow.gameObject.SetActive(true);
-
-        if (Application.platform == RuntimePlatform.Android)
-        {
-            float ratioX = ((float) tipWindow.lossyScale.x / 0.015625f);
-            float ratioY = ((float) tipWindow.lossyScale.y / 0.015625f);
-            //float ratioX = ((float) Screen.width / 1920);
-            //float ratioY = ((float) Screen.height / 1080);
-            
-            if (ratioX >= ratioY)
-            {
-                tipWindow.transform.position = new Vector3( MousePos.x / ratioX * tipWindow.lossyScale.x - 4.75f, MousePos.y / ratioY * tipWindow.lossyScale.y + (128 * tipWindow.lossyScale.y), canvas.planeDistance);
-            }
-            else 
-            {
-                tipWindow.transform.position = new Vector3( MousePos.x / ratioX * tipWindow.lossyScale.x + 0.125f, MousePos.y / ratioY * tipWindow.lossyScale.y + (128 * tipWindow.lossyScale.y), canvas.planeDistance);
-            }
-            
-            Debug.Log("ratiox " + ratioX);
-            Debug.Log("ratioy " + ratioY);
-            Debug.Log("mousex " + MousePos.x);
-            Debug.Log("mousey " + MousePos.y);
-            Debug.Log("lossyx " + tipWindow.lossyScale.x);
-            Debug.Log("lossyy " + tipWindow.lossyScale.y);
-        }
-        else 
-        {
-            tipWindow.transform.position = new Vector3(MousePos.x * tipWindow.lossyScale.x, MousePos.y * tipWindow.lossyScale.y + (64 * tipWindow.lossyScale.y), canvas.planeDistance);
-        }
     }
     
     private void HideTip(){
         tipText.text=default;
         tipWindow.gameObject.SetActive(false);
     }
-    
-    
-    
-    // Start is called before the first frame update
 
 }

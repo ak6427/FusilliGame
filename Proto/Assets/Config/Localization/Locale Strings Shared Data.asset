@@ -231,6 +231,10 @@ MonoBehaviour:
     m_Key: ClimatePyraInfo
     m_Metadata:
       m_Items: []
+  - m_Id: 5483337376731136
+    m_Key: Version
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:
