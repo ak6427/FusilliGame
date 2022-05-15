@@ -3,7 +3,7 @@
     "m_SelectedPackage": {
         "deviceId": "QV7811C39E",
         "name": "com.T.A.J.R.O.Foodamid",
-        "processId": 10062,
+        "processId": 11834,
         "exited": false
     },
     "m_SelectedPriority": 0,
@@ -210,6 +210,12 @@
             "deviceId": "QV7811C39E",
             "name": "com.T.A.J.R.O.Foodamid",
             "processId": 10062,
+            "exited": false
+        },
+        {
+            "deviceId": "QV7811C39E",
+            "name": "com.T.A.J.R.O.Foodamid",
+            "processId": 11834,
             "exited": false
         },
         {
